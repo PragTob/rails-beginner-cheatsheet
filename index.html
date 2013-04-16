@@ -356,6 +356,80 @@
         </tr>
       </table>
 
+      <h3>Important Rails commands</h3>
+      <p>
+        A summary of important commands that can be used in the context of
+        your ruby on rails app. For everyone of these commands but the
+        <em>rails new</em> command you have to be in the directory of your app.
+        That is the directory with the subfolders described above
+        (app, config...)
+      </p>
+
+      <table>
+        <tr>
+          <th>Concept</th>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Create a new app</td>
+          <td><strong>rails new</strong> <em>name</em></td>
+          <td>Create a new Ruby on Rails application with the given name here.
+            This will give you the basic structure to immediately get started.
+            After this command has successfully run your application is in a
+            folder named like the name you gave the application. You have to
+            <em>cd</em> into that folder.
+          </td>
+        </tr>
+        <tr>
+          <td>Start the server</td>
+          <td><strong>rails server</strong></td>
+          <td>You have to start the server in order for your application to
+            respond to your requests. Starting the server might take some time.
+            When it is done, you can access your application under
+            <a href="localhost:3000">localhost:3000</a> in the browser of your
+            choice.
+          </td>
+        </tr>
+        <tr>
+          <td>Scaffolding</td>
+          <td><strong>rails generate scaffold</strong>
+            <em>name attribute:type</em></td>
+          <td>
+            <p>
+              The scaffolding is a special part of Rails. It basically
+              magically generates all the common things needed for a new resource
+              for you! This includes <em>controllers, models and views</em>. It
+              also creates the following basic actions: create a new resource,
+              edit a resource, show a resource and delete a resource.
+            </p>
+            <p>That's what you most basically need. Take this example:</p>
+            <p><strong>rails generate scaffold</strong> <em>product
+              name:string price:integer</em></p>
+            <p>Now you can create new products, edit them, view them and delete
+              them if you don't need them anymore. Nothing stops you from
+              creating a full fledged web shop now ;-)</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Run migrations</td>
+          <td><strong>rake db:migrate</strong></td>
+          <td>When you have just added a new migration, for instance by creating
+            a new <em>scaffold</em>, this has to be applied to your database
+            to make sure that your application works correctly. This command
+            does just this and could also be referred to as "updating your
+            database".
+          </td>
+        </tr>
+        <tr>
+          <td>Install dependencies</td>
+          <td><strong>bundle install</strong></td>
+          <td>If you just added a new gem to your Gemfile you should run bundle
+            install to install it. Don't forget to restart your server
+            afterwards!</td>
+        </tr>
+      </table>
+
       <h2>What to do when things go wrong?</h2>
       <p>
         Things go wrong all the time, so don't worry this happens to everyone.
