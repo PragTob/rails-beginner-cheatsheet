@@ -101,7 +101,6 @@ header h2 {
 }
 
 #main-content {
-  width: 690px;
   float: left;
 }
 
@@ -190,23 +189,40 @@ hr {
 
 table {
   width: 100%;
-  border: 1px solid #ebebeb;
+  border: 1px solid darkgray;
 }
 
 th {
   font-weight: 500;
+  border: 1px solid darkgray;
 }
 
 td {
-  border: 1px solid #ebebeb;
+  border: 1px solid darkgray;
   text-align: center; 
   font-weight: 300;
 }
 
+th.concept {
+  width: 150px;
+}
+
+th.usage {
+    width: 150px;
+}
+
+th.example {
+  width: 200px;
+}
+
+th.description {
+  width: 460px;
+}
+
+
 form {
   background: #f2f2f2;
   padding: 20px;
-  
 }
 
 
