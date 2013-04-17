@@ -129,9 +129,9 @@
             </p>
           </td>
           <td>
-            <p>ls</p>
+            <p><strong>ls</strong></p>
 
-            <p>ls my_app</p>
+            <p><strong>ls</strong> <em>my_app</em></p>
           </td>
           <td>Shows all contents (files and folders) of the directory.
             If no directory is specified shows the contents of the
@@ -141,7 +141,7 @@
         <tr>
           <td>Directory you are currently in</td>
           <td><strong>pwd</strong></td>
-          <td>pwd</td>
+          <td><strong>pwd</strong></td>
           <td>Shows the full path of the directory you are currently
             in. E.g./home/tobi/railsgirls
           </td>
@@ -150,8 +150,9 @@
          <td>Starting a program</td>
          <td><strong>program</strong> <em>(arguments)</em></td>
          <td>
-           <p>firefox</p>
-           <p>firefox railsgirlsberlin.de</p>
+           <p><strong>firefox</strong></p>
+           <p><strong>firefox</strong> <em>railsgirlsberlin.de</em></p>
+           <p><strong>irb</strong></p>
          </td>
          <td>Starts the program with the given name and arbitrary arguments
            if the program takes arguments. Firefox is just one example. When you
@@ -207,23 +208,25 @@
         </tr>
         <tr>
           <td>Create</td>
-          <td><strong>[]</strong></td>
+          <td><strong>[</strong><em>arguments</em><strong>]</strong></td>
           <td>
-            <p>[]</p>
-            <p>["Rails", "fun", 5]</p>
+            <p><strong>[]</strong></p>
+            <p><strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong></p>
           </td>
           <td>Creates an Array, empty or with the specified contents.</td>
         </tr>
         <tr>
           <td>Access</td>
-          <td>an_array<strong>[<em>number</em>]</strong>
+          <td>an_array<strong>[</strong><em>number</em><strong>]</strong>
           </td>
           <td>
             <p>an_array = ["Helau", "Mooo", "zoooo"]</p>
 
-            <p>an_array[0] --&gt; "Helau"</p>
+            <p>an_array<strong>[</strong><em>0</em><strong>]</strong>
+              --&gt; "Helau"</p>
 
-            <p>an_array[2] --&gt; "zoooo"</p>
+            <p>an_array<strong>[</strong><em>2</em><strong>]</strong>
+              --&gt; "zoooo"</p>
           </td>
           <td>As an Array is a collection of different elements, you often want
             to access a single element of this Array.
@@ -242,7 +245,8 @@
           <td>
             <p>an_array = ["Helau", "Mooo", "zoooo"]</p>
 
-            <p>an_array[2] --&gt; "Oh I'm all new"</p>
+            <p>an_array<strong>[</strong><em>2</em><strong>]
+              =</strong> <em>"Oh I'm all new"</em></p>
 
             <p>an_array --&gt; ["Helau", "Mooo", "Oh I'm all
               new"]</p>
