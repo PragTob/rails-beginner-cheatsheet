@@ -222,6 +222,10 @@ th.description {
   width: 410px;
 }
 
+th.shortcut {
+  width: 150px;
+}
+
 
 form {
   background: #f2f2f2;
