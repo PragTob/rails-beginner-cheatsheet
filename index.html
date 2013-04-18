@@ -200,36 +200,6 @@
           <th class="description">Description</th>
         </tr>
         <tr>
-         <td>Variable</td>
-         <td>
-           <code><strong>variable_name =</strong> <em>some_value</em></code>
-         </td>
-         <td>
-           <p><code><strong>name =</strong> <em>"Tobi"</em></code></p>
-           <p><code><strong>sum =</strong> <em>18 + 5</em></code></p>
-         </td>
-         <td>
-           With a variable you tell Ruby that from now on you want to refer to
-           that value by the name you gave it. So for the first example, from
-           now on when you use <em>name</em> Ruby will know that you meant
-           <em>"Tobi"</em>.
-         </td>
-        </tr>
-        <tr>
-          <td>Console output</td>
-          <td>
-            <code><strong>puts</strong> <em>something</em></code>
-          </td>
-          <td>
-            <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
-            <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
-          </td>
-          <td>
-            Prints its argument to the console. Can be used in Rails apps
-            to print something in the console where the server is running.
-          </td>
-        </tr>
-        <tr>
           <td>Comment</td>
           <td>
             <code><strong>#</strong> <em>Comment text</em></code>
@@ -252,6 +222,38 @@
             is when you don't want some part of your code to execute anymore
             but you don't want to delete it just yet, because you are trying
             different things out.
+          </td>
+        </tr>
+        <tr>
+         <td>Variables</td>
+         <td>
+           <code><strong>variable =</strong> <em>some_value</em></code>
+         </td>
+         <td>
+ <pre><code><strong>name =</strong> <em>"Tobi"</em>
+<strong>name</strong> # => "Tobi"</code></pre>
+<pre><code><strong>sum =</strong> <em>18 + 5</em>
+<strong>sum</strong> # => 23</code></pre>
+         </td>
+         <td>
+           With a variable you tell Ruby that from now on you want to refer to
+           that value by the name you gave it. So for the first example, from
+           now on when you use <em>name</em> Ruby will know that you meant
+           <em>"Tobi"</em>.
+         </td>
+        </tr>
+        <tr>
+          <td>Console output</td>
+          <td>
+            <code><strong>puts</strong> <em>something</em></code>
+          </td>
+          <td>
+            <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
+            <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
+          </td>
+          <td>
+            Prints its argument to the console. Can be used in Rails apps
+            to print something in the console where the server is running.
           </td>
         </tr>
         <tr>
@@ -304,6 +306,82 @@
             </p>
           </td>
         </tr>
+        <tr>
+          <td>Equality</td>
+          <td><code>object <strong>==</strong> other</code></td>
+          <td>
+            <p><code>true <strong>==</strong> true # => true</code></p>
+            <p><code>3 <strong>==</strong> 4 # => false</code></p>
+            <p><code>"Hello" <strong>==</strong> "Hello" # => true</code></p>
+            <p><code>"Helo" <strong>==</strong> "Hello" # => false</code></p>
+          </td>
+          <td>
+            With two equal signs you can check if 2 things are basically the
+            same. If so, <code>true</code> will be returned otherwise the result
+            will be <code>false</code>.
+          </td>
+        </tr>
+        <tr>
+          <td>Inequality</td>
+          <td><code>object <strong>!=</strong> other</code></td>
+          <td>
+            <p><code>true <strong>!=</strong> true # => false</code></p>
+            <p><code>3 <strong>!=</strong> 4 # => true</code></p>
+          </td>
+          <td>
+            Inequality is the inverse to equality, e.g. it results in
+            <code>true</code> when two values are not the same and it results
+            in <code>false</code> when they are the same.
+          </td>
+        </tr>
+        <tr>
+          <td>Decisions with if</td>
+          <td>
+<pre><code><strong>if</strong> <em>condition</em>
+  # happens when true
+<strong>else</strong>
+  # happens when false
+<strong>end</strong>
+</code></pre>
+          </td>
+          <td>
+<pre><code><strong>if</strong> <em>input == password</em>
+  grant_access
+<strong>else</strong>
+  deny_access
+<strong>end</strong>
+</code></pre>
+          </td>
+          <td>
+            <p>With if-clauses you can decide based upon a <em>condition</em>
+            what to do. When the condition is considered true, then the code
+            after if is executed. If it is considered false, the code after
+            else is executed.</p>
+            <p>
+              In the example, access is granted based upon the decision if a
+              given input matches the password.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Constants</td>
+          <td><code><strong>CONSTANT =</strong> <em>some_value</em></code></td>
+          <td>
+<pre><code><strong>PI = 3.1415926535</strong>
+<strong>PI</strong> # => 3.1415926535</code></pre>
+<pre><code><strong>ADULT_AGE</strong> = 18
+<strong>ADULT_AGE</strong> # => 18</code></pre>
+          </td>
+          <td>
+            Constants look like variables, just in UPCASE. Well both hold
+            values and give you a name to refer to those values. However while
+            the value a variable holds may change or might be of an unknown
+            value (if you save user input in a variable) constants are
+            different. They have a known value that should never change. Think
+            of it a bit like mathematical or physical constants. These don't
+            change, they always refer to the same value.
+          </td>
+        </tr>
       </table>
 
       <h2>Numbers</h2>
@@ -349,13 +427,13 @@
         <tr>
           <td>Basic Math</td>
           <td>
-            <code><em>n</em> <strong>operator</strong> <em>n</em></code>
+            <code>n <strong>operator</strong> <em>m</em></code>
           </td>
           <td>
-            <p><code><em>2</em> <strong>+</strong> <em>3</em> # => 5</code></p>
-            <p><code><em>5</em> <strong>-</strong> <em>7</em> # => -2</code></p>
-            <p><code><em>8</em> <strong>*</strong> <em>7</em> # => 56</code></p>
-            <p><code><em>84</em> <strong>/</strong> <em>4</em> # => 21</code></p>
+            <p><code>2 <strong>+</strong> <em>3</em> # => 5</code></p>
+            <p><code>5 <strong>-</strong> <em>7</em> # => -2</code></p>
+            <p><code>8 <strong>*</strong> <em>7</em> # => 56</code></p>
+            <p><code>84 <strong>/</strong> <em>4</em> # => 21</code></p>
           </td>
           <td>
             In Ruby you can easily use basic math operations.
@@ -365,12 +443,12 @@
         <tr>
           <td>Comparison</td>
           <td>
-            <code><em>n</em> <strong>operator</strong> <em>n</em></code>
+            <code>n <strong>operator</strong> <em>m</em></code>
           </td>
           <td>
-            <p><code><em>12</em> <strong>></strong> <em>3</em> # => true</code></p>
-            <p><code><em>12</em> <strong><</strong> <em>3</em> # => false</code></p>
-            <p><code><em>7</em> <strong>>=</strong> <em>7</em> # => true</code></p>
+            <p><code>12 <strong>></strong> <em>3</em> # => true</code></p>
+            <p><code>12 <strong><</strong> <em>3</em> # => false</code></p>
+            <p><code>7 <strong>>=</strong> <em>7</em> # => true</code></p>
           </td>
           <td>
             <p>Numbers may be compared to see if a number is bigger or smaller
