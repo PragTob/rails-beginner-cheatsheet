@@ -262,7 +262,7 @@
           <td>
             <p><code>string<strong>.length</strong></code></p>
             <p><code>
-              object<strong>.equal?</strong><em>(another_object)</em>
+              array<strong>.delete_at</strong><em>(2)</em>
             </code></p>
             <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
           </td>
@@ -485,19 +485,37 @@ array # => ["Helau", "Mooo", "new"]</code></pre>
           </td>
         </tr>
         <tr>
-         <td>Iterating</td>
-         <td>
-           <code>array<strong>.each</strong> <em>do |e| .. end</em></code>
-         </td>
-         <td>
+          <td>Delete at index</td>
+          <td><code>
+            array<strong>.delete_at</strong><em>(i)</em>
+          </code></td>
+          <td>
+<pre><code>array = [0, 14, 55, 79]
+array<strong>.delete_at</strong><em>(2)</em>
+array # => [0, 14, 79]
+</code></pre>
+          </td>
+          <td>
+            Deletes the element of the array at the specified index. Remember
+            that indexing starts at 0. If you specify an index bigger then the
+            number of elements that actually are in the array nothing will
+            happen.
+          </td>
+        </tr>
+        <tr>
+          <td>Iterating</td>
+          <td>
+            <code>array<strong>.each</strong> <em>do |e| .. end</em></code>
+          </td>
+          <td>
            <p><code>
              persons<strong>.each</strong> <em>do |p| puts p.name end</em>
            </code></p>
            <p><code>
              numbers<strong>.each</strong> <em>do |n| n = n * 2 end</em>
            </code></p>
-         </td>
-         <td>
+          </td>
+          <td>
            <p>
              Iterating basically means doing something for <em>each</em> element
              of the array. What is done between <em>do</em> and <em>end</em>
@@ -508,7 +526,7 @@ array # => ["Helau", "Mooo", "new"]</code></pre>
              the console. The second example simply doubles every number of a
              given array.
            </p>
-         </td>
+</td>
         </tr>
       </table>
 
