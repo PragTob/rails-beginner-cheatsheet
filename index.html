@@ -461,7 +461,98 @@
       </table>
 
       <h2>Strings</h2>
-      <p>TBD</p>
+      <p>
+        Strings are used to hold textual information. As such they may contain
+        single characters, words, sentences or a whole book. However you may
+        just think of them as an ordered collection of characters.
+      </p>
+      <p>
+        You can find out more about at the
+        <a href="http://ruby-doc.org/core-2.0/String.html">ruby-doc page about
+        Strings</a>.
+      </p>
+
+      <table>
+        <tr>
+          <th class="concept">Concept</th>
+          <th class="usage">Usage</th>
+          <th class="example">Examples</th>
+          <th class="description">Description</th>
+        </tr>
+        <tr>
+          <td>Create</td>
+          <td>
+            <p><code><strong>"</strong>A string<strong>"</strong></code></p>
+          </td>
+          <td>
+            <p><code><strong>"</strong>Hello World<strong>"</strong></code></p>
+            <p><code><strong>"</strong>a<strong>"</strong></code></p>
+            <p><code>
+              <strong>"</strong>Just characters 129 _!$%^<strong>"</strong>
+            </code></p>
+            <p><code><strong>""</strong></code></p>
+          </td>
+          <td>
+            A string is created by simply putting quotation marks around a
+            character sequence.
+          </td>
+        </tr>
+        <tr>
+          <td>Length</td>
+          <td><code>string<strong>.length</strong></code></td>
+          <td>
+            <p><code>"Hello"<strong>.length</strong> # => 5</code></p>
+            <p><code>""<strong>.length</strong> # => 0</code></p>
+          </td>
+          <td>
+            You can send a string a message, asking it how long it is and it
+            responds with the number of characters it consists of. You could
+            use this to check if the desired password of a user exceeds the
+            required minimum length.
+          </td>
+        </tr>
+        <tr>
+          <td>Concatenate</td>
+          <td><code>string <strong>+</strong> <em>string2</em></code></td>
+          <td>
+<pre><code>"Hello " <strong>+</strong> <em>"reader"</em>
+# => "Hello reader"</code></pre>
+<p><code>"a" <strong>+</strong> <em>"b"</em> <strong>+</strong> <em>"c"</em>
+# => "abc"</code></p>
+          </td>
+          <td>Concatenates 2 or more strings together and returns the result.</td>
+        </tr>
+        <tr>
+          <td>Substitute</td>
+          <td><code>string<strong>.gsub</strong><em>(a_string, substitute)</em></code></td>
+          <td>
+            <p><code>"Hae"<strong>.gsub</strong><em>("ae", "ä") #=> "Hä"</em></code></p>
+            <p><code>"Hae"<strong>.gsub</strong><em>("b", "ä") #=> "Hae"</em></code></p>
+            <p><code>"Greenie"<strong>.gsub</strong><em>("e", "u") #=> "Gruuniu"</em></code></p>
+          </td>
+          <td><em>gsub</em> stands for globally substitute. It substitutes all
+          occurences of <code>a_string</code> within the string with
+          <code>substitute</code></td>
+        </tr>
+        <tr>
+          <td>Access</td>
+          <td>
+            <code>
+              string<strong>[</strong><em>position</em><strong>]</strong>
+            </code>
+          </td>
+          <td>
+            <code>
+              "Hello"<strong>[</strong><em>1</em><strong>]</strong> # => "e"
+            </code>
+          </td>
+          <td>
+            Access the character at the given position in the string. Be aware
+            that the first position is actually position <em>0</em>.
+          </td>
+        </tr>
+      </table>
+
 
       <h2>Arrays</h2>
       <p>
@@ -512,7 +603,7 @@
           <td>Access</td>
           <td>
             <code>
-              array<strong>[</strong><em>number</em><strong>]</strong>
+              array<strong>[</strong><em>position</em><strong>]</strong>
             </code>
           </td>
           <td>
