@@ -183,7 +183,109 @@
       </p>
 
       <h2>General concepts</h2>
-      <p>variables, calling methods, etc...</p>
+      <table>
+        <tr>
+          <th class="concept">Concept</th>
+          <th class="usage">Usage</th>
+          <th class="example">Examples</th>
+          <th class="description">Description</th>
+        </tr>
+        <tr>
+         <td>Variable</td>
+         <td><strong>variable_name =</strong> <em>some_value</em></td>
+         <td>
+           <p><strong>name =</strong> <em>"Tobi"</em></p>
+           <p><strong>sum =</strong> <em>18 + 5</em></p>
+         </td>
+         <td>
+           With a variable you tell Ruby that from now on you want to refer to
+           that value by the name you gave it. So for the first example, from
+           now on when you use <em>name</em> Ruby will know that you meant
+           <em>"Tobi"</em>.
+         </td>
+        </tr>
+        <tr>
+          <td>Console output</td>
+          <td><strong>puts</strong> <em>something</em></td>
+          <td>
+            <p><strong>puts</strong> <em>"Hello World"</em></p>
+            <p><strong>puts</strong> <em>[1, 5, "mooo"]</em></p>
+          </td>
+          <td>
+            Prints its argument to the console. Can be used in Rails apps
+            to print something in the console where the server is running.
+          </td>
+        </tr>
+        <tr>
+          <td>Comment</td>
+          <td><strong>#</strong> <em>Comment text</em></td>
+          <td>
+            <p>
+              <strong>#</strong> <em>This text is a comment</em>
+            </p>
+            <p>
+              some.ruby_code <strong>#</strong> A comment
+            </p>
+            <p>
+              <strong>#</strong> some.ignored_ruby_code
+            </p>
+          </td>
+          <td>
+            Ruby ignores everything that is marked as a comment. It does not try
+            to execute it. Comments are just there for you, some information.
+            Comments are also commonly used to <em>comment out code</em>. That
+            is when you don't want some part of your code to execute anymore
+            but you don't want to delete it just yet, because you are trying
+            different things out.
+          </td>
+        </tr>
+        <tr>
+          <td>Call a method</td>
+          <td>object<strong>.method</strong><em>(arguments)</em></td>
+          <td>
+            <p>string<strong>.length</strong></p>
+            <p>object<strong>.equal?</strong><em>(another_object)</em></p>
+            <p>string<strong>.gsub</strong><em>("ae", "ä")</em></p>
+          </td>
+          <td>
+            <p>Calling a method is also often referred to as
+            <em>sending a message</em> in Ruby. Basically we are sending an
+            object some kind of message and are waiting for its response.
+            So we kindly ask the object to do something or give us some
+            information.
+            When you call a method/send a message something happens. In the
+            first example we ask a String how long it is e.g. how many
+            characters it consists of. In the last example we substitute all
+            occurrences of "ae" in the string with the german "ä".</p>
+            <p>
+              Different kinds of objects (Strings, Numbers, Arrays...)
+              understand different messages.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Define a method</td>
+          <td>
+<pre><code><strong>def</strong> <em>name(parameter)</em>
+  <em># method body</em>
+<strong>end</strong></code></pre>
+          </td>
+          <td>
+<pre><code><strong>def</strong> <em>greet(name)</em>
+  <em>puts "Hy there " + name</em>
+<strong>end</strong></code></pre>
+          </td>
+          <td>
+            <p>Methods are basically reusable units of behaviour. And you can
+            define them yourself just like this. Methods are small and focused
+            on implementing a specific behaviour.</p>
+            <p>
+              Our example method for instance is focused on greeting people,
+              you could call it like this: <code>greet("Tobi")</code>
+            </p>
+          </td>
+        </tr>
+      </table>
 
       <h2>Numbers</h2>
       <p>TODO</p>
