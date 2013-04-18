@@ -109,12 +109,12 @@
         <tr>
           <td>Change directory</td>
           <td>
-            <strong>cd</strong> <em>directory</em>
+            <code><strong>cd</strong> <em>directory</em></code>
           </td>
           <td>
-            <p>cd my_app</p>
+            <p><code>cd my_app</code></p>
 
-            <p>cd my_app/app/controllers</p>
+            <p><code>cd my_app/app/controllers</code></p>
           </td>
           <td>Changes the directory to the specified directory on the
             console
@@ -123,15 +123,15 @@
         <tr>
           <td>List contents directory</td>
           <td>
-            <p><strong>ls</strong> <em>(directory)</em></p>
+            <p><code><strong>ls</strong> <em>(directory)</em></code></p>
 
-            <p>Windows: <strong>dir</strong> <em>(directory)</em>
+            <p><code>Windows: <strong>dir</strong> <em>(directory)</em></code>
             </p>
           </td>
           <td>
-            <p><strong>ls</strong></p>
+            <p><code><strong>ls</strong></code></p>
 
-            <p><strong>ls</strong> <em>my_app</em></p>
+            <p><code><strong>ls</strong> <em>my_app</em></code></p>
           </td>
           <td>Shows all contents (files and folders) of the directory.
             If no directory is specified shows the contents of the
@@ -140,23 +140,25 @@
         </tr>
         <tr>
           <td>Directory you are currently in</td>
-          <td><strong>pwd</strong></td>
-          <td><strong>pwd</strong></td>
+          <td><code><strong>pwd</strong></code></td>
+          <td><code><strong>pwd</strong></code></td>
           <td>Shows the full path of the directory you are currently
             in. E.g./home/tobi/railsgirls
           </td>
         </tr>
         <tr>
          <td>Starting a program</td>
-         <td><strong>program</strong> <em>(arguments)</em></td>
+         <td><code><strong>program</strong> <em>(arguments)</em></code></td>
          <td>
-           <p><strong>firefox</strong></p>
-           <p><strong>firefox</strong> <em>railsgirlsberlin.de</em></p>
-           <p><strong>irb</strong></p>
+           <p><code><strong>firefox</strong></code></p>
+           <p><code>
+             <strong>firefox</strong> <em>railsgirlsberlin.de</em></code>
+           </p>
+           <p><code><strong>irb</strong></code></p>
          </td>
          <td>Starts the program with the given name and arbitrary arguments
            if the program takes arguments. Firefox is just one example. When you
-           type in <em>irb</em> this also starts interactive ruby.
+           type in <code>irb</code> this starts <em>interactive ruby</em>.
          </td>
         </tr>
         <tr>
@@ -199,10 +201,12 @@
         </tr>
         <tr>
          <td>Variable</td>
-         <td><strong>variable_name =</strong> <em>some_value</em></td>
          <td>
-           <p><strong>name =</strong> <em>"Tobi"</em></p>
-           <p><strong>sum =</strong> <em>18 + 5</em></p>
+           <code><strong>variable_name =</strong> <em>some_value</em></code>
+         </td>
+         <td>
+           <p><code><strong>name =</strong> <em>"Tobi"</em></code></p>
+           <p><code><strong>sum =</strong> <em>18 + 5</em></code></p>
          </td>
          <td>
            With a variable you tell Ruby that from now on you want to refer to
@@ -213,10 +217,12 @@
         </tr>
         <tr>
           <td>Console output</td>
-          <td><strong>puts</strong> <em>something</em></td>
           <td>
-            <p><strong>puts</strong> <em>"Hello World"</em></p>
-            <p><strong>puts</strong> <em>[1, 5, "mooo"]</em></p>
+            <code><strong>puts</strong> <em>something</em></code>
+          </td>
+          <td>
+            <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
+            <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
           </td>
           <td>
             Prints its argument to the console. Can be used in Rails apps
@@ -225,16 +231,18 @@
         </tr>
         <tr>
           <td>Comment</td>
-          <td><strong>#</strong> <em>Comment text</em></td>
+          <td>
+            <code><strong>#</strong> <em>Comment text</em></code>
+          </td>
           <td>
             <p>
-              <strong>#</strong> <em>This text is a comment</em>
+              <code><strong>#</strong> <em>This text is a comment</em></code>
             </p>
             <p>
-              some.ruby_code <strong>#</strong> A comment
+              <code>some.ruby_code <strong>#</strong> A comment</code>
             </p>
             <p>
-              <strong>#</strong> some.ignored_ruby_code
+              <code><strong>#</strong> some.ignored_ruby_code</code>
             </p>
           </td>
           <td>
@@ -248,11 +256,15 @@
         </tr>
         <tr>
           <td>Call a method</td>
-          <td>object<strong>.method</strong><em>(arguments)</em></td>
           <td>
-            <p>string<strong>.length</strong></p>
-            <p>object<strong>.equal?</strong><em>(another_object)</em></p>
-            <p>string<strong>.gsub</strong><em>("ae", "ä")</em></p>
+            <code>object<strong>.method</strong><em>(arguments)</em></code>
+          </td>
+          <td>
+            <p><code>string<strong>.length</strong></code></p>
+            <p><code>
+              object<strong>.equal?</strong><em>(another_object)</em>
+            </code></p>
+            <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
           </td>
           <td>
             <p>Calling a method is also often referred to as
@@ -322,25 +334,28 @@
         </tr>
         <tr>
           <td>Create</td>
-          <td><strong>[</strong><em>arguments</em><strong>]</strong></td>
           <td>
-            <p><strong>[]</strong></p>
-            <p><strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong></p>
+            <code><strong>[</strong><em>arguments</em><strong>]</strong></code>
+          </td>
+          <td>
+            <p><code><strong>[]</strong></code></p>
+            <p><code>
+              <strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong>
+            </code></p>
           </td>
           <td>Creates an Array, empty or with the specified contents.</td>
         </tr>
         <tr>
           <td>Access</td>
-          <td>an_array<strong>[</strong><em>number</em><strong>]</strong>
+          <td>
+            <code>
+              an_array<strong>[</strong><em>number</em><strong>]</strong>
+            </code>
           </td>
           <td>
-            <p>an_array = ["Helau", "Mooo", "zoooo"]</p>
-
-            <p>an_array<strong>[</strong><em>0</em><strong>]</strong>
-              --&gt; "Helau"</p>
-
-            <p>an_array<strong>[</strong><em>2</em><strong>]</strong>
-              --&gt; "zoooo"</p>
+<pre><code>an_array = ["Helau", "Mooo", "zoooo"]
+an_array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
+an_array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
           </td>
           <td>As an Array is a collection of different elements, you often want
             to access a single element of this Array.
@@ -353,17 +368,14 @@
         </tr>
         <tr>
           <td>Assigning</td>
-          <td>an_array<strong>[</strong><em>number</em><strong>] =
-            </strong> <em>new_value</em>
+          <td>
+            <code>an_array<strong>[</strong><em>number</em><strong>] =
+            </strong> <em>new_value</em></code>
           </td>
           <td>
-            <p>an_array = ["Helau", "Mooo", "zoooo"]</p>
-
-            <p>an_array<strong>[</strong><em>2</em><strong>]
-              =</strong> <em>"Oh I'm all new"</em></p>
-
-            <p>an_array --&gt; ["Helau", "Mooo", "Oh I'm all
-              new"]</p>
+<pre><code>an_array = ["Helau", "Mooo", "zoooo"]
+an_array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
+an_array # => ["Helau", "Mooo", "new"]</code></pre>
           </td>
           <td>Assigning new Array Values works a lot like accessing
             them, you just add an equals sign and a new value et
@@ -372,10 +384,16 @@
         </tr>
         <tr>
          <td>Iterating</td>
-         <td>an_array<strong>.each</strong> <em>do |e| .. end</em></td>
          <td>
-           <p>persons<strong>.each</strong> <em>do |p| puts p.name end</em></p>
-           <p>numbers<strong>.each</strong> <em>do |n| n = n * 2</em></p>
+           <code>an_array<strong>.each</strong> <em>do |e| .. end</em></code>
+         </td>
+         <td>
+           <p><code>
+             persons<strong>.each</strong> <em>do |p| puts p.name end</em>
+           </code></p>
+           <p><code>
+             numbers<strong>.each</strong> <em>do |n| n = n * 2</em>
+           </code></p>
          </td>
          <td>
            <p>
@@ -588,7 +606,7 @@
         </tr>
         <tr>
           <td>Create a new app</td>
-          <td><strong>rails new</strong> <em>name</em></td>
+          <td><code><strong>rails new</strong> <em>name</em></code></td>
           <td>Create a new Ruby on Rails application with the given name here.
             This will give you the basic structure to immediately get started.
             After this command has successfully run your application is in a
@@ -598,7 +616,7 @@
         </tr>
         <tr>
           <td>Start the server</td>
-          <td><strong>rails server</strong></td>
+          <td><code><strong>rails server</strong></code></td>
           <td>You have to start the server in order for your application to
             respond to your requests. Starting the server might take some time.
             When it is done, you can access your application under
@@ -608,8 +626,10 @@
         </tr>
         <tr>
           <td>Scaffolding</td>
-          <td><strong>rails generate scaffold</strong>
-            <em>name attribute:type</em></td>
+          <td>
+            <code><strong>rails generate scaffold</strong>
+            <em>name attribute:type</em></code>
+          </td>
           <td>
             <p>
               The scaffolding is a special part of Rails. It basically
@@ -619,8 +639,8 @@
               edit a resource, show a resource and delete a resource.
             </p>
             <p>That's what you most basically need. Take this example:</p>
-            <p><strong>rails generate scaffold</strong> <em>product
-              name:string price:integer</em></p>
+            <p><code><strong>rails generate scaffold</strong> <em>product
+              name:string price:integer</em></code></p>
             <p>Now you can create new products, edit them, view them and delete
               them if you don't need them anymore. Nothing stops you from
               creating a full fledged web shop now ;-)</p>
@@ -628,7 +648,7 @@
         </tr>
         <tr>
           <td>Run migrations</td>
-          <td><strong>rake db:migrate</strong></td>
+          <td><code><strong>rake db:migrate</strong></code></td>
           <td>When you have just added a new migration, for instance by creating
             a new <em>scaffold</em>, this has to be applied to your database
             to make sure that your application works correctly. This command
@@ -638,7 +658,7 @@
         </tr>
         <tr>
           <td>Install dependencies</td>
-          <td><strong>bundle install</strong></td>
+          <td><code><strong>bundle install</strong></code></td>
           <td>If you just added a new gem to your Gemfile you should run bundle
             install to install it. Don't forget to restart your server
             afterwards!</td>
