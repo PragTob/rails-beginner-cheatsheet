@@ -346,16 +346,28 @@
           <td>Creates an Array, empty or with the specified contents.</td>
         </tr>
         <tr>
+          <td>Number of elements</td>
+          <td>
+            <code>array<strong>.size</strong></code>
+          </td>
+          <td>
+            <p><code>[]<strong>.size</strong> # => 0</code></p>
+            <p><code>[1, 2, 3]<strong>.size</strong> # => 3</code></p>
+            <p><code>["foo", "bar"]<strong>.size</strong> # => 2</code></p>
+          </td>
+          <td>Returns the number of elements in an Array.</td>
+        </tr>
+        <tr>
           <td>Access</td>
           <td>
             <code>
-              an_array<strong>[</strong><em>number</em><strong>]</strong>
+              array<strong>[</strong><em>number</em><strong>]</strong>
             </code>
           </td>
           <td>
-<pre><code>an_array = ["Helau", "Mooo", "zoooo"]
-an_array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
-an_array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
+<pre><code>array = ["Helau", "Mooo", "zoooo"]
+array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
+array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
           </td>
           <td>As an Array is a collection of different elements, you often want
             to access a single element of this Array.
@@ -367,15 +379,32 @@ an_array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
           </td>
         </tr>
         <tr>
+         <td>Adding an element</td>
+         <td>
+           <code>array <strong><<</strong> <em>element</em></code>
+         </td>
+         <td>
+<pre><code>
+array = [1, 2, 3]
+array <strong><<</strong> <em>4</em>
+array # => [1, 2, 3, 4]
+</code></pre>
+         </td>
+         <td>
+           Adds the element to the end of the array.
+           Increasing the size of the array by one.
+         </td>
+        </tr>
+        <tr>
           <td>Assigning</td>
           <td>
-            <code>an_array<strong>[</strong><em>number</em><strong>] =
+            <code>array<strong>[</strong><em>number</em><strong>] =
             </strong> <em>new_value</em></code>
           </td>
           <td>
-<pre><code>an_array = ["Helau", "Mooo", "zoooo"]
-an_array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
-an_array # => ["Helau", "Mooo", "new"]</code></pre>
+<pre><code>array = ["Helau", "Mooo", "zoooo"]
+array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
+array # => ["Helau", "Mooo", "new"]</code></pre>
           </td>
           <td>Assigning new Array Values works a lot like accessing
             them, you just add an equals sign and a new value et
@@ -385,14 +414,14 @@ an_array # => ["Helau", "Mooo", "new"]</code></pre>
         <tr>
          <td>Iterating</td>
          <td>
-           <code>an_array<strong>.each</strong> <em>do |e| .. end</em></code>
+           <code>array<strong>.each</strong> <em>do |e| .. end</em></code>
          </td>
          <td>
            <p><code>
              persons<strong>.each</strong> <em>do |p| puts p.name end</em>
            </code></p>
            <p><code>
-             numbers<strong>.each</strong> <em>do |n| n = n * 2</em>
+             numbers<strong>.each</strong> <em>do |n| n = n * 2 end</em>
            </code></p>
          </td>
          <td>
@@ -617,11 +646,14 @@ an_array # => ["Helau", "Mooo", "new"]</code></pre>
         <tr>
           <td>Start the server</td>
           <td><code><strong>rails server</strong></code></td>
-          <td>You have to start the server in order for your application to
+          <td>
+            <p>You have to start the server in order for your application to
             respond to your requests. Starting the server might take some time.
             When it is done, you can access your application under
             <a href="localhost:3000">localhost:3000</a> in the browser of your
-            choice.
+            choice.</p>
+            <p>In order to stop the server, go to the console where it is
+              running and press <strong>Ctrl + C</strong></p>
           </td>
         </tr>
         <tr>
