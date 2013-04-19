@@ -637,7 +637,7 @@ array # => [1, 2, 3, 4]
           <td>Assigning</td>
           <td>
             <code>array<strong>[</strong><em>number</em><strong>] =
-            </strong> <em>new_value</em></code>
+            </strong> <em>value</em></code>
           </td>
           <td>
 <pre><code>array = ["Helau", "Mooo", "zoooo"]
@@ -696,7 +696,109 @@ array # => [0, 14, 79]
       </table>
 
       <h2>Hashes</h2>
-      <p>TODO</p>
+      <p>
+        Hashes are some kind of mapping, they map a given key to some value.
+        You may then retrieve the value based upon its key. Keys ust be unique
+        for a given hash, but you can have the same value for multiple keys.
+        A bit like a dictionary you know. You have a key
+        (the word you are looking up) and
+        that leads you to a value (the entry for that word including a
+        translation). That's also why this construct is called a
+        <em>dictionaries</em> in other languages. But in Ruby we call them
+        hashes.
+      </p>
+      <p>
+        Hashes can map from anything to anything! You can map from Strings to
+        Numbers, Strings to Strings, Numbers to Booleans... and you can mix
+        all of those! Although it is common that at least all the keys are of
+        the same class. <em>Symbols</em> are especially common as keys. Symbols
+        look like this: <code>:symbol</code>. So just a colon followed by some
+        characters. You can think of them as special strings that stand for
+        (symbolize) something!
+      </p>
+      <p>Learn more about hashes at
+        <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a>!
+      </p>
+
+      <table>
+        <tr>
+          <th class="concept">Concept</th>
+          <th class="usage">Usage</th>
+          <th class="example">Examples</th>
+          <th class="description">Description</th>
+        </tr>
+        <tr>
+          <td>Creating</td>
+          <td><code>
+            <strong>{</strong>key <strong>=></strong> value<strong>}</strong>
+          </code></td>
+          <td>
+            <p><code>
+              <strong>{</strong>:hobby <strong>=></strong> "programming"<strong>}</strong>
+            </code></p>
+            <p><code>
+              <strong>{</strong>42 <strong>=></strong> "answer",
+              "score" <strong>=></strong> 100, :name <strong>=></strong> "Tobi"<strong>}</strong>
+            </code></p>
+          </td>
+          <td>
+            You create a hash by surrounding the key-value pairs with curly
+            braces. The arrow always goes from the <em>key</em> to the
+            <em>value</em> depicting the meaning: <em>"This key points to this
+            value."</em>. Key-value pairs are then separated by commas.
+          </td>
+        </tr>
+        <tr>
+          <td>Accessing</td>
+          <td><code>hash<strong>[</strong>key<strong>]</strong></code></td>
+          <td>
+<pre><code>hash = {:key => "value"}
+hash<strong>[</strong>:key<strong>]</strong> # => "value"
+hash<strong>[</strong>foo<strong>]</strong> # => nil
+</code></pre>
+          </td>
+          <td>
+            Accessing an entry in a hash looks a lot like accessing it in
+            an <em>array</em>. However with a hash the key can be anything, not
+            just numbers. If you try to access a key that does not exist the
+            value <code>nil</code> is returned which is Ruby's way of saying
+            "nothing", because if it doesn't know that key it also can't return
+            a value for it!
+          </td>
+        </tr>
+        <tr>
+          <td>Assigning</td>
+          <td>
+            <code>hash<strong>[</strong>key<strong>] =</strong> value</code>
+          </td>
+          <td>
+<pre><code>hash = {:a => "b"}
+hash<strong>[</strong>:key<strong>] =</strong> "value"
+hash # => {:a=>"b", :key=>"value"}
+</code></pre>
+          </td>
+          <td>
+            Assigning values again is pretty similiar to how assigning works
+            with arrays, the difference is just that here the key <em>can</em>
+            be a number but it does not have to be. It can be a symbol, string,
+            number... or anything really!
+          </td>
+        </tr>
+        <tr>
+          <td>Deleting</td>
+          <td><code>hash<strong>.delete</strong><em>(key)</em></code></td>
+          <td>
+<pre><code>hash = {:a => "b", :b => 10}
+hash<strong>.delete</strong><em>(:a)</em>
+hash # => {:b=>10}
+</code></pre>
+          </td>
+          <td>
+            Deletes the specified key from the hash, so that the key and its
+            value can not be accessed any more.
+          </td>
+        </tr>
+      </table>
 
       <h1>Rails Basics</h1>
       <p>This will go into rails specific basics. Most prominently the general
