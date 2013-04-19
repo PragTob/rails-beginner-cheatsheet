@@ -50,7 +50,7 @@ table {
 body {
   font-size: 15px;
   line-height: 1.5; 
-  background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
+  background-color: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-weight: 400;
   color: #666;
@@ -67,8 +67,8 @@ header {
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-  border-bottom: solid 1px #275da1;
+  background-color: #F3360B;
+  border-bottom: solid 1px ##D3360B;
 }
 
 header h1 {
@@ -108,16 +108,6 @@ header h2 {
   max-width: 100%;
 }
 
-/*aside#sidebar {*/
-  /*width: 200px;*/
-  /*padding-left: 20px;*/
-  /*min-height: 504px;*/
-  /*float: right;*/
-  /*background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;*/
-  /*font-size: 12px;*/
-  /*line-height: 1.3;*/
-/*}*/
-
 footer p.repo-owner,
 footer p.repo-owner a {
   font-weight: bold;
@@ -148,7 +138,7 @@ code {
   background-color: #fff;
   border: solid 1px #dbe7f3;
   padding: 0 3px;
-  color: #2879d0;
+  color: #F3360B;
 }
 
 pre {
@@ -241,10 +231,13 @@ em {
   color: #474747;
 } 
 
+h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
+  color: #F3360B;
+  padding-right: 0.3em;
+}
+
 #main-content h1:before {
   content: "/";
-  color: #9ddcff;
-  padding-right: 0.3em;
   margin-left: -0.9em;
 }
 
@@ -257,8 +250,6 @@ em {
 } 
 #main-content h2:before {
   content: "//";
-  color: #9ddcff;
-  padding-right: 0.3em;
   margin-left: -1.5em;
 }
 
@@ -273,8 +264,6 @@ em {
  
 #main-content h3:before {
   content: "///";
-  color: #9ddcff;
-  padding-right: 0.3em;
   margin-left: -2em;
 }
 
@@ -287,8 +276,6 @@ em {
 
 h4:before {
   content: "////";
-  color: #9ddcff;
-  padding-right: 0.3em;
   margin-left: -2.8em;
 }
 
@@ -299,8 +286,6 @@ h4:before {
 } 
 h5:before {
   content: "/////";
-  color: #9ddcff;
-  padding-right: 0.3em;
   margin-left: -3.2em;
 }
 
@@ -311,8 +296,6 @@ h5:before {
 } 
 h6:before {
   content: "//////";
-  color: #9ddcff;
-  padding-right: 0.3em;
   margin-left: -3.7em;
 }
 
@@ -351,7 +334,6 @@ dl dd {
 }
 
 footer {
-  background: transparent url('../images/hr.png') 0 0 no-repeat;
   margin-top: 40px;
   padding-top: 20px;
   padding-bottom: 30px;
