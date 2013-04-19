@@ -7,12 +7,18 @@
         content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
         rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"
+        media="screen"/>
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css"
         media="screen"/>
   <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css"
         media="screen"/>
   <link rel="stylesheet" type="text/css" href="stylesheets/print.css"
         media="print"/>
+  <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
+
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,1185 +28,1266 @@
 </head>
 
 <body>
-<header>
-  <div class="inner">
-    <h1>Rails Beginner Cheatsheet</h1>
-
-    <h2>See the most relevant information for rails beginners with explanations</h2>
-  </div>
-</header>
+<div class="container">
+  <nav>
+    <div class="navbar navbar-inner navbar-fixed-top">
+      <div class="navbar-inner">
+        <a href="#" class='brand'>Rails Beginner Cheat Sheet</a>
+        <ul class="nav">
+          <li><a href="#console">Console</a></li>
+          <li><a href="#ruby">Ruby</a></li>
+          <li><a href="#rails">Rails</a></li>
+          <li><a href="#editor">Editor Tips</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
 
 <div id="content-wrapper">
-  <div class="inner clearfix">
-    <section id="main-content">
-      <p>
-        Hi there! So you are just starting with Rails? That's great!
-        And then this place is for you. It summarizes some of the most important
-        information about Ruby on Rails. Those things that you tend to forget
-        especially in the beginning like: <em>How do I start the server?</em>
-        and <em>What was that config directory for again?</em>.
-        Furthermore it is directly aimed at beginners so contrary to common
-        concise cheat sheets it contains rather verbose descriptions of some
-        concepts.
+<div class="container ">
+<section id="main-content">
+<p>
+  Hi there! So you are just starting with Rails? That's great!
+  And then this place is for you. It summarizes some of the most important
+  information about Ruby on Rails. Those things that you tend to forget
+  especially in the beginning like: <em>How do I start the server?</em>
+  and <em>What was that config directory for again?</em>.
+  Furthermore it is directly aimed at beginners so contrary to common
+  concise cheat sheets it contains rather verbose descriptions of some
+  concepts.
+</p>
+
+<p>
+  A word of warning: I just created this and it <strong>
+  might contain faults and inaccuracies.</strong> Furthermore it is
+  <strong>far from done!</strong> There still is a lot of information
+  missing. But I will try to add it and so can you by contributing
+  to my <a href="https://github.com/PragTob/rails-beginner-cheatsheet">
+  repository</a>. If you <strong>notice any issues</strong> or have ideas
+  to improve this cheat sheet please
+  <a href="https://github.com/PragTob/rails-beginner-cheatsheet/issues">
+    report it at github</a> or <a href="mailto:pragtob@gmail.com">drop me an
+  email</a>.
+</p>
+
+<h1>Cheat Sheet Conventions</h1>
+
+<p>
+  <strong>Bold</strong> words are what is really important e.g.
+  the command and concept shown in the usage category.
+  In the examples and usage columns <em>Italic</em> words mark the
+  arguments of a command/method. If they are in brackets, then they
+  are optional arguments.
+</p>
+
+<p>
+  However <em>italic words</em> in the descriptions or general text denote
+  more general concepts or concepts explained elsewhere in this cheat
+  sheet.
+</p>
+
+<a name="console"></a>
+<h1>Console Basics</h1>
+
+<p>
+  The console (also called <em>command line, command prompt or
+  terminal</em>) is just another way of interacting with your computer.
+  So you can basically do anything with it that you could also do with
+  your graphical desktop user interface. This sections contains a couple
+  of examples.
+</p>
+
+<p>
+  For the different operating systems <strong>starting the console</strong>
+  differs.
+
+<ul>
+  <li><strong>Windows:</strong> Open the start menu and search for
+    command prompt. Alternatively choose <em>execute</em> and enter
+    <em>cmd</em></li>
+  <li><strong>Mac:</strong> Open spotlight type <em>terminal</em> and
+    start that program.
+  </li>
+  <li><strong>Linux:</strong> The terminal should be one of the main
+    options once you open the main menu of your distribution. Otherwise
+    search for <em>terminal</em> if your distribution has such an option
+    or look under Accessories.
+  </li>
+</ul>
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th class="concept">Concept</th>
+    <th class="usage">Usage</th>
+    <th class="example">Examples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td>Change directory</td>
+    <td>
+      <code><strong>cd</strong> <em>directory</em></code>
+    </td>
+    <td>
+      <p><code>cd my_app</code></p>
+
+      <p><code>cd my_app/app/controllers</code></p>
+    </td>
+    <td>Changes the directory to the specified directory on the
+      console
+    </td>
+  </tr>
+  <tr>
+    <td>List contents directory</td>
+    <td>
+      <p><code><strong>ls</strong> <em>(directory)</em></code></p>
+
+      <p><code>Windows: <strong>dir</strong> <em>(directory)</em></code>
       </p>
-      <p>
-        A word of warning: I just created this and it <strong>
-        might contain faults and inaccuracies.</strong> Furthermore it is
-        <strong>far from done!</strong> There still is a lot of information
-        missing. But I will try to add it and so can you by contributing
-        to my <a href="https://github.com/PragTob/rails-beginner-cheatsheet">
-        repository</a>. If you <strong>notice any issues</strong> or have ideas
-        to improve this cheat sheet please
-        <a href="https://github.com/PragTob/rails-beginner-cheatsheet/issues">
-        report it at github</a> or <a href="mailto:pragtob@gmail.com">drop me an
-        email</a>.
-      </p>
+    </td>
+    <td>
+      <p><code><strong>ls</strong></code></p>
 
-      <h1>Cheat Sheet Conventions</h1>
-      <p>
-        <strong>Bold</strong> words are what is really important e.g.
-        the command and concept shown in the usage category.
-        In the examples and usage columns <em>Italic</em> words mark the
-        arguments of a command/method. If they are in brackets, then they
-        are optional arguments.
-      </p>
-      <p>
-        However <em>italic words</em> in the descriptions or general text denote
-        more general concepts or concepts explained elsewhere in this cheat
-        sheet.
-      </p>
+      <p><code><strong>ls</strong> <em>my_app</em></code></p>
+    </td>
+    <td>Shows all contents (files and folders) of the directory.
+      If no directory is specified shows the contents of the
+      current directory.
+    </td>
+  </tr>
+  <tr>
+    <td>Directory you are currently in</td>
+    <td><code><strong>pwd</strong></code></td>
+    <td><code><strong>pwd</strong></code></td>
+    <td>Shows the full path of the directory you are currently
+      in. E.g./home/tobi/railsgirls
+    </td>
+  </tr>
+  <tr>
+    <td>Starting a program</td>
+    <td><code><strong>program</strong> <em>(arguments)</em></code></td>
+    <td>
+      <p><code><strong>firefox</strong></code></p>
 
-      <h1>Console Basics</h1>
-      <p>
-        The console (also called <em>command line, command prompt or
-        terminal</em>) is just another way of interacting with your computer.
-        So you can basically do anything with it that you could also do with
-        your graphical desktop user interface. This sections contains a couple
-        of examples.
-      </p>
-      <p>
-        For the different operating systems <strong>starting the console</strong>
-        differs.
-
-        <ul>
-          <li><strong>Windows:</strong> Open the start menu and search for
-          command prompt. Alternatively choose <em>execute</em> and enter
-          <em>cmd</em></li>
-          <li><strong>Mac:</strong> Open spotlight type <em>terminal</em> and
-          start that program.</li>
-          <li><strong>Linux:</strong> The terminal should be one of the main
-          options once you open the main menu of your distribution. Otherwise
-          search for <em>terminal</em> if your distribution has such an option
-          or look under Accessories.</li>
-        </ul>
-      </p>
-
-      <table>
-        <tr>
-          <th class="concept">Concept</th>
-          <th class="usage">Usage</th>
-          <th class="example">Examples</th>
-          <th class="description">Description</th>
-        </tr>
-        <tr>
-          <td>Change directory</td>
-          <td>
-            <code><strong>cd</strong> <em>directory</em></code>
-          </td>
-          <td>
-            <p><code>cd my_app</code></p>
-
-            <p><code>cd my_app/app/controllers</code></p>
-          </td>
-          <td>Changes the directory to the specified directory on the
-            console
-          </td>
-        </tr>
-        <tr>
-          <td>List contents directory</td>
-          <td>
-            <p><code><strong>ls</strong> <em>(directory)</em></code></p>
-
-            <p><code>Windows: <strong>dir</strong> <em>(directory)</em></code>
-            </p>
-          </td>
-          <td>
-            <p><code><strong>ls</strong></code></p>
-
-            <p><code><strong>ls</strong> <em>my_app</em></code></p>
-          </td>
-          <td>Shows all contents (files and folders) of the directory.
-            If no directory is specified shows the contents of the
-            current directory.
-          </td>
-        </tr>
-        <tr>
-          <td>Directory you are currently in</td>
-          <td><code><strong>pwd</strong></code></td>
-          <td><code><strong>pwd</strong></code></td>
-          <td>Shows the full path of the directory you are currently
-            in. E.g./home/tobi/railsgirls
-          </td>
-        </tr>
-        <tr>
-         <td>Starting a program</td>
-         <td><code><strong>program</strong> <em>(arguments)</em></code></td>
-         <td>
-           <p><code><strong>firefox</strong></code></p>
-           <p><code>
-             <strong>firefox</strong> <em>railsgirlsberlin.de</em></code>
-           </p>
-           <p><code><strong>irb</strong></code></p>
-         </td>
-         <td>Starts the program with the given name and arbitrary arguments
-           if the program takes arguments. Firefox is just one example. When you
-           type in <code>irb</code> this starts <em>interactive ruby</em>.
-         </td>
-        </tr>
-        <tr>
-          <td>Abort the program</td>
-          <td>Press <strong>Ctrl + C</strong></td>
-          <td>-</td>
-          <td>This will abort the program currently running in the terminal.
-            For instance this is used to shut down the rails server.
-            You can also abort many other related tasks with it, including:
-            bundle install, rake db:migrate, git pull and many more!
-          </td>
-        </tr>
-      </table>
-
-
-      <h1>Ruby Basics</h1>
-      <p>
-        Ruby is the programming language Ruby on Rails is written in. So most
-        of the time you will be writing Ruby code. Therefore it is good to
-        grasp the basics of Ruby. If you just want to play with ruby type
-        <strong>irb</strong> into your console to start interactive ruby. There
-        you can easily experiment with Ruby. To leave irb, type
-        <strong>exit</strong>.
-      </p>
-      <p>
-        This is just a very small selection of concepts. This is especially
-        true later on when we talk about what Arrays, Strings etc. can do.
-        For more complete information have a look at
-        <a href="http://ruby-doc.org/">ruby-doc</a> or search with your favorite
-        search engine!
+      <p><code>
+        <strong>firefox</strong> <em>railsgirlsberlin.de</em></code>
       </p>
 
-      <h2>General concepts</h2>
-      <table>
-        <tr>
-          <th class="concept">Concept</th>
-          <th class="usage">Usage</th>
-          <th class="example">Examples</th>
-          <th class="description">Description</th>
-        </tr>
-        <tr>
-          <td>Comment</td>
-          <td>
-            <code><strong>#</strong> <em>Comment text</em></code>
-          </td>
-          <td>
-            <p>
-              <code><strong>#</strong> <em>This text is a comment</em></code>
-            </p>
-            <p>
-              <code>some.ruby_code <strong>#</strong> A comment</code>
-            </p>
-            <p>
-              <code><strong>#</strong> some.ignored_ruby_code</code>
-            </p>
-          </td>
-          <td>
-            Ruby ignores everything that is marked as a comment. It does not try
-            to execute it. Comments are just there for you, some information.
-            Comments are also commonly used to <em>comment out code</em>. That
-            is when you don't want some part of your code to execute anymore
-            but you don't want to delete it just yet, because you are trying
-            different things out.
-          </td>
-        </tr>
-        <tr>
-         <td>Variables</td>
-         <td>
-           <code><strong>variable =</strong> <em>some_value</em></code>
-         </td>
-         <td>
+      <p><code><strong>irb</strong></code></p>
+    </td>
+    <td>Starts the program with the given name and arbitrary arguments
+      if the program takes arguments. Firefox is just one example. When you
+      type in <code>irb</code> this starts <em>interactive ruby</em>.
+    </td>
+  </tr>
+  <tr>
+    <td>Abort the program</td>
+    <td>Press <strong>Ctrl + C</strong></td>
+    <td>-</td>
+    <td>This will abort the program currently running in the terminal.
+      For instance this is used to shut down the rails server.
+      You can also abort many other related tasks with it, including:
+      bundle install, rake db:migrate, git pull and many more!
+    </td>
+  </tr>
+</table>
+
+
+<h1><a name="ruby"></a>Ruby Basics</h1>
+
+<p>
+  Ruby is the programming language Ruby on Rails is written in. So most
+  of the time you will be writing Ruby code. Therefore it is good to
+  grasp the basics of Ruby. If you just want to play with ruby type
+  <strong>irb</strong> into your console to start interactive ruby. There
+  you can easily experiment with Ruby. To leave irb, type
+  <strong>exit</strong>.
+</p>
+
+<p>
+  This is just a very small selection of concepts. This is especially
+  true later on when we talk about what Arrays, Strings etc. can do.
+  For more complete information have a look at
+  <a href="http://ruby-doc.org/">ruby-doc</a> or search with your favorite
+  search engine!
+</p>
+
+<h2>General concepts</h2>
+<table class="table table-striped">
+  <tr>
+    <th class="concept">Concept</th>
+    <th class="usage">Usage</th>
+    <th class="example">Examples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td>Comment</td>
+    <td>
+      <code><strong>#</strong> <em>Comment text</em></code>
+    </td>
+    <td>
+      <p>
+        <code><strong>#</strong> <em>This text is a comment</em></code>
+      </p>
+
+      <p>
+        <code>some.ruby_code <strong>#</strong> A comment</code>
+      </p>
+
+      <p>
+        <code><strong>#</strong> some.ignored_ruby_code</code>
+      </p>
+    </td>
+    <td>
+      Ruby ignores everything that is marked as a comment. It does not try
+      to execute it. Comments are just there for you, some information.
+      Comments are also commonly used to <em>comment out code</em>. That
+      is when you don't want some part of your code to execute anymore
+      but you don't want to delete it just yet, because you are trying
+      different things out.
+    </td>
+  </tr>
+  <tr>
+    <td>Variables</td>
+    <td>
+      <code><strong>variable =</strong> <em>some_value</em></code>
+    </td>
+    <td>
  <pre><code><strong>name =</strong> <em>"Tobi"</em>
-<strong>name</strong> # => "Tobi"</code></pre>
+   <strong>name</strong> # => "Tobi"</code></pre>
 <pre><code><strong>sum =</strong> <em>18 + 5</em>
-<strong>sum</strong> # => 23</code></pre>
-         </td>
-         <td>
-           With a variable you tell Ruby that from now on you want to refer to
-           that value by the name you gave it. So for the first example, from
-           now on when you use <em>name</em> Ruby will know that you meant
-           <em>"Tobi"</em>.
-         </td>
-        </tr>
-        <tr>
-          <td>Console output</td>
-          <td>
-            <code><strong>puts</strong> <em>something</em></code>
-          </td>
-          <td>
-            <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
-            <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
-          </td>
-          <td>
-            Prints its argument to the console. Can be used in Rails apps
-            to print something in the console where the server is running.
-          </td>
-        </tr>
-        <tr>
-          <td>Call a method</td>
-          <td>
-            <code>object<strong>.method</strong><em>(arguments)</em></code>
-          </td>
-          <td>
-            <p><code>string<strong>.length</strong></code></p>
-            <p><code>
-              array<strong>.delete_at</strong><em>(2)</em>
-            </code></p>
-            <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
-          </td>
-          <td>
-            <p>Calling a method is also often referred to as
-            <em>sending a message</em> in Ruby. Basically we are sending an
-            object some kind of message and are waiting for its response.
-            So we kindly ask the object to do something or give us some
-            information.
-            When you call a method/send a message something happens. In the
-            first example we ask a String how long it is e.g. how many
-            characters it consists of. In the last example we substitute all
-            occurrences of "ae" in the string with the german "ä".</p>
-            <p>
-              Different kinds of objects (Strings, Numbers, Arrays...)
-              understand different messages.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>Define a method</td>
-          <td>
+  <strong>sum</strong> # => 23</code></pre>
+    </td>
+    <td>
+      With a variable you tell Ruby that from now on you want to refer to
+      that value by the name you gave it. So for the first example, from
+      now on when you use <em>name</em> Ruby will know that you meant
+      <em>"Tobi"</em>.
+    </td>
+  </tr>
+  <tr>
+    <td>Console output</td>
+    <td>
+      <code><strong>puts</strong> <em>something</em></code>
+    </td>
+    <td>
+      <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
+
+      <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
+    </td>
+    <td>
+      Prints its argument to the console. Can be used in Rails apps
+      to print something in the console where the server is running.
+    </td>
+  </tr>
+  <tr>
+    <td>Call a method</td>
+    <td>
+      <code>object<strong>.method</strong><em>(arguments)</em></code>
+    </td>
+    <td>
+      <p><code>string<strong>.length</strong></code></p>
+
+      <p><code>
+        array<strong>.delete_at</strong><em>(2)</em>
+      </code></p>
+
+      <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
+    </td>
+    <td>
+      <p>Calling a method is also often referred to as
+        <em>sending a message</em> in Ruby. Basically we are sending an
+        object some kind of message and are waiting for its response.
+        So we kindly ask the object to do something or give us some
+        information.
+        When you call a method/send a message something happens. In the
+        first example we ask a String how long it is e.g. how many
+        characters it consists of. In the last example we substitute all
+        occurrences of "ae" in the string with the german "ä".</p>
+
+      <p>
+        Different kinds of objects (Strings, Numbers, Arrays...)
+        understand different messages.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Define a method</td>
+    <td>
 <pre><code><strong>def</strong> <em>name(parameter)</em>
   <em># method body</em>
-<strong>end</strong></code></pre>
-          </td>
-          <td>
+  <strong>end</strong></code></pre>
+    </td>
+    <td>
 <pre><code><strong>def</strong> <em>greet(name)</em>
   <em>puts "Hy there " + name</em>
-<strong>end</strong></code></pre>
-          </td>
-          <td>
-            <p>Methods are basically reusable units of behaviour. And you can
-            define them yourself just like this. Methods are small and focused
-            on implementing a specific behaviour.</p>
-            <p>
-              Our example method for instance is focused on greeting people,
-              you could call it like this: <code>greet("Tobi")</code>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>Equality</td>
-          <td><code>object <strong>==</strong> other</code></td>
-          <td>
-            <p><code>true <strong>==</strong> true # => true</code></p>
-            <p><code>3 <strong>==</strong> 4 # => false</code></p>
-            <p><code>"Hello" <strong>==</strong> "Hello" # => true</code></p>
-            <p><code>"Helo" <strong>==</strong> "Hello" # => false</code></p>
-          </td>
-          <td>
-            With two equal signs you can check if 2 things are basically the
-            same. If so, <code>true</code> will be returned otherwise the result
-            will be <code>false</code>.
-          </td>
-        </tr>
-        <tr>
-          <td>Inequality</td>
-          <td><code>object <strong>!=</strong> other</code></td>
-          <td>
-            <p><code>true <strong>!=</strong> true # => false</code></p>
-            <p><code>3 <strong>!=</strong> 4 # => true</code></p>
-          </td>
-          <td>
-            Inequality is the inverse to equality, e.g. it results in
-            <code>true</code> when two values are not the same and it results
-            in <code>false</code> when they are the same.
-          </td>
-        </tr>
-        <tr>
-          <td>Decisions with if</td>
-          <td>
+  <strong>end</strong></code></pre>
+    </td>
+    <td>
+      <p>Methods are basically reusable units of behaviour. And you can
+        define them yourself just like this. Methods are small and focused
+        on implementing a specific behaviour.</p>
+
+      <p>
+        Our example method for instance is focused on greeting people,
+        you could call it like this: <code>greet("Tobi")</code>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Equality</td>
+    <td><code>object <strong>==</strong> other</code></td>
+    <td>
+      <p><code>true <strong>==</strong> true # => true</code></p>
+
+      <p><code>3 <strong>==</strong> 4 # => false</code></p>
+
+      <p><code>"Hello" <strong>==</strong> "Hello" # => true</code></p>
+
+      <p><code>"Helo" <strong>==</strong> "Hello" # => false</code></p>
+    </td>
+    <td>
+      With two equal signs you can check if 2 things are basically the
+      same. If so, <code>true</code> will be returned otherwise the result
+      will be <code>false</code>.
+    </td>
+  </tr>
+  <tr>
+    <td>Inequality</td>
+    <td><code>object <strong>!=</strong> other</code></td>
+    <td>
+      <p><code>true <strong>!=</strong> true # => false</code></p>
+
+      <p><code>3 <strong>!=</strong> 4 # => true</code></p>
+    </td>
+    <td>
+      Inequality is the inverse to equality, e.g. it results in
+      <code>true</code> when two values are not the same and it results
+      in <code>false</code> when they are the same.
+    </td>
+  </tr>
+  <tr>
+    <td>Decisions with if</td>
+    <td>
 <pre><code><strong>if</strong> <em>condition</em>
   # happens when true
-<strong>else</strong>
+  <strong>else</strong>
   # happens when false
-<strong>end</strong>
+  <strong>end</strong>
 </code></pre>
-          </td>
-          <td>
+    </td>
+    <td>
 <pre><code><strong>if</strong> <em>input == password</em>
   grant_access
-<strong>else</strong>
+  <strong>else</strong>
   deny_access
-<strong>end</strong>
+  <strong>end</strong>
 </code></pre>
-          </td>
-          <td>
-            <p>With if-clauses you can decide based upon a <em>condition</em>
-            what to do. When the condition is considered true, then the code
-            after if is executed. If it is considered false, the code after
-            else is executed.</p>
-            <p>
-              In the example, access is granted based upon the decision if a
-              given input matches the password.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>Constants</td>
-          <td><code><strong>CONSTANT =</strong> <em>some_value</em></code></td>
-          <td>
+    </td>
+    <td>
+      <p>With if-clauses you can decide based upon a <em>condition</em>
+        what to do. When the condition is considered true, then the code
+        after if is executed. If it is considered false, the code after
+        else is executed.</p>
+
+      <p>
+        In the example, access is granted based upon the decision if a
+        given input matches the password.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Constants</td>
+    <td><code><strong>CONSTANT =</strong> <em>some_value</em></code></td>
+    <td>
 <pre><code><strong>PI = 3.1415926535</strong>
-<strong>PI</strong> # => 3.1415926535</code></pre>
+  <strong>PI</strong> # => 3.1415926535</code></pre>
 <pre><code><strong>ADULT_AGE</strong> = 18
-<strong>ADULT_AGE</strong> # => 18</code></pre>
-          </td>
-          <td>
-            Constants look like variables, just in UPCASE. Well both hold
-            values and give you a name to refer to those values. However while
-            the value a variable holds may change or might be of an unknown
-            value (if you save user input in a variable) constants are
-            different. They have a known value that should never change. Think
-            of it a bit like mathematical or physical constants. These don't
-            change, they always refer to the same value.
-          </td>
-        </tr>
-      </table>
+  <strong>ADULT_AGE</strong> # => 18</code></pre>
+    </td>
+    <td>
+      Constants look like variables, just in UPCASE. Well both hold
+      values and give you a name to refer to those values. However while
+      the value a variable holds may change or might be of an unknown
+      value (if you save user input in a variable) constants are
+      different. They have a known value that should never change. Think
+      of it a bit like mathematical or physical constants. These don't
+      change, they always refer to the same value.
+    </td>
+  </tr>
+</table>
 
-      <h2>Numbers</h2>
-      <p>
-        Well numbers are just about what you would expect them to be, normal
-        numbers with whom you can perform basic math operations.
-      </p>
-      <p>
-        More information of numbers can be found in the
-        <a href="http://ruby-doc.org/core-2.0/Numeric.html">ruby-doc of Numeric</a>
-      </p>
+<h2>Numbers</h2>
 
-      <table>
-        <tr>
-          <th class="concept">Concept</th>
-          <th class="usage">Usage</th>
-          <th class="example">Examples</th>
-          <th class="description">Description</th>
-        </tr>
-        <tr>
-          <td>normal Number</td>
-          <td><code><strong>number_of_your_choice</strong></code></td>
-          <td>
-            <p><code><strong>0</strong></code></p>
-            <p><code><strong>-11</strong></code></p>
-            <p><code><strong>42</strong></code></p>
-          </td>
-          <td>
-            Well numbers are natural for Ruby, you just have to enter them!
-          </td>
-        </tr>
-        <tr>
-          <td>Decimals</td>
-          <td><code><strong>main.decimal</strong></code></td>
-          <td>
-            <p><code><strong>3.2</strong></code></p>
-            <p><code><strong>-5.0</strong></code></p>
-          </td>
-          <td>
-            You can achieve decimal numbers in Ruby simply by adding a point.
-          </td>
-        </tr>
-        <tr>
-          <td>Basic Math</td>
-          <td>
-            <code>n <strong>operator</strong> <em>m</em></code>
-          </td>
-          <td>
-            <p><code>2 <strong>+</strong> <em>3</em> # => 5</code></p>
-            <p><code>5 <strong>-</strong> <em>7</em> # => -2</code></p>
-            <p><code>8 <strong>*</strong> <em>7</em> # => 56</code></p>
-            <p><code>84 <strong>/</strong> <em>4</em> # => 21</code></p>
-          </td>
-          <td>
-            In Ruby you can easily use basic math operations.
-            In that sense you may use Ruby as a super powered calculator.
-          </td>
-        </tr>
-        <tr>
-          <td>Comparison</td>
-          <td>
-            <code>n <strong>operator</strong> <em>m</em></code>
-          </td>
-          <td>
-            <p><code>12 <strong>></strong> <em>3</em> # => true</code></p>
-            <p><code>12 <strong><</strong> <em>3</em> # => false</code></p>
-            <p><code>7 <strong>>=</strong> <em>7</em> # => true</code></p>
-          </td>
-          <td>
-            <p>Numbers may be compared to see if a number is bigger or smaller
-            than another number. When you got the age of a person saved in the
-            <code>age</code> variable you can see if that person is considered
-            an adult in Germany:</p>
-            <p><code>age >= 18 # true or false</code></p>
-          </td>
-        </tr>
-      </table>
+<p>
+  Well numbers are just about what you would expect them to be, normal
+  numbers with whom you can perform basic math operations.
+</p>
 
-      <h2>Strings</h2>
-      <p>
-        Strings are used to hold textual information. As such they may contain
-        single characters, words, sentences or a whole book. However you may
-        just think of them as an ordered collection of characters.
-      </p>
-      <p>
-        You can find out more about at the
-        <a href="http://ruby-doc.org/core-2.0/String.html">ruby-doc page about
-        Strings</a>.
-      </p>
+<p>
+  More information of numbers can be found in the
+  <a href="http://ruby-doc.org/core-2.0/Numeric.html">ruby-doc of Numeric</a>
+</p>
 
-      <table>
-        <tr>
-          <th class="concept">Concept</th>
-          <th class="usage">Usage</th>
-          <th class="example">Examples</th>
-          <th class="description">Description</th>
-        </tr>
-        <tr>
-          <td>Create</td>
-          <td>
-            <p><code><strong>"</strong>A string<strong>"</strong></code></p>
-          </td>
-          <td>
-            <p><code><strong>"</strong>Hello World<strong>"</strong></code></p>
-            <p><code><strong>"</strong>a<strong>"</strong></code></p>
-            <p><code>
-              <strong>"</strong>Just characters 129 _!$%^<strong>"</strong>
-            </code></p>
-            <p><code><strong>""</strong></code></p>
-          </td>
-          <td>
-            A string is created by simply putting quotation marks around a
-            character sequence.
-          </td>
-        </tr>
-        <tr>
-          <td>Length</td>
-          <td><code>string<strong>.length</strong></code></td>
-          <td>
-            <p><code>"Hello"<strong>.length</strong> # => 5</code></p>
-            <p><code>""<strong>.length</strong> # => 0</code></p>
-          </td>
-          <td>
-            You can send a string a message, asking it how long it is and it
-            responds with the number of characters it consists of. You could
-            use this to check if the desired password of a user exceeds the
-            required minimum length.
-          </td>
-        </tr>
-        <tr>
-          <td>Concatenate</td>
-          <td><code>string <strong>+</strong> <em>string2</em></code></td>
-          <td>
+<table class="table table-striped">
+  <tr>
+    <th class="concept">Concept</th>
+    <th class="usage">Usage</th>
+    <th class="example">Examples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td>normal Number</td>
+    <td><code><strong>number_of_your_choice</strong></code></td>
+    <td>
+      <p><code><strong>0</strong></code></p>
+
+      <p><code><strong>-11</strong></code></p>
+
+      <p><code><strong>42</strong></code></p>
+    </td>
+    <td>
+      Well numbers are natural for Ruby, you just have to enter them!
+    </td>
+  </tr>
+  <tr>
+    <td>Decimals</td>
+    <td><code><strong>main.decimal</strong></code></td>
+    <td>
+      <p><code><strong>3.2</strong></code></p>
+
+      <p><code><strong>-5.0</strong></code></p>
+    </td>
+    <td>
+      You can achieve decimal numbers in Ruby simply by adding a point.
+    </td>
+  </tr>
+  <tr>
+    <td>Basic Math</td>
+    <td>
+      <code>n <strong>operator</strong> <em>m</em></code>
+    </td>
+    <td>
+      <p><code>2 <strong>+</strong> <em>3</em> # => 5</code></p>
+
+      <p><code>5 <strong>-</strong> <em>7</em> # => -2</code></p>
+
+      <p><code>8 <strong>*</strong> <em>7</em> # => 56</code></p>
+
+      <p><code>84 <strong>/</strong> <em>4</em> # => 21</code></p>
+    </td>
+    <td>
+      In Ruby you can easily use basic math operations.
+      In that sense you may use Ruby as a super powered calculator.
+    </td>
+  </tr>
+  <tr>
+    <td>Comparison</td>
+    <td>
+      <code>n <strong>operator</strong> <em>m</em></code>
+    </td>
+    <td>
+      <p><code>12 <strong>></strong> <em>3</em> # => true</code></p>
+
+      <p><code>12 <strong><</strong> <em>3</em> # => false</code></p>
+
+      <p><code>7 <strong>>=</strong> <em>7</em> # => true</code></p>
+    </td>
+    <td>
+      <p>Numbers may be compared to see if a number is bigger or smaller
+        than another number. When you got the age of a person saved in the
+        <code>age</code> variable you can see if that person is considered
+        an adult in Germany:</p>
+
+      <p><code>age >= 18 # true or false</code></p>
+    </td>
+  </tr>
+</table>
+
+<h2>Strings</h2>
+
+<p>
+  Strings are used to hold textual information. As such they may contain
+  single characters, words, sentences or a whole book. However you may
+  just think of them as an ordered collection of characters.
+</p>
+
+<p>
+  You can find out more about at the
+  <a href="http://ruby-doc.org/core-2.0/String.html">ruby-doc page about
+    Strings</a>.
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th class="concept">Concept</th>
+    <th class="usage">Usage</th>
+    <th class="example">Examples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td>Create</td>
+    <td>
+      <p><code><strong>"</strong>A string<strong>"</strong></code></p>
+    </td>
+    <td>
+      <p><code><strong>"</strong>Hello World<strong>"</strong></code></p>
+
+      <p><code><strong>"</strong>a<strong>"</strong></code></p>
+
+      <p><code>
+        <strong>"</strong>Just characters 129 _!$%^<strong>"</strong>
+      </code></p>
+
+      <p><code><strong>""</strong></code></p>
+    </td>
+    <td>
+      A string is created by simply putting quotation marks around a
+      character sequence.
+    </td>
+  </tr>
+  <tr>
+    <td>Length</td>
+    <td><code>string<strong>.length</strong></code></td>
+    <td>
+      <p><code>"Hello"<strong>.length</strong> # => 5</code></p>
+
+      <p><code>""<strong>.length</strong> # => 0</code></p>
+    </td>
+    <td>
+      You can send a string a message, asking it how long it is and it
+      responds with the number of characters it consists of. You could
+      use this to check if the desired password of a user exceeds the
+      required minimum length.
+    </td>
+  </tr>
+  <tr>
+    <td>Concatenate</td>
+    <td><code>string <strong>+</strong> <em>string2</em></code></td>
+    <td>
 <pre><code>"Hello " <strong>+</strong> <em>"reader"</em>
-# => "Hello reader"</code></pre>
-<p><code>"a" <strong>+</strong> <em>"b"</em> <strong>+</strong> <em>"c"</em>
-# => "abc"</code></p>
-          </td>
-          <td>Concatenates 2 or more strings together and returns the result.</td>
-        </tr>
-        <tr>
-          <td>Substitute</td>
-          <td><code>string<strong>.gsub</strong><em>(a_string, substitute)</em></code></td>
-          <td>
-            <p><code>"Hae"<strong>.gsub</strong><em>("ae", "ä") #=> "Hä"</em></code></p>
-            <p><code>"Hae"<strong>.gsub</strong><em>("b", "ä") #=> "Hae"</em></code></p>
-            <p><code>"Greenie"<strong>.gsub</strong><em>("e", "u") #=> "Gruuniu"</em></code></p>
-          </td>
-          <td><em>gsub</em> stands for globally substitute. It substitutes all
-          occurences of <code>a_string</code> within the string with
-          <code>substitute</code></td>
-        </tr>
-        <tr>
-          <td>Access</td>
-          <td>
-            <code>
-              string<strong>[</strong><em>position</em><strong>]</strong>
-            </code>
-          </td>
-          <td>
-            <code>
-              "Hello"<strong>[</strong><em>1</em><strong>]</strong> # => "e"
-            </code>
-          </td>
-          <td>
-            Access the character at the given position in the string. Be aware
-            that the first position is actually position <em>0</em>.
-          </td>
-        </tr>
-      </table>
+  # => "Hello reader"</code></pre>
+      <p><code>"a" <strong>+</strong> <em>"b"</em> <strong>+</strong>
+        <em>"c"</em>
+        # => "abc"</code></p>
+    </td>
+    <td>Concatenates 2 or more strings together and returns the result.</td>
+  </tr>
+  <tr>
+    <td>Substitute</td>
+    <td>
+<pre><code>string<strong>.gsub</strong><em>(a_string,
+  substitute)</em></code></pre>
+    </td>
+    <td>
+<pre><code>"Hae"<strong>.gsub</strong><em>("ae", "ä")
+  # => "Hä"</em></code></pre>
+<pre><code>"Hae"<strong>.gsub</strong><em>("b", "ä")
+  # => "Hae"</em></code></pre>
+<pre><code>"Greenie"<strong>.gsub</strong><em>("e", "u")
+  # => "Gruuniu"</em></code></pre>
+    </td>
+    <td><em>gsub</em> stands for globally substitute. It substitutes all
+      occurences of <code>a_string</code> within the string with
+      <code>substitute</code></td>
+  </tr>
+  <tr>
+    <td>Access</td>
+    <td>
+      <code>
+        string<strong>[</strong><em>position</em><strong>]</strong>
+      </code>
+    </td>
+    <td>
+      <code>
+        "Hello"<strong>[</strong><em>1</em><strong>]</strong> # => "e"
+      </code>
+    </td>
+    <td>
+      Access the character at the given position in the string. Be aware
+      that the first position is actually position <em>0</em>.
+    </td>
+  </tr>
+</table>
 
 
-      <h2>Arrays</h2>
-      <p>
-        An array is an ordered collection of things which is indexed by numbers.
-        So an array contains multiple objects that are mostly related to each
-        other. So what could you do? You could store a collection of the names
-        of your favorite fruits and name it <em>fruits</em>.
-      </p>
-      <p>
-        This is just a small selection of things an Array can do, for more
-        information have a look at the
-        <a href= http://ruby-doc.org/core-2.0/Array.html>ruby-doc of Array</a>.
-      </p>
+<h2>Arrays</h2>
 
-      <table>
-        <tr>
-          <th class="concept">Concept</th>
-          <th class="usage">Usage</th>
-          <th class="example">Examples</th>
-          <th class="description">Description</th>
-        </tr>
-        <tr>
-          <td>Create</td>
-          <td>
-            <code><strong>[</strong><em>arguments</em><strong>]</strong></code>
-          </td>
-          <td>
-            <p><code><strong>[]</strong></code></p>
-            <p><code>
-              <strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong>
-            </code></p>
-          </td>
-          <td>Creates an Array, empty or with the specified contents.</td>
-        </tr>
-        <tr>
-          <td>Number of elements</td>
-          <td>
-            <code>array<strong>.size</strong></code>
-          </td>
-          <td>
-            <p><code>[]<strong>.size</strong> # => 0</code></p>
-            <p><code>[1, 2, 3]<strong>.size</strong> # => 3</code></p>
-            <p><code>["foo", "bar"]<strong>.size</strong> # => 2</code></p>
-          </td>
-          <td>Returns the number of elements in an Array.</td>
-        </tr>
-        <tr>
-          <td>Access</td>
-          <td>
-            <code>
-              array<strong>[</strong><em>position</em><strong>]</strong>
-            </code>
-          </td>
-          <td>
+<p>
+  An array is an ordered collection of things which is indexed by numbers.
+  So an array contains multiple objects that are mostly related to each
+  other. So what could you do? You could store a collection of the names
+  of your favorite fruits and name it <em>fruits</em>.
+</p>
+
+<p>
+  This is just a small selection of things an Array can do, for more
+  information have a look at the
+  <a href=http://ruby-doc.org/core-2.0/Array.html>ruby-doc of Array</a>.
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th class="concept">Concept</th>
+    <th class="usage">Usage</th>
+    <th class="example">Examples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td>Create</td>
+    <td>
+      <code><strong>[</strong><em>arguments</em><strong>]</strong></code>
+    </td>
+    <td>
+      <p><code><strong>[]</strong></code></p>
+
+      <p><code>
+        <strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong>
+      </code></p>
+    </td>
+    <td>Creates an Array, empty or with the specified contents.</td>
+  </tr>
+  <tr>
+    <td>Number of elements</td>
+    <td>
+      <code>array<strong>.size</strong></code>
+    </td>
+    <td>
+      <p><code>[]<strong>.size</strong> # => 0</code></p>
+
+      <p><code>[1, 2, 3]<strong>.size</strong> # => 3</code></p>
+
+      <p><code>["foo", "bar"]<strong>.size</strong> # => 2</code></p>
+    </td>
+    <td>Returns the number of elements in an Array.</td>
+  </tr>
+  <tr>
+    <td>Access</td>
+    <td>
+      <code>
+        array<strong>[</strong><em>position</em><strong>]</strong>
+      </code>
+    </td>
+    <td>
 <pre><code>array = ["Helau", "Mooo", "zoooo"]
-array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
-array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
-          </td>
-          <td>As an Array is a collection of different elements, you often want
-            to access a single element of this Array.
-            Arrays are indexed by numbers, you can use that number
-            to access an individual element. Be aware that the
-            numbering actually starts 0 so the first element
-            actually is the 0th. And the last element of a 3 element
-            array is element number 2.
-          </td>
-        </tr>
-        <tr>
-         <td>Adding an element</td>
-         <td>
-           <code>array <strong><<</strong> <em>element</em></code>
-         </td>
-         <td>
-<pre><code>
-array = [1, 2, 3]
-array <strong><<</strong> <em>4</em>
-array # => [1, 2, 3, 4]
+  array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
+  array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
+    </td>
+    <td>As an Array is a collection of different elements, you often want
+      to access a single element of this Array.
+      Arrays are indexed by numbers, you can use that number
+      to access an individual element. Be aware that the
+      numbering actually starts 0 so the first element
+      actually is the 0th. And the last element of a 3 element
+      array is element number 2.
+    </td>
+  </tr>
+  <tr>
+    <td>Adding an element</td>
+    <td>
+      <code>array <strong><<</strong> <em>element</em></code>
+    </td>
+    <td>
+<pre><code>array = [1, 2, 3]
+  array <strong><<</strong> <em>4</em>
+  array # => [1, 2, 3, 4]
 </code></pre>
-         </td>
-         <td>
-           Adds the element to the end of the array.
-           Increasing the size of the array by one.
-         </td>
-        </tr>
-        <tr>
-          <td>Assigning</td>
-          <td>
-            <code>array<strong>[</strong><em>number</em><strong>] =
-            </strong> <em>value</em></code>
-          </td>
-          <td>
+    </td>
+    <td>
+      Adds the element to the end of the array.
+      Increasing the size of the array by one.
+    </td>
+  </tr>
+  <tr>
+    <td>Assigning</td>
+    <td>
+      <code>array<strong>[</strong><em>number</em><strong>] =
+      </strong> <em>value</em></code>
+    </td>
+    <td>
 <pre><code>array = ["Helau", "Mooo", "zoooo"]
-array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
-array # => ["Helau", "Mooo", "new"]</code></pre>
-          </td>
-          <td>Assigning new Array Values works a lot like accessing
-            them, you just add an equals sign and a new value et
-            voila you changed an element of the array! Weehuuuuu!
-          </td>
-        </tr>
-        <tr>
-          <td>Delete at index</td>
-          <td><code>
-            array<strong>.delete_at</strong><em>(i)</em>
-          </code></td>
-          <td>
+  array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
+  array # => ["Helau", "Mooo", "new"]</code></pre>
+    </td>
+    <td>Assigning new Array Values works a lot like accessing
+      them, you just add an equals sign and a new value et
+      voila you changed an element of the array! Weehuuuuu!
+    </td>
+  </tr>
+  <tr>
+    <td>Delete at index</td>
+    <td><code>
+      array<strong>.delete_at</strong><em>(i)</em>
+    </code></td>
+    <td>
 <pre><code>array = [0, 14, 55, 79]
-array<strong>.delete_at</strong><em>(2)</em>
-array # => [0, 14, 79]
+  array<strong>.delete_at</strong><em>(2)</em>
+  array # => [0, 14, 79]
 </code></pre>
-          </td>
-          <td>
-            Deletes the element of the array at the specified index. Remember
-            that indexing starts at 0. If you specify an index bigger then the
-            number of elements that actually are in the array nothing will
-            happen.
-          </td>
-        </tr>
-        <tr>
-          <td>Iterating</td>
-          <td>
-            <code>array<strong>.each</strong> <em>do |e| .. end</em></code>
-          </td>
-          <td>
-           <p><code>
-             persons<strong>.each</strong> <em>do |p| puts p.name end</em>
-           </code></p>
-           <p><code>
-             numbers<strong>.each</strong> <em>do |n| n = n * 2 end</em>
-           </code></p>
-          </td>
-          <td>
-           <p>
-             Iterating basically means doing something for <em>each</em> element
-             of the array. What is done between <em>do</em> and <em>end</em>
-             defines what is done to every element in the array.
-           </p>
-           <p>
-             The first example prints the name of every person in the array to
-             the console. The second example simply doubles every number of a
-             given array.
-           </p>
-</td>
-        </tr>
-      </table>
+    </td>
+    <td>
+      Deletes the element of the array at the specified index. Remember
+      that indexing starts at 0. If you specify an index bigger then the
+      number of elements that actually are in the array nothing will
+      happen.
+    </td>
+  </tr>
+  <tr>
+    <td>Iterating</td>
+    <td>
+      <code>array<strong>.each</strong> <em>do |e| .. end</em></code>
+    </td>
+    <td>
+      <p><code>
+        persons<strong>.each</strong> <em>do |p| puts p.name end</em>
+      </code></p>
 
-      <h2>Hashes</h2>
+      <p><code>
+        numbers<strong>.each</strong> <em>do |n| n = n * 2 end</em>
+      </code></p>
+    </td>
+    <td>
       <p>
-        Hashes are some kind of mapping, they map a given key to some value.
-        You may then retrieve the value based upon its key. Keys ust be unique
-        for a given hash, but you can have the same value for multiple keys.
-        A bit like a dictionary you know. You have a key
-        (the word you are looking up) and
-        that leads you to a value (the entry for that word including a
-        translation). That's also why this construct is called a
-        <em>dictionaries</em> in other languages. But in Ruby we call them
-        hashes.
-      </p>
-      <p>
-        Hashes can map from anything to anything! You can map from Strings to
-        Numbers, Strings to Strings, Numbers to Booleans... and you can mix
-        all of those! Although it is common that at least all the keys are of
-        the same class. <em>Symbols</em> are especially common as keys. Symbols
-        look like this: <code>:symbol</code>. So just a colon followed by some
-        characters. You can think of them as special strings that stand for
-        (symbolize) something!
-      </p>
-      <p>Learn more about hashes at
-        <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a>!
+        Iterating basically means doing something for <em>each</em> element
+        of the array. What is done between <em>do</em> and <em>end</em>
+        defines what is done to every element in the array.
       </p>
 
-      <table>
-        <tr>
-          <th class="concept">Concept</th>
-          <th class="usage">Usage</th>
-          <th class="example">Examples</th>
-          <th class="description">Description</th>
-        </tr>
-        <tr>
-          <td>Creating</td>
-          <td><code>
-            <strong>{</strong>key <strong>=></strong> value<strong>}</strong>
-          </code></td>
-          <td>
-            <p><code>
-              <strong>{</strong>:hobby <strong>=></strong> "programming"<strong>}</strong>
-            </code></p>
-            <p><code>
-              <strong>{</strong>42 <strong>=></strong> "answer",
-              "score" <strong>=></strong> 100, :name <strong>=></strong> "Tobi"<strong>}</strong>
-            </code></p>
-          </td>
-          <td>
-            You create a hash by surrounding the key-value pairs with curly
-            braces. The arrow always goes from the <em>key</em> to the
-            <em>value</em> depicting the meaning: <em>"This key points to this
-            value."</em>. Key-value pairs are then separated by commas.
-          </td>
-        </tr>
-        <tr>
-          <td>Accessing</td>
-          <td><code>hash<strong>[</strong>key<strong>]</strong></code></td>
-          <td>
+      <p>
+        The first example prints the name of every person in the array to
+        the console. The second example simply doubles every number of a
+        given array.
+      </p>
+    </td>
+  </tr>
+</table>
+
+<h2>Hashes</h2>
+
+<p>
+  Hashes are some kind of mapping, they map a given key to some value.
+  You may then retrieve the value based upon its key. Keys ust be unique
+  for a given hash, but you can have the same value for multiple keys.
+  A bit like a dictionary you know. You have a key
+  (the word you are looking up) and
+  that leads you to a value (the entry for that word including a
+  translation). That's also why this construct is called a
+  <em>dictionaries</em> in other languages. But in Ruby we call them
+  hashes.
+</p>
+
+<p>
+  Hashes can map from anything to anything! You can map from Strings to
+  Numbers, Strings to Strings, Numbers to Booleans... and you can mix
+  all of those! Although it is common that at least all the keys are of
+  the same class. <em>Symbols</em> are especially common as keys. Symbols
+  look like this: <code>:symbol</code>. So just a colon followed by some
+  characters. You can think of them as special strings that stand for
+  (symbolize) something!
+</p>
+
+<p>Learn more about hashes at
+  <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a>!
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th class="concept">Concept</th>
+    <th class="usage">Usage</th>
+    <th class="hash-example">Examples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td>Creating</td>
+    <td><code>
+      <strong>{</strong>key <strong>=></strong> value<strong>}</strong>
+    </code></td>
+    <td>
+      <p><code>
+        <strong>{</strong>:hobby <strong>=></strong>
+        "programming"<strong>}</strong>
+      </code></p>
+<pre><code><strong>{</strong>42 <strong>=></strong> "answer", "score"
+  <strong>=></strong> 100,
+  :name <strong>=></strong> "Tobi"<strong>}</strong>
+</code></pre>
+    </td>
+    <td>
+      You create a hash by surrounding the key-value pairs with curly
+      braces. The arrow always goes from the <em>key</em> to the
+      <em>value</em> depicting the meaning: <em>"This key points to this
+      value."</em>. Key-value pairs are then separated by commas.
+    </td>
+  </tr>
+  <tr>
+    <td>Accessing</td>
+    <td><code>hash<strong>[</strong>key<strong>]</strong></code></td>
+    <td>
 <pre><code>hash = {:key => "value"}
-hash<strong>[</strong>:key<strong>]</strong> # => "value"
-hash<strong>[</strong>foo<strong>]</strong> # => nil
+  hash<strong>[</strong>:key<strong>]</strong> # => "value"
+  hash<strong>[</strong>foo<strong>]</strong> # => nil
 </code></pre>
-          </td>
-          <td>
-            Accessing an entry in a hash looks a lot like accessing it in
-            an <em>array</em>. However with a hash the key can be anything, not
-            just numbers. If you try to access a key that does not exist the
-            value <code>nil</code> is returned which is Ruby's way of saying
-            "nothing", because if it doesn't know that key it also can't return
-            a value for it!
-          </td>
-        </tr>
-        <tr>
-          <td>Assigning</td>
-          <td>
-            <code>hash<strong>[</strong>key<strong>] =</strong> value</code>
-          </td>
-          <td>
+    </td>
+    <td>
+      Accessing an entry in a hash looks a lot like accessing it in
+      an <em>array</em>. However with a hash the key can be anything, not
+      just numbers. If you try to access a key that does not exist the
+      value <code>nil</code> is returned which is Ruby's way of saying
+      "nothing", because if it doesn't know that key it also can't return
+      a value for it!
+    </td>
+  </tr>
+  <tr>
+    <td>Assigning</td>
+    <td>
+      <code>hash<strong>[</strong>key<strong>] =</strong> value</code>
+    </td>
+    <td>
 <pre><code>hash = {:a => "b"}
-hash<strong>[</strong>:key<strong>] =</strong> "value"
-hash # => {:a=>"b", :key=>"value"}
+  hash<strong>[</strong>:key<strong>] =</strong> "value"
+  hash # => {:a=>"b", :key=>"value"}
 </code></pre>
-          </td>
-          <td>
-            Assigning values again is pretty similiar to how assigning works
-            with arrays, the difference is just that here the key <em>can</em>
-            be a number but it does not have to be. It can be a symbol, string,
-            number... or anything really!
-          </td>
-        </tr>
-        <tr>
-          <td>Deleting</td>
-          <td><code>hash<strong>.delete</strong><em>(key)</em></code></td>
-          <td>
+    </td>
+    <td>
+      Assigning values again is pretty similiar to how assigning works
+      with arrays, the difference is just that here the key <em>can</em>
+      be a number but it does not have to be. It can be a symbol, string,
+      number... or anything really!
+    </td>
+  </tr>
+  <tr>
+    <td>Deleting</td>
+    <td><code>hash<strong>.delete</strong><em>(key)</em></code></td>
+    <td>
 <pre><code>hash = {:a => "b", :b => 10}
-hash<strong>.delete</strong><em>(:a)</em>
-hash # => {:b=>10}
+  hash<strong>.delete</strong><em>(:a)</em>
+  hash # => {:b=>10}
 </code></pre>
-          </td>
-          <td>
-            Deletes the specified key from the hash, so that the key and its
-            value can not be accessed any more.
-          </td>
-        </tr>
-      </table>
+    </td>
+    <td>
+      Deletes the specified key from the hash, so that the key and its
+      value can not be accessed any more.
+    </td>
+  </tr>
+</table>
 
-      <h1>Rails Basics</h1>
-      <p>This will go into rails specific basics. Most prominently the general
-        structure of a Rails application and the important command line
-        commands.
+<h1><a name="rails"></a>Rails Basics</h1>
+
+<p>This will go into rails specific basics. Most prominently the general
+  structure of a Rails application and the important command line
+  commands.
+</p>
+
+<h2>The Structure of a Rails app</h2>
+An overview of all the folders of brand new Rails application, outlining
+what they are there for. Also touching upon the most important files.
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>app</td>
+    <td>This folder contains your application. Therefore it is the
+      <strong>most important folder</strong> in ruby on rails and it is
+      worth digging into its sub folders. See the following rows.
+    </td>
+  </tr>
+  <tr>
+    <td>app/assets</td>
+    <td>Assets basically are your front end stuff. This folder contains
+      <em>images</em> you use on your website, <em>javascripts</em> for
+      all your fancy front end interaction and <em>stylesheets</em> for
+      all your css making your website absolutely beautiful.
+    </td>
+  </tr>
+  <tr>
+    <td>app/controllers</td>
+    <td>The controllers subdirectory contains the different controllers of
+      an application. A controller handles the requests from
+      the users. It is often responsible for a single resource type,
+      such as places, users or attendees. Controllers also tie together
+      the <em>models</em> and the <em>views</em>.
+    </td>
+  </tr>
+  <tr>
+    <td>app/helpers</td>
+    <td>Helpers are used to take care of logic that is needed in the views
+      in order to keep the views clean of logic and reuse that logic in
+      multiple views.
+    </td>
+  </tr>
+  <tr>
+    <td>app/mailers</td>
+    <td>Functionality to send emails goes here.</td>
+  </tr>
+  <tr>
+    <td>app/models</td>
+    <td>The models subdirectory holds the classes that model the business
+      logic of our application. It is concerned with the things our
+      application is about. Often this is data, that is also saved in the
+      database. Examples here are a Person, or a Place class with all
+      their typical behaviour.
+    </td>
+  </tr>
+  <tr>
+    <td>app/views</td>
+    <td>
+      <p>The views subdirectory contains the display templates that will
+        be displayed to the user after a successful request.
+        By default they are written in HTML with embedded ruby
+        (.html.erb). The embedded ruby is used to insert data from the
+        application. It is then converted to HTML and send to the browser
+        of the user. It has subdirectories for every resource of our
+        application e.g. places, persons. These subdirectories contain the
+        associated view files.</p>
+
+      <p>Files starting with an underscore (<em>_</em>) are so called
+        <em>partials</em>. Those are parts of a view which are reused in
+        other views. A common example is <em>_form.html.erb</em> which
+        contains the basic form for a given resource. It is used in the
+        <em>new</em> and in the <em>edit</em> view since creating
+        something
+        and editing something looks pretty similar.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>config</td>
+    <td>This directory contains the configuration files that your
+      application will need, including your database configuration (in
+      <em>database.yml</em>) and the particularly important
+      <em>routes.rb</em> which decides how web requests are handled.
+      More specifically: for a given URL it decides which
+      <em>controller</em> will handle the request.
+    </td>
+  </tr>
+  <tr>
+    <td>db</td>
+    <td>Contains a lot of <em>database</em> related files.
+      Most importantly the <em>migrations</em> subdirectory, containing
+      all your database migrations. Those files basically define how your
+      database should look like. This is important as it, among other
+      things, defines what attributes your models have. With migrations
+      you can add new attributes to existing models or create new ones.
+      So you could add the <em>favorite_color</em> attribute to your
+      Person model so everyone can specify their favorite color.
+    </td>
+  </tr>
+  <tr>
+    <td>doc</td>
+    <td>Contains the documentation you create for your application. Not
+      too important when starting out.
+    </td>
+  </tr>
+  <tr>
+    <td>lib</td>
+    <td>Short for library. Contains code you developed that is not only
+      specific to your application but could be used elsewhere.
+      This might be a set of functionality related to getting specific
+      information from Facebook.
+    </td>
+  </tr>
+  <tr>
+    <td>log</td>
+    <td>See all the funny stuff that is written in the console where you
+      started the rails server? That goes here into
+      <em>development.log</em>. Basically logs contain runtime information
+      of your application. Also if an error happened, it will be noted
+      here.
+    </td>
+  </tr>
+  <tr>
+    <td>public</td>
+    <td>Contains general non dynamic files like some html pages.</td>
+  </tr>
+  <tr>
+    <td>script</td>
+    <td>By default contains what is executed when you type in the
+      <em>rails</em> command. That's not really important to know in the
+      beginning though.
+    </td>
+  </tr>
+  <tr>
+    <td>test</td>
+    <td>Contains the tests for your application. With tests you make sure
+      that your application actually does what you think it does. This
+      directory might also be called <em>spec</em>, when you are using
+      rspec/
+    </td>
+  </tr>
+  <tr>
+    <td>vendor</td>
+    <td>Libraries that you do not own e.g. somebody else owns them. You
+      will install most of those as <em>ruby gems (see Gemfile)</em> and
+      those will not show up here. However if they are not available as
+      ruby gems then you should put them here. This might be the case for
+      jQuery plugins. Probably won't be used that often in the beginning.
+    </td>
+  </tr>
+  <tr>
+    <td>Gemfile</td>
+    <td><p>A list of the gems, more generally called libraries,
+      (= set of functionality) your application depends on. For Rails
+      applications this will always be rails.</p>
+
+      <p>If you want to add a new gem to your app all you have to do is
+        add "<strong>gem</strong> <em>gem_name</em>" to your Gemfile,
+        optionally specifying a version number. Save the file and then run
+        <em>bundle install</em> to install the gem.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Gemfile.lock</td>
+    <td>This file contains the versions of all gems you use. Because some
+      gems depend on other gems so ruby is so nice to install them for
+      you automatically. It also contains the concrete version numbers.
+      It can be used to make sure that everyone within a team is working
+      with the same versions of gems. The file is auto generated.
+      <em>Do not touch this file.</em></td>
+  </tr>
+</table>
+
+<h2>Important Rails commands</h2>
+
+<p>
+  A summary of important commands that can be used in the context of
+  your ruby on rails app. For everyone of these commands but the
+  <em>rails new</em> command you have to be in the directory of your app.
+  That is the directory with the subfolders described above
+  (app, config...)
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th>Concept</th>
+    <th>Usage</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Create a new app</td>
+    <td><code><strong>rails new</strong> <em>name</em></code></td>
+    <td>Create a new Ruby on Rails application with the given name here.
+      This will give you the basic structure to immediately get started.
+      After this command has successfully run your application is in a
+      folder named like the name you gave the application. You have to
+      <em>cd</em> into that folder.
+    </td>
+  </tr>
+  <tr>
+    <td>Start the server</td>
+    <td><code><strong>rails server</strong></code></td>
+    <td>
+      <p>You have to start the server in order for your application to
+        respond to your requests. Starting the server might take some time.
+        When it is done, you can access your application under
+        <a href="localhost:3000">localhost:3000</a> in the browser of your
+        choice.</p>
+
+      <p>In order to stop the server, go to the console where it is
+        running and press <strong>Ctrl + C</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Scaffolding</td>
+    <td>
+      <code><strong>rails generate scaffold</strong>
+        <em>name attribute:type</em></code>
+    </td>
+    <td>
+      <p>
+        The scaffolding is a special part of Rails. It basically
+        magically generates all the common things needed for a new resource
+        for you! This includes <em>controllers, models and views</em>. It
+        also creates the following basic actions: create a new resource,
+        edit a resource, show a resource and delete a resource.
       </p>
 
-      <h2>The Structure of a Rails app</h2>
-      An overview of all the folders of brand new Rails application, outlining
-      what they are there for. Also touching upon the most important files.
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>app</td>
-          <td>This folder contains your application. Therefore it is the
-            <strong>most important folder</strong> in ruby on rails and it is
-            worth digging into its sub folders. See the following rows.
-          </td>
-        </tr>
-        <tr>
-          <td>app/assets</td>
-          <td>Assets basically are your front end stuff. This folder contains
-            <em>images</em> you use on your website, <em>javascripts</em> for
-            all your fancy front end interaction and <em>stylesheets</em> for
-            all your css making your website absolutely beautiful.
-          </td>
-        </tr>
-        <tr>
-          <td>app/controllers</td>
-          <td>The controllers subdirectory contains the different controllers of
-            an application. A controller handles the requests from
-            the users. It is often responsible for a single resource type,
-            such as places, users or attendees. Controllers also tie together
-            the <em>models</em> and the <em>views</em>.
-          </td>
-        </tr>
-        <tr>
-          <td>app/helpers</td>
-          <td>Helpers are used to take care of logic that is needed in the views
-            in order to keep the views clean of logic and reuse that logic in
-            multiple views.
-          </td>
-        </tr>
-        <tr>
-          <td>app/mailers</td>
-          <td>Functionality to send emails goes here.</td>
-        </tr>
-        <tr>
-          <td>app/models</td>
-          <td>The models subdirectory holds the classes that model the business
-            logic of our application. It is concerned with the things our
-            application is about. Often this is data, that is also saved in the
-            database. Examples here are a Person, or a Place class with all
-            their typical behaviour.
-          </td>
-        </tr>
-        <tr>
-          <td>app/views</td>
-          <td>
-            <p>The views subdirectory contains the display templates that will
-              be displayed to the user after a successful request.
-              By default they are written in HTML with embedded ruby
-              (.html.erb). The embedded ruby is used to insert data from the
-              application. It is then converted to HTML and send to the browser
-              of the user. It has subdirectories for every resource of our
-              application e.g. places, persons. These subdirectories contain the
-              associated view files.</p>
+      <p>That's what you most basically need. Take this example:</p>
 
-            <p>Files starting with an underscore (<em>_</em>) are so called
-              <em>partials</em>. Those are parts of a view which are reused in
-              other views. A common example is <em>_form.html.erb</em> which
-              contains the basic form for a given resource. It is used in the
-              <em>new</em> and in the <em>edit</em> view since creating
-              something
-              and editing something looks pretty similar.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>config</td>
-          <td>This directory contains the configuration files that your
-            application will need, including your database configuration (in
-            <em>database.yml</em>) and the particularly important
-            <em>routes.rb</em> which decides how web requests are handled.
-            More specifically: for a given URL it decides which
-            <em>controller</em> will handle the request.
-          </td>
-        </tr>
-        <tr>
-          <td>db</td>
-          <td>Contains a lot of <em>database</em> related files.
-            Most importantly the <em>migrations</em> subdirectory, containing
-            all your database migrations. Those files basically define how your
-            database should look like. This is important as it, among other
-            things, defines what attributes your models have. With migrations
-            you can add new attributes to existing models or create new ones.
-            So you could add the <em>favorite_color</em> attribute to your
-            Person model so everyone can specify their favorite color.
-          </td>
-        </tr>
-        <tr>
-          <td>doc</td>
-          <td>Contains the documentation you create for your application. Not
-            too important when starting out.
-          </td>
-        </tr>
-        <tr>
-          <td>lib</td>
-          <td>Short for library. Contains code you developed that is not only
-            specific to your application but could be used elsewhere.
-            This might be a set of functionality related to getting specific
-            information from Facebook.
-          </td>
-        </tr>
-        <tr>
-          <td>log</td>
-          <td>See all the funny stuff that is written in the console where you
-            started the rails server? That goes here into
-            <em>development.log</em>. Basically logs contain runtime information
-            of your application. Also if an error happened, it will be noted
-            here.
-          </td>
-        </tr>
-        <tr>
-          <td>public</td>
-          <td>Contains general non dynamic files like some html pages.</td>
-        </tr>
-        <tr>
-          <td>script</td>
-          <td>By default contains what is executed when you type in the
-            <em>rails</em> command. That's not really important to know in the
-            beginning though.
-          </td>
-        </tr>
-        <tr>
-          <td>test</td>
-          <td>Contains the tests for your application. With tests you make sure
-            that your application actually does what you think it does. This
-            directory might also be called <em>spec</em>, when you are using
-            rspec/
-          </td>
-        </tr>
-        <tr>
-          <td>vendor</td>
-          <td>Libraries that you do not own e.g. somebody else owns them. You
-            will install most of those as <em>ruby gems (see Gemfile)</em> and
-            those will not show up here. However if they are not available as
-            ruby gems then you should put them here. This might be the case for
-            jQuery plugins. Probably won't be used that often in the beginning.
-          </td>
-        </tr>
-        <tr>
-          <td>Gemfile</td>
-          <td><p>A list of the gems, more generally called libraries,
-            (= set of functionality) your application depends on. For Rails
-            applications this will always be rails.</p>
-            <p>If you want to add a new gem to your app all you have to do is
-              add "<strong>gem</strong> <em>gem_name</em>" to your Gemfile,
-              optionally specifying a version number. Save the file and then run
-              <em>bundle install</em> to install the gem.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>Gemfile.lock</td>
-          <td>This file contains the versions of all gems you use. Because some
-            gems depend on other gems so ruby is so nice to install them for
-            you automatically. It also contains the concrete version numbers.
-            It can be used to make sure that everyone within a team is working 
-            with the same versions of gems. The file is auto generated.
-            <em>Do not touch this file.</em></td>
-        </tr>
-      </table>
+      <p><code><strong>rails generate scaffold</strong> <em>product
+        name:string price:integer</em></code></p>
 
-      <h2>Important Rails commands</h2>
-      <p>
-        A summary of important commands that can be used in the context of
-        your ruby on rails app. For everyone of these commands but the
-        <em>rails new</em> command you have to be in the directory of your app.
-        That is the directory with the subfolders described above
-        (app, config...)
-      </p>
+      <p>Now you can create new products, edit them, view them and delete
+        them if you don't need them anymore. Nothing stops you from
+        creating a full fledged web shop now ;-)</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Run migrations</td>
+    <td><code><strong>rake db:migrate</strong></code></td>
+    <td>When you have just added a new migration, for instance by creating
+      a new <em>scaffold</em>, this has to be applied to your database
+      to make sure that your application works correctly. This command
+      does just this and could also be referred to as "updating your
+      database".
+    </td>
+  </tr>
+  <tr>
+    <td>Install dependencies</td>
+    <td><code><strong>bundle install</strong></code></td>
+    <td>If you just added a new gem to your Gemfile you should run bundle
+      install to install it. Don't forget to restart your server
+      afterwards!
+    </td>
+  </tr>
+</table>
 
-      <table>
-        <tr>
-          <th>Concept</th>
-          <th>Usage</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Create a new app</td>
-          <td><code><strong>rails new</strong> <em>name</em></code></td>
-          <td>Create a new Ruby on Rails application with the given name here.
-            This will give you the basic structure to immediately get started.
-            After this command has successfully run your application is in a
-            folder named like the name you gave the application. You have to
-            <em>cd</em> into that folder.
-          </td>
-        </tr>
-        <tr>
-          <td>Start the server</td>
-          <td><code><strong>rails server</strong></code></td>
-          <td>
-            <p>You have to start the server in order for your application to
-            respond to your requests. Starting the server might take some time.
-            When it is done, you can access your application under
-            <a href="localhost:3000">localhost:3000</a> in the browser of your
-            choice.</p>
-            <p>In order to stop the server, go to the console where it is
-              running and press <strong>Ctrl + C</strong></p>
-          </td>
-        </tr>
-        <tr>
-          <td>Scaffolding</td>
-          <td>
-            <code><strong>rails generate scaffold</strong>
-            <em>name attribute:type</em></code>
-          </td>
-          <td>
-            <p>
-              The scaffolding is a special part of Rails. It basically
-              magically generates all the common things needed for a new resource
-              for you! This includes <em>controllers, models and views</em>. It
-              also creates the following basic actions: create a new resource,
-              edit a resource, show a resource and delete a resource.
-            </p>
-            <p>That's what you most basically need. Take this example:</p>
-            <p><code><strong>rails generate scaffold</strong> <em>product
-              name:string price:integer</em></code></p>
-            <p>Now you can create new products, edit them, view them and delete
-              them if you don't need them anymore. Nothing stops you from
-              creating a full fledged web shop now ;-)</p>
-          </td>
-        </tr>
-        <tr>
-          <td>Run migrations</td>
-          <td><code><strong>rake db:migrate</strong></code></td>
-          <td>When you have just added a new migration, for instance by creating
-            a new <em>scaffold</em>, this has to be applied to your database
-            to make sure that your application works correctly. This command
-            does just this and could also be referred to as "updating your
-            database".
-          </td>
-        </tr>
-        <tr>
-          <td>Install dependencies</td>
-          <td><code><strong>bundle install</strong></code></td>
-          <td>If you just added a new gem to your Gemfile you should run bundle
-            install to install it. Don't forget to restart your server
-            afterwards!</td>
-        </tr>
-      </table>
+<h1><a name="editor"></a>Editor tips</h1>
+<p>
+  When you write code you will be using a text editor. Of course each text
+  editor is different and configurable. Here are just some functions and
+  their most general short cuts. All of them work in
+  <a href="https://sublimetext.com/2">Sublime Text 2</a>, you editor may
+  differ.
+</p>
 
-      <h1>Editor tips</h1>
-      <p>
-        When you write code you will be using a text editor. Of course each text
-        editor is different and configurable. Here are just some functions and
-        their most general short cuts. All of them work in
-        <a href="https://sublimetext.com/2">Sublime Text 2</a>, you editor may
-        differ.
-      </p>
-      <p>
-        The short cuts listed here are for Linux/Windows. On a Mac you will have
-        to substitute <em>Ctrl</em> with <em>Cmd</em>.
-      </p>
+<p>
+  The short cuts listed here are for Linux/Windows. On a Mac you will have
+  to substitute <em>Ctrl</em> with <em>Cmd</em>.
+</p>
 
-      <table>
-        <tr>
-          <th>Function</th>
-          <th class="shortcut">Shortcut</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Save file</td>
-          <td><strong>Ctrl + S</strong></td>
-          <td>
-            Saves the currently open file, if it was a new file you may also be
-            asked where to save it.
-          </td>
-        </tr>
-        <tr>
-          <td>Undo</td>
-          <td><strong>Ctrl + Z</strong></td>
-          <td>
-            Undo the last change you made to the current file. Can be applied
-            multiple times in succession to undo multiple changes.
-          </td>
-        </tr>
-        <tr>
-          <td>Redo</td>
-          <td><p><strong>Ctrl + Y</strong></p>
-            <p><em>or Ctrl + Shift + Z</em></p></td>
-          <td>
-            Redo what you just undid with <em>undo</em>, can also be done
-            multiple times.
-          </td>
-        </tr>
-        <tr>
-          <td>Find in File</td>
-          <td><strong>Ctrl + F</strong></td>
-          <td>
-            Search for a character sequence within the currently open file.
-            Hit <em>Enter</em> to progress to the next match.
-          </td>
-        </tr>
-        <tr>
-          <td>Find in all Files</td>
-          <td><strong>Ctrl + Shift + F</strong></td>
-          <td>Search for a character sequence in all files of the project.</td>
-        </tr>
-        <tr>
-          <td>Replace</td>
-          <td>
-            <p><strong>Ctrl + H</strong></p>
-            <p><em>or Ctrl + R</em></p>
-          </td>
-          <td>
-            Replace occurrences of the supplied character sequence with the
-            other supplied character sequence. Useful when renaming something.
-          </td>
-        </tr>
-        <tr>
-          <td>Copy</td>
-          <td><strong>Ctrl + C</strong></td>
-          <td>
-            Copy the currently highlighted text into the clipboard.
-          </td>
-        </tr>
-        <tr>
-          <td>Cut</td>
-          <td><strong>Ctrl + X</strong></td>
-          <td>Copy the highlighted text into the clipboard but delete it.</td>
-        </tr>
-        <tr>
-          <td>Paste</td>
-          <td><strong>Ctrl + V</strong></td>
-          <td>
-            Insert whatever currently is in the clipboard (through
-            <em>Copy</em> or<em>Cut</em>) at the current caret position.
-            Can inserted multiple times.
-          </td>
-        </tr>
-        <tr>
-          <td>New File</td>
-          <td><strong>Ctrl + N</strong></td>
-          <td>Create a new empty file. </td>
-        </tr>
-        <tr>
-          <td>Search and open file</td>
-          <td><strong>Ctrl + P</strong></td>
-          <td>
-            Search for a file giving part of its name (<em>fuzzy search</em>).
-            Pressing enter will open the selected file.
-          </td>
-        </tr>
-        <tr>
-          <td>Comment</td>
-          <td><strong>Ctrl + /</strong></td>
-          <td>
-            Marks the selected text as a comment, which means that it will
-            be ignored.l Useful when you want to see how something behaves/looks
-            without a specific section of code being run.
-          </td>
-        </tr>
-      </table>
+<table class="table table-striped">
+  <tr>
+    <th>Function</th>
+    <th class="shortcut">Shortcut</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Save file</td>
+    <td><strong>Ctrl + S</strong></td>
+    <td>
+      Saves the currently open file, if it was a new file you may also be
+      asked where to save it.
+    </td>
+  </tr>
+  <tr>
+    <td>Undo</td>
+    <td><strong>Ctrl + Z</strong></td>
+    <td>
+      Undo the last change you made to the current file. Can be applied
+      multiple times in succession to undo multiple changes.
+    </td>
+  </tr>
+  <tr>
+    <td>Redo</td>
+    <td><p><strong>Ctrl + Y</strong></p>
 
-      <h1>What to do when things go wrong?</h1>
-      <p>
-        Things go wrong all the time, so don't worry this happens to everyone.
-        So keep calm. When you encounter an error message it is always a good
-        idea to google the error message and maybe at key words like "rails" or
-        "ruby". The most experienced developers do this as well ;-)</p>
-      <p>
-        There are some mistakes, which I found to be common when an error occurs
-        so I made this little checklist for you here:
+      <p><em>or Ctrl + Shift + Z</em></p></td>
+    <td>
+      Redo what you just undid with <em>undo</em>, can also be done
+      multiple times.
+    </td>
+  </tr>
+  <tr>
+    <td>Find in File</td>
+    <td><strong>Ctrl + F</strong></td>
+    <td>
+      Search for a character sequence within the currently open file.
+      Hit <em>Enter</em> to progress to the next match.
+    </td>
+  </tr>
+  <tr>
+    <td>Find in all Files</td>
+    <td><strong>Ctrl + Shift + F</strong></td>
+    <td>Search for a character sequence in all files of the project.</td>
+  </tr>
+  <tr>
+    <td>Replace</td>
+    <td>
+      <p><strong>Ctrl + H</strong></p>
 
-        <ul>
-          <li>Have you run <em>rake db:migrate</em> to apply the newest database
-          migrations?</li>
-          <li>Have you really saved the file you just changed? Unsaved files are
-            often marked in the editor via an asterisk or a point next to their
-            name.
-          </li>
-          <li>If you just added a gem to the Gemfile, have you run <em>bundle
-            install</em> to install it?
-          </li>
-          <li>If you just installed a gem, have you restarted the server?</li>
-          <li>
-            When you google results from stackoverflow.com are often really 
-            helpful. Look for those!
-        </ul>
-      </p>
+      <p><em>or Ctrl + R</em></p>
+    </td>
+    <td>
+      Replace occurrences of the supplied character sequence with the
+      other supplied character sequence. Useful when renaming something.
+    </td>
+  </tr>
+  <tr>
+    <td>Copy</td>
+    <td><strong>Ctrl + C</strong></td>
+    <td>
+      Copy the currently highlighted text into the clipboard.
+    </td>
+  </tr>
+  <tr>
+    <td>Cut</td>
+    <td><strong>Ctrl + X</strong></td>
+    <td>Copy the highlighted text into the clipboard but delete it.</td>
+  </tr>
+  <tr>
+    <td>Paste</td>
+    <td><strong>Ctrl + V</strong></td>
+    <td>
+      Insert whatever currently is in the clipboard (through
+      <em>Copy</em> or<em>Cut</em>) at the current caret position.
+      Can inserted multiple times.
+    </td>
+  </tr>
+  <tr>
+    <td>New File</td>
+    <td><strong>Ctrl + N</strong></td>
+    <td>Create a new empty file.</td>
+  </tr>
+  <tr>
+    <td>Search and open file</td>
+    <td><strong>Ctrl + P</strong></td>
+    <td>
+      Search for a file giving part of its name (<em>fuzzy search</em>).
+      Pressing enter will open the selected file.
+    </td>
+  </tr>
+  <tr>
+    <td>Comment</td>
+    <td><strong>Ctrl + /</strong></td>
+    <td>
+      Marks the selected text as a comment, which means that it will
+      be ignored.l Useful when you want to see how something behaves/looks
+      without a specific section of code being run.
+    </td>
+  </tr>
+</table>
 
-      <footer>
-        <p class="repo-owner">This cheat sheet is maintained by <a
-                href="https://github.com/PragTob">PragTob</a>.</p>
-      </footer>
-    </section>
-  </div>
+<h1><a name="help"></a>Help: What to do when things go wrong?</h1>
+
+<p>
+  Things go wrong all the time, so don't worry this happens to everyone.
+  So keep calm. When you encounter an error message it is always a good
+  idea to google the error message and maybe at key words like "rails" or
+  "ruby". The most experienced developers do this as well ;-)</p>
+
+<p>
+  There are some mistakes, which I found to be common when an error occurs
+  so I made this little checklist for you here:
+
+<ul>
+  <li>Have you run <em>rake db:migrate</em> to apply the newest database
+    migrations?
+  </li>
+  <li>Have you really saved the file you just changed? Unsaved files are
+    often marked in the editor via an asterisk or a point next to their
+    name.
+  </li>
+  <li>If you just added a gem to the Gemfile, have you run <em>bundle
+    install</em> to install it?
+  </li>
+  <li>If you just installed a gem, have you restarted the server?</li>
+  <li>
+    When you google results from stackoverflow.com are often really
+    helpful. Look for those!
+</ul>
+</p>
+
+<footer>
+  <p class="repo-owner">This cheat sheet is maintained by <a
+          href="https://github.com/PragTob">PragTob</a>.</p>
+</footer>
+</section>
+</div>
 </div>
 
 </body>
