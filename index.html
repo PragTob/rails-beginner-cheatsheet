@@ -656,9 +656,9 @@ substitute)</em></code></pre>
       </code>
     </td>
     <td>
-<pre><code>array = ["Helau", "Mooo", "zoooo"]
-array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
-array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
+<pre><code>array = ["hi", "foo", "bar"]
+array<strong>[</strong><em>0</em><strong>]</strong> # => "hi"
+array<strong>[</strong><em>2</em><strong>]</strong> # => "bar"</code></pre>
     </td>
     <td>As an Array is a collection of different elements, you often want
       to access a single element of this Array.
@@ -692,9 +692,9 @@ array # => [1, 2, 3, 4]
       </strong> <em>value</em></code>
     </td>
     <td>
-<pre><code>array = ["Helau", "Mooo", "zoooo"]
+<pre><code>array = ["hi", "foo", "bar"]
 array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
-array # => ["Helau", "Mooo", "new"]</code></pre>
+array # => ["hi", "foo", "new"]</code></pre>
     </td>
     <td>Assigning new Array Values works a lot like accessing
       them, you just add an equals sign and a new value et
@@ -794,8 +794,7 @@ array # => [0, 14, 79]
         <strong>{</strong>:hobby <strong>=></strong>
         "programming"<strong>}</strong>
       </code></p>
-<pre><code><strong>{</strong>42 <strong>=></strong> "answer", "score"
- <strong>=></strong> 100,
+<pre><code><strong>{</strong>42 <strong>=></strong> "answer", "score" <strong>=></strong> 100,
  :name <strong>=></strong> "Tobi"<strong>}</strong>
 </code></pre>
     </td>
