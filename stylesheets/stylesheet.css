@@ -10,10 +10,14 @@ body {
 }
 
 a {
-  color: #2879d0;
+  color: #F3360B;
 }
 a:hover {
-  color: #2268b2;
+  color: #BE360B;
+}
+
+a:visited {
+  color: #BE360B;
 }
 
 .navbar a {
