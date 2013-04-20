@@ -69,6 +69,7 @@
 </p>
 
 <a name="console"></a>
+
 <h1>Console Basics</h1>
 
 <p>
@@ -198,209 +199,209 @@
 
 <h2>General concepts</h2>
 <table class="table table-striped">
-  <tr>
-    <th class="concept">Concept</th>
-    <th class="usage">Usage</th>
-    <th class="example">Examples</th>
-    <th class="description">Description</th>
-  </tr>
-  <tr>
-    <td>Comment</td>
-    <td>
-      <code><strong>#</strong> <em>Comment text</em></code>
-    </td>
-    <td>
-      <p>
-        <code><strong>#</strong> <em>This text is a comment</em></code>
-      </p>
+<tr>
+  <th class="concept">Concept</th>
+  <th class="usage">Usage</th>
+  <th class="example">Examples</th>
+  <th class="description">Description</th>
+</tr>
+<tr>
+  <td>Comment</td>
+  <td>
+    <code><strong>#</strong> <em>Comment text</em></code>
+  </td>
+  <td>
+    <p>
+      <code><strong>#</strong> <em>This text is a comment</em></code>
+    </p>
 
-      <p>
-        <code>some.ruby_code <strong>#</strong> A comment</code>
-      </p>
+    <p>
+      <code>some.ruby_code <strong>#</strong> A comment</code>
+    </p>
 
-      <p>
-        <code><strong>#</strong> some.ignored_ruby_code</code>
-      </p>
-    </td>
-    <td>
-      Ruby ignores everything that is marked as a comment. It does not try
-      to execute it. Comments are just there for you, some information.
-      Comments are also commonly used to <em>comment out code</em>. That
-      is when you don't want some part of your code to execute anymore
-      but you don't want to delete it just yet, because you are trying
-      different things out.
-    </td>
-  </tr>
-  <tr>
-    <td>Variables</td>
-    <td>
-      <code><strong>variable =</strong> <em>some_value</em></code>
-    </td>
-    <td>
- <pre><code><strong>name =</strong> <em>"Tobi"</em>
-   <strong>name</strong> # => "Tobi"</code></pre>
+    <p>
+      <code><strong>#</strong> some.ignored_ruby_code</code>
+    </p>
+  </td>
+  <td>
+    Ruby ignores everything that is marked as a comment. It does not try
+    to execute it. Comments are just there for you, some information.
+    Comments are also commonly used to <em>comment out code</em>. That
+    is when you don't want some part of your code to execute anymore
+    but you don't want to delete it just yet, because you are trying
+    different things out.
+  </td>
+</tr>
+<tr>
+  <td>Variables</td>
+  <td>
+    <code><strong>variable =</strong> <em>some_value</em></code>
+  </td>
+  <td>
+<pre><code><strong>name =</strong> <em>"Tobi"</em>
+<strong>name</strong> # => "Tobi"</code></pre>
 <pre><code><strong>sum =</strong> <em>18 + 5</em>
-  <strong>sum</strong> # => 23</code></pre>
-    </td>
-    <td>
-      With a variable you tell Ruby that from now on you want to refer to
-      that value by the name you gave it. So for the first example, from
-      now on when you use <em>name</em> Ruby will know that you meant
-      <em>"Tobi"</em>.
-    </td>
-  </tr>
-  <tr>
-    <td>Console output</td>
-    <td>
-      <code><strong>puts</strong> <em>something</em></code>
-    </td>
-    <td>
-      <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
+<strong>sum</strong> # => 23</code></pre>
+  </td>
+  <td>
+    With a variable you tell Ruby that from now on you want to refer to
+    that value by the name you gave it. So for the first example, from
+    now on when you use <em>name</em> Ruby will know that you meant
+    <em>"Tobi"</em>.
+  </td>
+</tr>
+<tr>
+  <td>Console output</td>
+  <td>
+    <code><strong>puts</strong> <em>something</em></code>
+  </td>
+  <td>
+    <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
 
-      <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
-    </td>
-    <td>
-      Prints its argument to the console. Can be used in Rails apps
-      to print something in the console where the server is running.
-    </td>
-  </tr>
-  <tr>
-    <td>Call a method</td>
-    <td>
-      <code>object<strong>.method</strong><em>(arguments)</em></code>
-    </td>
-    <td>
-      <p><code>string<strong>.length</strong></code></p>
+    <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
+  </td>
+  <td>
+    Prints its argument to the console. Can be used in Rails apps
+    to print something in the console where the server is running.
+  </td>
+</tr>
+<tr>
+  <td>Call a method</td>
+  <td>
+    <code>object<strong>.method</strong><em>(arguments)</em></code>
+  </td>
+  <td>
+    <p><code>string<strong>.length</strong></code></p>
 
-      <p><code>
-        array<strong>.delete_at</strong><em>(2)</em>
-      </code></p>
+    <p><code>
+      array<strong>.delete_at</strong><em>(2)</em>
+    </code></p>
 
-      <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
-    </td>
-    <td>
-      <p>Calling a method is also often referred to as
-        <em>sending a message</em> in Ruby. Basically we are sending an
-        object some kind of message and are waiting for its response.
-        This message may have no arguments or multiple arguments, depending
-        on the message.
-        So we kindly ask the object to do something or give us some
-        information.
-        When you call a method/send a message something happens. In the
-        first example we ask a String how long it is e.g. how many
-        characters it consists of. In the last example we substitute all
-        occurrences of "ae" in the string with the german "ä".</p>
+    <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
+  </td>
+  <td>
+    <p>Calling a method is also often referred to as
+      <em>sending a message</em> in Ruby. Basically we are sending an
+      object some kind of message and are waiting for its response.
+      This message may have no arguments or multiple arguments, depending
+      on the message.
+      So we kindly ask the object to do something or give us some
+      information.
+      When you call a method/send a message something happens. In the
+      first example we ask a String how long it is e.g. how many
+      characters it consists of. In the last example we substitute all
+      occurrences of "ae" in the string with the german "ä".</p>
 
-      <p>
-        Different kinds of objects (Strings, Numbers, Arrays...)
-        understand different messages.
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>Define a method</td>
-    <td>
+    <p>
+      Different kinds of objects (Strings, Numbers, Arrays...)
+      understand different messages.
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>Define a method</td>
+  <td>
 <pre><code><strong>def</strong> <em>name(parameter)</em>
   <em># method body</em>
-  <strong>end</strong></code></pre>
-    </td>
-    <td>
+<strong>end</strong></code></pre>
+  </td>
+  <td>
 <pre><code><strong>def</strong> <em>greet(name)</em>
   <em>puts "Hy there " + name</em>
-  <strong>end</strong></code></pre>
-    </td>
-    <td>
-      <p>Methods are basically reusable units of behaviour. And you can
-        define them yourself just like this. Methods are small and focused
-        on implementing a specific behaviour.</p>
+<strong>end</strong></code></pre>
+  </td>
+  <td>
+    <p>Methods are basically reusable units of behaviour. And you can
+      define them yourself just like this. Methods are small and focused
+      on implementing a specific behaviour.</p>
 
-      <p>
-        Our example method for instance is focused on greeting people,
-        you could call it like this: <code>greet("Tobi")</code>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>Equality</td>
-    <td><code>object <strong>==</strong> other</code></td>
-    <td>
-      <p><code>true <strong>==</strong> true # => true</code></p>
+    <p>
+      Our example method for instance is focused on greeting people,
+      you could call it like this: <code>greet("Tobi")</code>
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>Equality</td>
+  <td><code>object <strong>==</strong> other</code></td>
+  <td>
+    <p><code>true <strong>==</strong> true # => true</code></p>
 
-      <p><code>3 <strong>==</strong> 4 # => false</code></p>
+    <p><code>3 <strong>==</strong> 4 # => false</code></p>
 
-      <p><code>"Hello" <strong>==</strong> "Hello" # => true</code></p>
+    <p><code>"Hello" <strong>==</strong> "Hello" # => true</code></p>
 
-      <p><code>"Helo" <strong>==</strong> "Hello" # => false</code></p>
-    </td>
-    <td>
-      With two equal signs you can check if 2 things are basically the
-      same. If so, <code>true</code> will be returned otherwise the result
-      will be <code>false</code>.
-    </td>
-  </tr>
-  <tr>
-    <td>Inequality</td>
-    <td><code>object <strong>!=</strong> other</code></td>
-    <td>
-      <p><code>true <strong>!=</strong> true # => false</code></p>
+    <p><code>"Helo" <strong>==</strong> "Hello" # => false</code></p>
+  </td>
+  <td>
+    With two equal signs you can check if 2 things are basically the
+    same. If so, <code>true</code> will be returned otherwise the result
+    will be <code>false</code>.
+  </td>
+</tr>
+<tr>
+  <td>Inequality</td>
+  <td><code>object <strong>!=</strong> other</code></td>
+  <td>
+    <p><code>true <strong>!=</strong> true # => false</code></p>
 
-      <p><code>3 <strong>!=</strong> 4 # => true</code></p>
-    </td>
-    <td>
-      Inequality is the inverse to equality, e.g. it results in
-      <code>true</code> when two values are not the same and it results
-      in <code>false</code> when they are the same.
-    </td>
-  </tr>
-  <tr>
-    <td>Decisions with if</td>
-    <td>
+    <p><code>3 <strong>!=</strong> 4 # => true</code></p>
+  </td>
+  <td>
+    Inequality is the inverse to equality, e.g. it results in
+    <code>true</code> when two values are not the same and it results
+    in <code>false</code> when they are the same.
+  </td>
+</tr>
+<tr>
+  <td>Decisions with if</td>
+  <td>
 <pre><code><strong>if</strong> <em>condition</em>
   # happens when true
-  <strong>else</strong>
+<strong>else</strong>
   # happens when false
-  <strong>end</strong>
+<strong>end</strong>
 </code></pre>
-    </td>
-    <td>
+  </td>
+  <td>
 <pre><code><strong>if</strong> <em>input == password</em>
   grant_access
-  <strong>else</strong>
+<strong>else</strong>
   deny_access
-  <strong>end</strong>
+<strong>end</strong>
 </code></pre>
-    </td>
-    <td>
-      <p>With if-clauses you can decide based upon a <em>condition</em>
-        what to do. When the condition is considered true, then the code
-        after if is executed. If it is considered false, the code after
-        else is executed.</p>
+  </td>
+  <td>
+    <p>With if-clauses you can decide based upon a <em>condition</em>
+      what to do. When the condition is considered true, then the code
+      after if is executed. If it is considered false, the code after
+      else is executed.</p>
 
-      <p>
-        In the example, access is granted based upon the decision if a
-        given input matches the password.
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>Constants</td>
-    <td><code><strong>CONSTANT =</strong> <em>some_value</em></code></td>
-    <td>
+    <p>
+      In the example, access is granted based upon the decision if a
+      given input matches the password.
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>Constants</td>
+  <td><code><strong>CONSTANT =</strong> <em>some_value</em></code></td>
+  <td>
 <pre><code><strong>PI = 3.1415926535</strong>
-  <strong>PI</strong> # => 3.1415926535</code></pre>
+<strong>PI</strong> # => 3.1415926535</code></pre>
 <pre><code><strong>ADULT_AGE</strong> = 18
-  <strong>ADULT_AGE</strong> # => 18</code></pre>
-    </td>
-    <td>
-      Constants look like variables, just in UPCASE. Well both hold
-      values and give you a name to refer to those values. However while
-      the value a variable holds may change or might be of an unknown
-      value (if you save user input in a variable) constants are
-      different. They have a known value that should never change. Think
-      of it a bit like mathematical or physical constants. These don't
-      change, they always refer to the same value.
-    </td>
-  </tr>
+<strong>ADULT_AGE</strong> # => 18</code></pre>
+  </td>
+  <td>
+    Constants look like variables, just in UPCASE. Well both hold
+    values and give you a name to refer to those values. However while
+    the value a variable holds may change or might be of an unknown
+    value (if you save user input in a variable) constants are
+    different. They have a known value that should never change. Think
+    of it a bit like mathematical or physical constants. These don't
+    change, they always refer to the same value.
+  </td>
+</tr>
 </table>
 
 <h2>Numbers</h2>
@@ -552,7 +553,7 @@
     <td><code>string <strong>+</strong> <em>string2</em></code></td>
     <td>
 <pre><code>"Hello " <strong>+</strong> <em>"reader"</em>
-  # => "Hello reader"</code></pre>
+# => "Hello reader"</code></pre>
       <p><code>"a" <strong>+</strong> <em>"b"</em> <strong>+</strong>
         <em>"c"</em>
         # => "abc"</code></p>
@@ -563,15 +564,15 @@
     <td>Substitute</td>
     <td>
 <pre><code>string<strong>.gsub</strong><em>(a_string,
-  substitute)</em></code></pre>
+substitute)</em></code></pre>
     </td>
     <td>
 <pre><code>"Hae"<strong>.gsub</strong><em>("ae", "ä")
-  # => "Hä"</em></code></pre>
+# => "Hä"</em></code></pre>
 <pre><code>"Hae"<strong>.gsub</strong><em>("b", "ä")
-  # => "Hae"</em></code></pre>
+# => "Hae"</em></code></pre>
 <pre><code>"Greenie"<strong>.gsub</strong><em>("e", "u")
-  # => "Gruuniu"</em></code></pre>
+# => "Gruuniu"</em></code></pre>
     </td>
     <td><em>gsub</em> stands for globally substitute. It substitutes all
       occurences of <code>a_string</code> within the string with
@@ -656,8 +657,8 @@
     </td>
     <td>
 <pre><code>array = ["Helau", "Mooo", "zoooo"]
-  array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
-  array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
+array<strong>[</strong><em>0</em><strong>]</strong> # => "Helau"
+array<strong>[</strong><em>2</em><strong>]</strong> # => "zoooo"</code></pre>
     </td>
     <td>As an Array is a collection of different elements, you often want
       to access a single element of this Array.
@@ -675,8 +676,8 @@
     </td>
     <td>
 <pre><code>array = [1, 2, 3]
-  array <strong><<</strong> <em>4</em>
-  array # => [1, 2, 3, 4]
+array <strong><<</strong> <em>4</em>
+array # => [1, 2, 3, 4]
 </code></pre>
     </td>
     <td>
@@ -692,8 +693,8 @@
     </td>
     <td>
 <pre><code>array = ["Helau", "Mooo", "zoooo"]
-  array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
-  array # => ["Helau", "Mooo", "new"]</code></pre>
+array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
+array # => ["Helau", "Mooo", "new"]</code></pre>
     </td>
     <td>Assigning new Array Values works a lot like accessing
       them, you just add an equals sign and a new value et
@@ -707,8 +708,8 @@
     </code></td>
     <td>
 <pre><code>array = [0, 14, 55, 79]
-  array<strong>.delete_at</strong><em>(2)</em>
-  array # => [0, 14, 79]
+array<strong>.delete_at</strong><em>(2)</em>
+array # => [0, 14, 79]
 </code></pre>
     </td>
     <td>
@@ -794,8 +795,8 @@
         "programming"<strong>}</strong>
       </code></p>
 <pre><code><strong>{</strong>42 <strong>=></strong> "answer", "score"
-  <strong>=></strong> 100,
-  :name <strong>=></strong> "Tobi"<strong>}</strong>
+ <strong>=></strong> 100,
+ :name <strong>=></strong> "Tobi"<strong>}</strong>
 </code></pre>
     </td>
     <td>
@@ -810,8 +811,8 @@
     <td><code>hash<strong>[</strong>key<strong>]</strong></code></td>
     <td>
 <pre><code>hash = {:key => "value"}
-  hash<strong>[</strong>:key<strong>]</strong> # => "value"
-  hash<strong>[</strong>foo<strong>]</strong> # => nil
+hash<strong>[</strong>:key<strong>]</strong> # => "value"
+hash<strong>[</strong>foo<strong>]</strong> # => nil
 </code></pre>
     </td>
     <td>
@@ -830,8 +831,8 @@
     </td>
     <td>
 <pre><code>hash = {:a => "b"}
-  hash<strong>[</strong>:key<strong>] =</strong> "value"
-  hash # => {:a=>"b", :key=>"value"}
+hash<strong>[</strong>:key<strong>] =</strong> "value"
+hash # => {:a=>"b", :key=>"value"}
 </code></pre>
     </td>
     <td>
@@ -846,8 +847,8 @@
     <td><code>hash<strong>.delete</strong><em>(key)</em></code></td>
     <td>
 <pre><code>hash = {:a => "b", :b => 10}
-  hash<strong>.delete</strong><em>(:a)</em>
-  hash # => {:b=>10}
+hash<strong>.delete</strong><em>(:a)</em>
+hash # => {:b=>10}
 </code></pre>
     </td>
     <td>
@@ -1121,6 +1122,7 @@ what they are there for. Also touching upon the most important files.
 </table>
 
 <h1><a name="editor"></a>Editor tips</h1>
+
 <p>
   When you write code you will be using a text editor. Of course each text
   editor is different and configurable. Here are just some functions and
@@ -1269,7 +1271,7 @@ what they are there for. Also touching upon the most important files.
 <p>
   If you need more detailed information and guides, then you can check out the
   <strong><a href="http://pragtob.wordpress.com/resources/">resources
-  section of my blog</a></strong>. I use it to collect free resources to learn
+    section of my blog</a></strong>. I use it to collect free resources to learn
   Ruby, Rails and a lot of other things. For Ruby and Rails I especially
   recommend the
   <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">
