@@ -55,16 +55,17 @@
 
 <p>
   <strong>Bold</strong> words are what is really important e.g.
-  the command and concept shown in the usage category.
-  In the examples and usage columns <em>Italic</em> words mark the
-  arguments of a command/method. If they are in brackets, then they
-  are optional arguments.
+  the command and concept shown in the usage category. In the code usage and
+  example columns these highlight the main part of the concept, like this:
+  <code>general_stuff<strong>.concept</strong></code>.
+  In the same columns <code><em>italic_words</em></code> mark the
+  arguments/parameters of a command/method.
 </p>
 
 <p>
   However <em>italic words</em> in the descriptions or general text denote
   more general concepts or concepts explained elsewhere in this cheat
-  sheet.
+  sheet or in general.
 </p>
 
 <a name="console"></a>
@@ -121,9 +122,9 @@
   <tr>
     <td>List contents directory</td>
     <td>
-      <p><code><strong>ls</strong> <em>(directory)</em></code></p>
+      <p><code><strong>ls</strong> <em>directory</em></code></p>
 
-      <p><code>Windows: <strong>dir</strong> <em>(directory)</em></code>
+      <p><code>Windows: <strong>dir</strong> <em>directory</em></code>
       </p>
     </td>
     <td>
@@ -146,7 +147,7 @@
   </tr>
   <tr>
     <td>Starting a program</td>
-    <td><code><strong>program</strong> <em>(arguments)</em></code></td>
+    <td><code><strong>program</strong> <em>arguments</em></code></td>
     <td>
       <p><code><strong>firefox</strong></code></p>
 
@@ -157,8 +158,10 @@
       <p><code><strong>irb</strong></code></p>
     </td>
     <td>Starts the program with the given name and arbitrary arguments
-      if the program takes arguments. Firefox is just one example. When you
-      type in <code>irb</code> this starts <em>interactive ruby</em>.
+      if the program takes arguments. Firefox is just one example. Starting
+      firefox without arguments just opens up firefox, if you give it an
+      argument it open the specified URL.
+      When you type in <code>irb</code> this starts <em>interactive ruby</em>.
     </td>
   </tr>
   <tr>
@@ -279,6 +282,8 @@
       <p>Calling a method is also often referred to as
         <em>sending a message</em> in Ruby. Basically we are sending an
         object some kind of message and are waiting for its response.
+        This message may have no arguments or multiple arguments, depending
+        on the message.
         So we kindly ask the object to do something or give us some
         information.
         When you call a method/send a message something happens. In the
