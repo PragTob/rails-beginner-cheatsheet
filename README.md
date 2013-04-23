@@ -21,14 +21,18 @@ Fork the repository to your own GitHub account.
 
 Download the project:
 
-  $ git clone git@github.com:MyGitHubAcoount/rails-beginner-cheatsheet.git
-  $ cd rails-beginner-cheatsheet
+```
+$ git clone git@github.com:MyGitHubAcoount/rails-beginner-cheatsheet.git
+$ cd rails-beginner-cheatsheet
+```
 
 Make your changes.
 
 Commit and push to the remote repository:
 
-  $ git commit -am "some helpful comment"
-  $ git push origin gh-pages
+```
+$ git commit -am "some helpful comment"
+$ git push origin gh-pages
+```
 
 Make a pull request.
