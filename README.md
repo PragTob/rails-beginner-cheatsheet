@@ -1,7 +1,7 @@
 Rails Beginner Cheatsheet
 =========================
 
-A cheat sheet for rails beginners, taking care of a lot of basic stuff and information. Aimed at helping beginners too look up stuff.
+A cheat sheet for Rails beginners, taking care of a lot of basic stuff and information. Aimed at helping beginners to look up stuff.
 
 You can view this cheatsheet in all its "beauty" here: http://pragtob.github.io/rails-beginner-cheatsheet/
 
@@ -13,4 +13,4 @@ How to contribute?
 ==================
 Contributions are very welcome. Just go ahead and open a pull request. Be it corrections, new content or some styling (I haven't exactly mastered styling... yet).
 
-Any contribution will be repayed with eternal gratitude!
+Any contribution will be repaid with eternal gratitude!
