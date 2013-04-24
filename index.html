@@ -147,6 +147,64 @@
     </td>
   </tr>
   <tr>
+    <td>Create a new directory</td>
+    <td><code><strong>mkdir</strong> <em>name</em></code></td>
+    <td>
+      <p><code><strong>mkdir</strong> <em>rails</em></code></p>
+      <p><code><strong>mkdir</strong> <em>fun</em></code></p>
+    </td>
+    <td>
+      Creates a directory with the given name in the folder you are currently
+      in.
+    </td>
+  </tr>
+  <tr>
+    <td>Delete a file</td>
+    <td>
+      <p><code><strong>rm</strong> <em>file</em></code></p>
+
+      <p><code>Windows: <strong>del</strong> <em>file</em></code>
+    </td>
+    <td>
+      <p><code><strong>rm</strong> <em>foo</em></code></p>
+      <p><code><strong>rm</strong> <em>index.html</em></code></p>
+      <p><code><strong>rm</strong> <em>pictures/old_picture.jpg</em></code></p>
+    </td>
+    <td>
+      <p>Deletes the specified file. Be <strong>extra cautious</strong> with this
+      as it would be too bad to delete something you still need :-(</p>
+      <p>
+        You can simply specify the name of a file of the directory you are
+        currently in. However you can also specify a path, this is shown in the
+        third example. There we delete the <em>old_picture.jpg</em> file from
+        the <em>pictures</em> folder.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Delete a directory</td>
+    <td>
+      <p><code><strong>rm -r</strong> <em>folder</em></code></p>
+
+      <p><code>Windows: <strong>deltree</strong> <em>folder</em></code>
+    </td>
+    <td>
+      <p><code><strong>rm -r</strong> <em>stuff_i_dont_need</em></code></p>
+      <p><code><strong>rm -r</strong> <em>stuff_i_dont_need/</em></code></p>
+      <p><code><strong>rm -r</strong> <em>old_application</em></code></p>
+    </td>
+    <td>
+      <p>Deletes the specified folder <strong>and all of its contents</strong>.
+        So please be <strong>super cautious</strong> with this! Make sure that
+        you do not need any of the contents of this folder any more.
+      </p>
+      <p>
+        So why would you want to delete a whole folder? Well maybe it was an old
+        application that you do not need anymore :-)
+      </p>
+    </td>
+  </tr>
+  <tr>
     <td>Starting a program</td>
     <td><code><strong>program</strong> <em>arguments</em></code></td>
     <td>
