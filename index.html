@@ -35,7 +35,16 @@
         <a href="#" class='brand'>Rails Beginner Cheat Sheet</a>
         <ul class="nav">
           <li><a href="#console">Console</a></li>
-          <li><a href="#ruby">Ruby</a></li>
+          <li class="dropdown">
+            <a href="#ruby" class="dropdown-toggle"><b class="caret"></b> Ruby</a>
+            <ul class="dropdown-menu">
+              <li><a href="#ruby-concepts">General Concepts</a></li>
+              <li><a href="#ruby-numbers">Numbers</a></li>
+              <li><a href="#ruby-strings">Strings</a></li>
+              <li><a href="#ruby-arrays">Arrays</a></li>
+              <li><a href="#ruby-hashes">Hashes</a></li>
+            </ul>
+          </li>
           <li><a href="#rails">Rails</a></li>
           <li><a href="#editor">Editor Tips</a></li>
           <li><a href="#help">Help</a></li>
@@ -47,6 +56,7 @@
     </div>
   </nav>
 </div>
+
 
 <div id="content-wrapper">
 <div class="container ">
@@ -255,6 +265,7 @@
   search engine!
 </p>
 
+<a name="ruby-concepts"></a>
 <h2>General concepts</h2>
 <table class="table table-striped">
 <tr>
@@ -462,6 +473,8 @@
 </tr>
 </table>
 
+<a name="ruby-numbers"></a>
+
 <h2>Numbers</h2>
 
 <p>
@@ -548,6 +561,8 @@
     </td>
   </tr>
 </table>
+
+<a name="ruby-strings"></a>
 
 <h2>Strings</h2>
 
@@ -675,6 +690,7 @@ substitute)</em></code></pre>
   </tr>
 </table>
 
+<a name="ruby-arrays"></a>
 
 <h2>Arrays</h2>
 
@@ -825,6 +841,8 @@ array # => [0, 14, 79]
     </td>
   </tr>
 </table>
+
+<a name="ruby-hashes"></a>
 
 <h2>Hashes</h2>
 
