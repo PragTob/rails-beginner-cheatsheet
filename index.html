@@ -145,6 +145,8 @@
     <td><code><strong>pwd</strong></code></td>
     <td>Shows the full path of the directory you are currently
       in. E.g. /home/tobi/railsgirls
+      <br />
+      A note on filenames: if a file or directory name starts with a slash / as in the output of pwd above, it is an absolute filename specifying the complete filename starting at the root of the current file system (e.g. hard disk). If the slash (/) is ommitted, the file name is relative to the current working directory.
     </td>
   </tr>
   <tr>
@@ -702,7 +704,7 @@ substitute)</em></code></pre>
   <tr>
     <td>Create</td>
     <td>
-      <code><strong>[</strong><em>arguments</em><strong>]</strong></code>
+      <code><strong>[</strong><em>contents</em><strong>]</strong></code>
     </td>
     <td>
       <p><code><strong>[]</strong></code></p>
