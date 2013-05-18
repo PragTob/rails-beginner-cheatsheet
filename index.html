@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
@@ -84,6 +83,7 @@
 <p>
   For the different operating systems <strong>starting the console</strong>
   differs.
+</p>
 
 <ul>
   <li><strong>Windows:</strong> Open the start menu and search for
@@ -98,7 +98,6 @@
     or look under Accessories.
   </li>
 </ul>
-</p>
 
 <table class="table table-striped">
   <tr>
@@ -535,11 +534,11 @@
       <code>n <strong>operator</strong> <em>m</em></code>
     </td>
     <td>
-      <p><code>12 <strong>></strong> <em>3</em> # => true</code></p>
+      <p><code>12 <strong>&gt;</strong> <em>3</em> # => true</code></p>
 
-      <p><code>12 <strong><</strong> <em>3</em> # => false</code></p>
+      <p><code>12 <strong>&lt;</strong> <em>3</em> # => false</code></p>
 
-      <p><code>7 <strong>>=</strong> <em>7</em> # => true</code></p>
+      <p><code>7 <strong>&gt;=</strong> <em>7</em> # => true</code></p>
     </td>
     <td>
       <p>Numbers may be compared to determine if a number is bigger or smaller
@@ -657,7 +656,7 @@ substitute)</em></code></pre>
     </td>
     <td><em>gsub</em> stands for "globally substitute". It substitutes all
       occurences of <code>a_string</code> within the string with
-      <code>substitute</code></td>.
+      <code>substitute</code>.</td>
   </tr>
   <tr>
     <td>Access</td>
@@ -753,11 +752,11 @@ array<strong>[</strong><em>2</em><strong>]</strong> # => "bar"</code></pre>
   <tr>
     <td>Adding an element</td>
     <td>
-      <code>array <strong><<</strong> <em>element</em></code>
+      <code>array <strong>&lt;&lt;</strong> <em>element</em></code>
     </td>
     <td>
 <pre><code>array = [1, 2, 3]
-array <strong><<</strong> <em>4</em>
+array <strong>&lt;&lt;</strong> <em>4</em>
 array # => [1, 2, 3, 4]
 </code></pre>
     </td>
