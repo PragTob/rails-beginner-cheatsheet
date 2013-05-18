@@ -32,6 +32,14 @@ a:visited {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
 }
 
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}
+
 header h1 {
   letter-spacing: -1px;
   font-size: 72px;
