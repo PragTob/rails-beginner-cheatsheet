@@ -173,3 +173,14 @@ h6:before {
 .footer-links li:first-child {
   padding-left: 0;
 }
+
+.navbar-inner {
+  background-color: #D3360B;
+  background-image: linear-gradient(to bottom, #BE360B, #F3360B);
+  border: 1px solid #B82908;
+}
+
+.navbar .brand, .navbar .nav > li > a{
+  color: white;
+  text-shadow: 0 1px 0 #BE360B;
+}
