@@ -192,3 +192,7 @@ h6:before {
   color: white;
   text-shadow: 0 1px 0 #BE360B;
 }
+
+.dropdown-menu {
+  top: 95%;
+}
