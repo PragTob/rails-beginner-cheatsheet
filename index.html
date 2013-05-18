@@ -45,7 +45,13 @@
             <li><a href="#ruby-hashes">Hashes</a></li>
           </ul>
         </li>
-        <li><a href="#rails">Rails</a></li>
+        <li class="dropdown">
+          <a href="#rails"><b class="caret"></b> Rails</a>
+          <ul class="dropdown-menu">
+            <li><a href="#rails-folder-structure">Folder Structure</a></li>
+            <li><a href="#rails-commands">Commands</a></li>
+          </ul>
+        </li>
         <li><a href="#editor">Editor Tips</a></li>
         <li><a href="#help">Help</a></li>
       </ul>
@@ -945,7 +951,7 @@ hash # => {:b=>10}
   structure of a Rails application and the important commands used in the terminal.
 </p>
 
-<h2>The Structure of a Rails app</h2>
+<h2 id="rails-folder-structure">The Structure of a Rails app</h2>
 Here is an overview of all the folders of a new Rails application, outlining
 the purpose of each folder, and describing the most important files.
 <table class="table table-striped">
@@ -1115,7 +1121,7 @@ the purpose of each folder, and describing the most important files.
   </tr>
 </table>
 
-<h2>Important Rails commands</h2>
+<h2 id="rails-commands">Important Rails commands</h2>
 
 <p>
   Here is a summary of important commands that can be used as you develop
