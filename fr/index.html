@@ -6,20 +6,17 @@
         content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
         rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"
+  <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css"
         media="screen"/>
-  <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-responsive.min.css"
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css"
         media="screen"/>
-  <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css"
+  <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css"
         media="screen"/>
-  <link rel="stylesheet" type="text/css" href="stylesheets/print.css"
+  <link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
         media="print"/>
-  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css"
-        media="screen"/>
-  <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
-  <script type="text/javascript" src="javascripts/main.js"></script>
-
+  <script type="text/javascript" src="../javascripts/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../javascripts/main.js"></script>
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,25 +38,25 @@
           <a href="#ruby" class="dropdown-toggle"><b class="caret"></b> Ruby</a>
           <ul class="dropdown-menu">
             <li><a href="#ruby-concepts">Concepts Généraux</a></li>
-            <li><a href="#ruby-numbers">Numbers</a></li>
-            <li><a href="#ruby-strings">Strings</a></li>
-            <li><a href="#ruby-arrays">Arrays</a></li>
-            <li><a href="#ruby-hashes">Hashes</a></li>
+            <li><a href="#ruby-numbers">Nombres</a></li>
+            <li><a href="#ruby-strings">Textes</a></li>
+            <li><a href="#ruby-arrays">Tableaux</a></li>
+            <li><a href="#ruby-hashes">Dictionnaires</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#rails"><b class="caret"></b> Rails</a>
           <ul class="dropdown-menu">
-            <li><a href="#rails-folder-structure">Folder Structure</a></li>
-            <li><a href="#rails-commands">Commands</a></li>
+            <li><a href="#rails-folder-structure">Dossiers et Fichiers</a></li>
+            <li><a href="#rails-commands">Commandes</a></li>
           </ul>
         </li>
-        <li><a href="#editor">Editor Tips</a></li>
-        <li><a href="#help">Help</a></li>
+        <li><a href="#editor">Éditeur de texte</a></li>
+        <li><a href="#help">Aide</a></li>
       </ul>
       <ul class="nav pull-right">
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Ressources</a></li>
+        <li><a href="about.html">À propos de</a></li>
       </ul>
     </div>
   </nav>
@@ -68,79 +65,85 @@
 <div id="content-wrapper">
 <div class="container ">
 <section id="main-content">
-<h1>Cheat Sheet Conventions</h1>
+<h1>Conventions de cette référence</h1>
 
 <p>
-  <strong>Bold</strong> words are what is really important e.g.
-  the command and concept shown in the usage category. In the code usage and
-  example columns these highlight the main part of the concept, like this:
-  <code>general_stuff<strong>.concept</strong></code>.
-  In the same columns <code><em>italic_words</em></code> mark the
-  arguments/parameters of a command/method.
+  Les mots en <strong>gras</strong> sont les plus importants, par exemple
+  la commande ou le concept, et son utilisation.
+
+  Dans le code d'exemple, nous mettons en valeur la commande utilisée :
+  <code>code_d_exemple<strong>.concept_a_montrer</strong></code>
+
+  Dans les mêmes colonnes, les <code><em>mots_italiques</em></code>
+  marquent les arguments/paramètres d'une commande/méthode.
 </p>
 
 <p>
-  However <em>italic words</em> in the descriptions or general text denote
-  more general concepts or concepts explained elsewhere in this cheat
-  sheet or in general.
+  Mais dans les descriptions ou le texte général, les <em>mots italiques</em>
+  dénotent plutôt des concepts génériques, ou des concepts expliqués ailleurs
+  (que ce soit dans cette page ou en général).
 </p>
 
-<h1 id="console">Console Basics</h1>
+<h1 id="console">La console</h1>
 
 <p>
-  The console (also called <em>command line, command prompt or
-  terminal</em>) is just another way of interacting with your computer.
-  So you can basically do anything with it that you could also do with
-  your graphical desktop user interface. This sections contains a couple
-  of examples.
+  La console (aussi appelée <em>terminal, ligne de commande ou 'shell'</em>
+  est simplement un moyen d'interagir avec votre ordinateur.
+
+  C'est comme une discussion avec lui : vous tapez une commande (un
+  ordre ou une question), et il répond. Vous pouvez faire tout un tas
+  de choses similaires à ce que vous feriez à l'aide d'une interface
+  graphique.
+
+  Comme c'est du texte, c'est plus facile de copier-coller les lignes
+  ou de répéter et d'enchaîner des commandes. Grouper des commandes,
+  souvent dans un fichier texte, pour les éxécuter en groupe s'appelle
+  faire (ou lancer) un "script".
 </p>
 
 <p>
-  For the different operating systems <strong>starting the console</strong>
-  differs.
+  Selon votre OS (système d'exploitation), <strong>démarrer la console</strong>
+  se fait de différentes manières.
 </p>
 
 <ul>
-  <li><strong>Windows:</strong> Open the start menu and search for
-    command prompt. Alternatively choose <em>execute</em> and enter
-    <em>cmd</em>.</li>
-  <li><strong>Mac:</strong> Open Spotlight, type <em>terminal</em>, and
-    start that program.
+  <li><strong>Windows:</strong> ouvrez le menu démarrer et cherchez le terminal.
+    Vous pouvez également choisir <em>Exécuter...</em> et taper <em>cmd</em>.</li>
+  <li><strong>Mac:</strong> Ouvrez la recherche (Spotlight), tapez <em>terminal</em>,
+    et lancez ce programme.
   </li>
-  <li><strong>Linux:</strong> The terminal should be one of the main
-    options once you open the main menu of your distribution. Otherwise
-    search for <em>terminal</em> if your distribution has such an option
-    or look under Accessories.
+  <li><strong>Linux:</strong> Le terminal devrait être une des principales options
+    de votre menu principal, même s'ils diffèrent selon les distributions.
+    S'il n'est pas mis en valeur, il est probablement dans un menu Utilitaires,
+    ou nommé <em>Terminal</em> ou <em>Console</em>.
   </li>
 </ul>
 
 <table class="table table-striped">
   <tr>
     <th class="concept">Concept</th>
-    <th class="usage">Usage</th>
-    <th class="example">Examples</th>
+    <th class="usage">Utilisation</th>
+    <th class="example">Exemples</th>
     <th class="description">Description</th>
   </tr>
   <tr>
-    <td>Change directory</td>
+    <td>Changer de dossier</td>
     <td>
-      <code><strong>cd</strong> <em>directory</em></code>
+      <code><strong>cd</strong> <em>dossier</em></code>
     </td>
     <td>
       <p><code>cd my_app</code></p>
 
       <p><code>cd my_app/app/controllers</code></p>
     </td>
-    <td>Changes the directory to the specified directory on the
-      console.
+    <td>Vous déplace vers (ou "ouvre") le dossier demandé.
     </td>
   </tr>
   <tr>
-    <td>List contents directory</td>
+    <td>Lister le contenu du dossier</td>
     <td>
-      <p><code><strong>ls</strong> <em>directory</em></code></p>
-
-      <p><code>Windows: <strong>dir</strong> <em>directory</em></code>
+      <p><code><strong>ls</strong> <em>dossier</em></code></p>
+      <p><code>Windows: <strong>dir</strong> <em>dossier</em></code>
       </p>
     </td>
     <td>
@@ -148,112 +151,119 @@
 
       <p><code><strong>ls</strong> <em>my_app</em></code></p>
     </td>
-    <td>Shows all contents (files and folders) of the directory.
-      If no directory is specified shows the contents of the
-      current directory.
+    <td>Montre le contenu (fichiers et dossiers) du dossier demandé.
+      Si aucun dossier n'est demandé, liste le contenu du dossier courant.
     </td>
   </tr>
   <tr>
-    <td>Directory you are currently in</td>
+    <td>Dossier courant</td>
     <td><code><strong>pwd</strong></code></td>
     <td><code><strong>pwd</strong></code></td>
-    <td>Shows the full path of the directory you are currently
-      in. E.g. /home/tobi/railsgirls
+    <td>Montre le chemin complet du dossier courant ("dans lequel vous êtes"), par exemple
+      <code>/home/tobi/railsgirls</code>
       <br />
-      A note on filenames: if a file or directory name starts with a slash / as in the output of pwd above, it is an absolute filename specifying the complete filename starting at the root of the current file system (e.g. hard disk). If the slash (/) is ommitted, the file name is relative to the current working directory.
+      À propos des chemins : si un fichier ou dossier commence par un slash /
+      comme montré ci-dessus, il s'agit d'un chemin "absolu", donnant le chemin
+      complet depuis la racine du disque.
+      S'il n'y a pas de slash(/), le chemin est relatif au dossier courant.
     </td>
   </tr>
   <tr>
-    <td>Create a new directory</td>
-    <td><code><strong>mkdir</strong> <em>name</em></code></td>
+    <td>Nouveau dossier</td>
+    <td><code><strong>mkdir</strong> <em>nom</em></code></td>
     <td>
       <p><code><strong>mkdir</strong> <em>rails</em></code></p>
       <p><code><strong>mkdir</strong> <em>fun</em></code></p>
     </td>
     <td>
-      Creates a directory with the given name in the folder you are currently
-      in.
+      Créé un nouveau dossier, avec le nom demandé, dans le dossier courant.
     </td>
   </tr>
   <tr>
-    <td>Delete a file</td>
+    <td>Effacer un fichier</td>
     <td>
-      <p><code><strong>rm</strong> <em>file</em></code></p>
+      <p><code><strong>rm</strong> <em>fichier</em></code></p>
 
-      <p><code>Windows: <strong>del</strong> <em>file</em></code>
+      <p><code>Windows: <strong>del</strong> <em>fichier</em></code>
     </td>
     <td>
-      <p><code><strong>rm</strong> <em>foo</em></code></p>
+      <p><code><strong>rm</strong> <em>toto</em></code></p>
       <p><code><strong>rm</strong> <em>index.html</em></code></p>
-      <p><code><strong>rm</strong> <em>pictures/old_picture.jpg</em></code></p>
+      <p><code><strong>rm</strong> <em>images/vieille_image.jpg</em></code></p>
     </td>
     <td>
-      <p>Deletes the specified file. Be <strong>extra cautious</strong> with this
-      as it would be too bad to delete something you still need :-(</p>
+      <p>Supprime le fichier demandé. <strong>Attention !</strong>
+      Il sera perdu pour toujours, et il est trop facile d'effacer un fichier
+      que l'on voulait conserver :(</p>
       <p>
-        You can simply specify the name of a file of the directory you are
-        currently in. However you can also specify a path, this is shown in the
-        third example. There we delete the <em>old_picture.jpg</em> file from
-        the <em>pictures</em> folder.
+	Vous pouvez vous déplacer dans le dossier et supprimer le fichier.
+	Mais comme montre le troisième exemple, vous pouvez effacer un fichier
+	où qu'il soit sans changer de dossier, tant que vous connaissez son chemin.
+	Ici, on efface <em>vieille_image.jpg</em> du dossier <em>images</em>.
       </p>
     </td>
   </tr>
   <tr>
-    <td>Delete a directory</td>
+    <td>Effacer un dossier complet</td>
     <td>
-      <p><code><strong>rm -r</strong> <em>folder</em></code></p>
+      <p><code><strong>rm -r</strong> <em>dossier</em></code></p>
 
-      <p><code>Windows: <strong>rd</strong> <em>folder</em></code>
+      <p><code>Windows: <strong>rd</strong> <em>dossier</em></code>
     </td>
     <td>
-      <p><code><strong>rm -r</strong> <em>stuff_i_dont_need</em></code></p>
-      <p><code><strong>rm -r</strong> <em>stuff_i_dont_need/</em></code></p>
-      <p><code><strong>rm -r</strong> <em>old_application</em></code></p>
+      <p><code><strong>rm -r</strong> <em>vieux_trucs</em></code></p>
+      <p><code><strong>rm -r</strong> <em>vieux_trucs/</em></code></p>
+      <p><code><strong>rm -r</strong> <em>ancienne_application</em></code></p>
     </td>
     <td>
-      <p>Deletes the specified folder <strong>and all of its contents</strong>.
-        So please be <strong>super cautious</strong> with this! Make sure that
-        you do not need any of the contents of this folder any more.
+      <p>Supprime le dossier demandé <strong>et tout son contenu !</strong>
+	Faites <strong>d'autant plus attention</strong> avec ça, et soyez
+	sûrs de ne plus avoir besoin d'aucun fichier dans ce dossier.
       </p>
       <p>
-        So why would you want to delete a whole folder? Well maybe it was an old
-        application that you do not need anymore :-)
+	Alors, pourquoi voudriez-vous supprimer un dossier entier ?
+	Et bien peut-être parce que c'est une vieille application dont
+	vous n'avez plus besoin :)
       </p>
     </td>
   </tr>
   <tr>
-    <td>Starting a program</td>
-    <td><code><strong>program</strong> <em>arguments</em></code></td>
+    <td>Lancer un programme</td>
+    <td><code><strong>programme</strong> <em>arguments</em></code></td>
     <td>
       <p><code><strong>firefox</strong></code></p>
 
       <p><code>
-        <strong>firefox</strong> <em>railsgirlsberlin.de</em></code>
+        <strong>firefox</strong> <em>railsgirls.com</em></code>
       </p>
 
       <p><code><strong>irb</strong></code></p>
     </td>
-    <td>Starts the program with the given name and arbitrary arguments
-      if the program takes arguments. Firefox is just one example. Starting
-      Firefox without arguments just opens up Firefox. If you give it an
-      argument it opens the specified URL.
-      When you type in <code>irb</code> this starts <em>interactive ruby</em>.
+    <td>Lance le programme avec le nom demandé. Tout ce qui est après sont
+      des paramètres ou options, si votre programme en a besoin.
+      Dans l'exemple de Firefox, sans argument il s'ouvre parfaitement.
+      Mais avec une adresse en paramètre, il ouvrira le site demandé.
+
+      Et quand vous tapez <code>irb</code>, cela lance un <em>interpréteur ruby</em>.
     </td>
   </tr>
   <tr>
-    <td>Abort the program</td>
-    <td>Press <strong>Ctrl + C</strong></td>
+    <td>Quitter le programme</td>
+    <td>Appuyez sur <strong>Ctrl + C</strong></td>
     <td>-</td>
-    <td>This will abort the program currently running in the terminal.
-      For instance this is used to shut down the Rails server.
-      You can also abort many other related tasks with it, including:
-      bundle install, rake db:migrate, git pull and many more!
+    <td>Termine le programme qui fonctionne en ce moment dans le
+    terminal et vous rend la main.
+      Par exemple, c'est ainsi que l'on arrête le serveur Rails.
+      Vous pouvez aussi interrompre de nombreuses commandes avec ça,
+      comme par exemple
+      <code>bundle install</code>, <code>rake db:migrate</code>,
+      <code>git pull</code> et tant d'autres !
     </td>
   </tr>
 </table>
 
 
-<h1 id="ruby">Ruby Basics</h1>
+<h1 id="ruby">Bases de Ruby</h1>
 
 <p>
   Ruby is the programming language Ruby on Rails is written in. So most
@@ -978,7 +988,7 @@ the purpose of each folder, and describing the most important files.
   </tr>
   <tr>
     <td>app/controllers</td>
-    <td>The controllers subdirectory contains the controllers, which
+    <td>The controllers sous-dossier contains the controllers, which
       handle the requests from
       the users. It is often responsible for a single resource type,
       such as places, users or attendees. Controllers also tie together
@@ -998,7 +1008,7 @@ the purpose of each folder, and describing the most important files.
   </tr>
   <tr>
     <td>app/models</td>
-    <td>The models subdirectory holds the classes that model the business
+    <td>The models sous-dossier holds the classes that model the business
       logic of our application. It is concerned with the things our
       application is about. Often this is data, that is also saved in the
       database. Examples here are a Person, or a Place class with all
@@ -1008,7 +1018,7 @@ the purpose of each folder, and describing the most important files.
   <tr>
     <td>app/views</td>
     <td>
-      <p>The views subdirectory contains the display templates that will
+      <p>The views sous-dossier contains the display templates that will
         be displayed to the user after a successful request.
         By default they are written in HTML with embedded ruby
         (.html.erb). The embedded ruby is used to insert data from the
@@ -1029,7 +1039,7 @@ the purpose of each folder, and describing the most important files.
   </tr>
   <tr>
     <td>config</td>
-    <td>This directory contains the configuration files that your
+    <td>This dossier contains the configuration files that your
       application will need, including your database configuration (in
       <em>database.yml</em>) and the particularly important
       <em>routes.rb</em> which decides how web requests are handled.
@@ -1040,7 +1050,7 @@ the purpose of each folder, and describing the most important files.
   <tr>
     <td>db</td>
     <td>Contains a lot of <em>database</em> related files.
-      Most importantly the <em>migrations</em> subdirectory, containing
+      Most importantly the <em>migrations</em> sous-dossier, containing
       all your database migration files. Migrations set up your
       database structure, including the attributes of your models. With migrations
       you can add new attributes to existing models or create new models.
@@ -1084,7 +1094,7 @@ the purpose of each folder, and describing the most important files.
     <td>test</td>
     <td>Contains the tests for your application. With tests you make sure
       that your application actually does what you think it does. This
-      directory might also be called <em>spec</em>, if you are using the
+      dossier might also be called <em>spec</em>, if you are using the
       RSpec gem (an alternative testing framework).
     </td>
   </tr>
@@ -1127,9 +1137,9 @@ the purpose of each folder, and describing the most important files.
 
 <p>
   Here is a summary of important commands that can be used as you develop
-  your Ruby on Rails app. You must be in the root directory of your project
+  your Ruby on Rails app. You must be in the root dossier of your project
   to run any of these commands (with the exception of the <em>rails new</em>
-  command). The project or application root directory is the folder containing
+  command). The project or application root dossier is the folder containing
   all the subfolders described above (app, config, etc.).
 </p>
 
