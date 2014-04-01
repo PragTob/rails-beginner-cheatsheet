@@ -26,13 +26,20 @@ $ git clone git@github.com:MyGitHubAcoount/rails-beginner-cheatsheet.git
 $ cd rails-beginner-cheatsheet
 ```
 
+It is best to create a new branch to contribute (not necessary though):
+
+```
+$ git checkout -b my-new-branch
+```
+
+
 Make your changes.
 
 Commit and push to the remote repository:
 
 ```
 $ git commit -am "some helpful comment"
-$ git push origin gh-pages
+$ git push origin my-new-branch
 ```
 
-Make a pull request.
+Make a pull request (when you check the repository out online at github you should see a big green button to make a pull request shortly after you pushed the branch).
