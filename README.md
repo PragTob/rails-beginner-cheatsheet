@@ -47,11 +47,13 @@ Make a pull request (when you check the repository out online at github you shou
 Get the site running locally
 ============================
 
-To get the site running locally (for development/contribution or trying it out) do the following (after you cloned etc. as described above):
+To get the site running locally (for development/contribution or trying it out) enter the following commands on your command line in the folder of this repository (after you cloned etc. as described above):
 
 ```
 bundle install
 jekyll serve
 ```
+
+This assumes you already have Ruby installed :)
 
 Now you can visit http://0.0.0.0:4000/ to see the website locally! Yay you!
