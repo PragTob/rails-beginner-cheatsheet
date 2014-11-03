@@ -1,9 +1,16 @@
 ---
-# bla?
 ---
 
-/* LAYOUT STYLES */
+
+$cheat-sheet-red: #D3360B;
+$navbar-default-bg: $cheat-sheet-red;
+$navbar-default-color: white;
+$navbar-default-link-color: white;
+$navbar-default-brand-hover-color: white;
+
+
 @import "vendor/bootstrap";
+
 
 body {
   font-size: 15px;
@@ -29,12 +36,10 @@ a:visited {
 .navbar a {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 20px;
-  padding: 10px 5px;
 }
 
-.navbar a.brand {
+.navbar a.cheat-sheet-brand {
   font-size: 25px;
-  padding: 2px 20px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
 }
 
@@ -168,7 +173,7 @@ h6:before {
 /* Footer
 -------------------------------------------------- */
 
-.footer {
+footer {
   padding: 30px 0;
   margin-top: 70px;
   border-top: 1px solid #e5e5e5;
@@ -179,6 +184,7 @@ h6:before {
 }
 .footer-links {
   margin: 10px 0;
+  padding: 0px;
 }
 .footer-links li {
   display: inline;
