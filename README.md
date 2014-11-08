@@ -3,7 +3,7 @@ Rails Beginner Cheat sheet
 
 A cheat sheet for Rails beginners, taking care of a lot of basic stuff and information. Aimed at helping beginners to look up stuff.
 
-You can view this cheat sheet in all its "beauty" here: http://pragtob.github.io/rails-beginner-cheat sheet/
+You can view this cheat sheet in all its _beauty_ here: http://www.pragtob.info/rails-beginner-cheatsheet/
 
 As opposed to other cheat sheets it isn't necessarily aimed at brevity, but comprehensibility. It also takes care of the very basics, like cd on the command line, that beginners sometimes forget or confuse.
 
