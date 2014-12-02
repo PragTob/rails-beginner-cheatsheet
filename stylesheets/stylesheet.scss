@@ -3,6 +3,8 @@
 
 
 $cheat-sheet-red: #D3360B;
+$cheat-sheet-red-dark: #AC2400;
+$cheat-sheet-red-complement: #550000;
 $navbar-default-bg: $cheat-sheet-red;
 $navbar-default-color: white;
 $navbar-default-link-color: white;
@@ -11,6 +13,9 @@ $navbar-default-brand-hover-color: white;
 
 @import "vendor/bootstrap";
 
+body {
+  background: #000;
+}
 
 body {
   font-size: 15px;
@@ -34,17 +39,22 @@ a:visited {
 }
 
 .navbar a {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 20px;
+}
+
+.navbar a:hover {
+  color: $cheat-sheet-red-complement;
 }
 
 .navbar a.cheat-sheet-brand {
   font-size: 25px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-weight: 600;
 }
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
-    display: block;    
+    display: block;
 }
 
 a.menu:after, .dropdown-toggle:after {
@@ -67,6 +77,14 @@ header h2 {
   line-height: 1.3;
   width: 540px;
   letter-spacing: 0;
+}
+
+.navbar-toggle:hover {
+  background: $cheat-sheet-red-dark !important;
+}
+
+.icon-bar {
+  background-color: #fff !important;
 }
 
 code, pre {
@@ -96,7 +114,7 @@ th.hash-example {
 /* GENERAL ELEMENT TYPE STYLES */
 
 #main-content h1 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 2.8em;
   letter-spacing: -1px;
   color: #474747;
@@ -113,7 +131,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 }
 
 #main-content h2 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 8px;
@@ -125,7 +143,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 }
 
 #main-content h3 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 18px;
   font-weight: bold;
   margin-top: 24px;
@@ -139,7 +157,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 }
 
 #main-content h4 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 15px;
   font-weight: bold;
   color: #474747;
@@ -151,7 +169,7 @@ h4:before {
 }
 
 #main-content h5 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 14px;
   color: #474747;
 }
@@ -161,7 +179,7 @@ h5:before {
 }
 
 #main-content h6 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: .8em;
   color: #474747;
 }
@@ -207,4 +225,19 @@ footer {
 
 .dropdown-menu {
   top: 95%;
+}
+
+/* Media Queries
+-------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .navbar a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 421px) {
+  .navbar-brand {
+    font-size: 16px !important;
+  }
 }
