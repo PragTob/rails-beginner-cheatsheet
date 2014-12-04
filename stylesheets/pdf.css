@@ -1,0 +1,75 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: rgb(102, 102, 102);
+  font-size: 1em;
+}
+
+td {
+  text-align: left;
+}
+
+td:first-child {
+  width: 10%;
+}
+
+td:last-child {
+  width: 25%;
+}
+
+th {
+  font-weight: bold;
+  background: rgb(249, 249, 249);
+}
+
+td, th {
+  padding: .5em;
+}
+
+table,
+td {
+  border: 0;
+}
+
+table {
+  margin-bottom: 3em;
+  border-top: solid 1px rgb(221, 221, 221);
+}
+
+td, th {
+  padding: .5em;
+  border-bottom: solid 1px rgb(221, 221, 221);
+}
+
+tbody tr:nth-child(odd) {
+  background: rgb(249, 249, 249);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  color: rgb(71, 71, 71);
+}
+
+i, em {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 3em;
+}
+
+.navbar-fixed-top .navbar-nav,
+.footer-links {
+  display: none;
+}
+
+code {
+  color: red;
+  background: rgb(247, 247, 249);
+  border: solid 1px rgb(234, 234, 239);
+  border-radius: 5px;
+  padding: 3px;
+}

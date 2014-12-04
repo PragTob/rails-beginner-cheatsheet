@@ -57,3 +57,26 @@ jekyll serve
 This assumes you already have Ruby installed :)
 
 Now you can visit http://0.0.0.0:4000/ to see the website locally! Yay you!
+
+Generate a PDF
+==============
+
+The Rake task *create_pdf* will write a PDF file from an HTML document. Its default behavior is to create RailsBeginnerCheatSheet.pdf from ./_site/index.html. It runs Jekyll build to ensure the source file is up to date.
+
+```
+rake cheatsheet:create_pdf
+```
+
+The input, output, and formatting can be controlled with command line arguments. Ex:
+
+```
+rake cheatsheet:create_pdf -- --source='./_site/about.html' --dest='./about.pdf'
+
+**Arguments**
+
+Name          | Default Value                 | Description
+--------------|-------------------------------|-------------------------------------
+--source      | ./_site/index.html            | HTML file from which to create a PDF.
+--dest        | ./RailsBeginnerCheatSheet.pdf | Path where output should be written.
+--format      | Letter                        | Paper size format
+--orientation | Landscape                     | Orientation of the PDF document.
