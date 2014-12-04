@@ -71,6 +71,7 @@ The input, output, and formatting can be controlled with command line arguments.
 
 ```
 rake cheatsheet:create_pdf -- --source='./_site/about.html' --dest='./about.pdf'
+```
 
 **Arguments**
 
