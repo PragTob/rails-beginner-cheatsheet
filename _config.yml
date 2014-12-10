@@ -1,1 +1,1 @@
-exclude: ['makepdf', 'lib']
+exclude: ['lib', 'Rakefile', 'Gemfile']
