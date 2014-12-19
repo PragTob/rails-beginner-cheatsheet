@@ -1155,13 +1155,13 @@ the purpose of each folder, and describing the most important files.
 <h2 id="rails-erb">ERB: Embedded Ruby</h2>
 <p>
   In your views (that is, under <code>app/views</code> in your Rails app) you will find 
-  .html.erb files. <strong>ERB</strong> stands for <b>E</b>mbedded <b>Ruby</b>.
+  .html.erb files. <strong>ERB</strong> stands for <strong>E</strong>mbedded <strong>RB</strong>by.
   This just means that Rails processes some special tags in those files, and produces 
   HTML output to send back to the user.
 </p>
+<p>
   There are only two ERB tags that you need to remember: <code><%= <i>ruby_code</i> %></code>,
   and <code><% <i>ruby_code</i> %></code>
-<p>
 </p>
 
 <table class="table table-striped">
@@ -1169,6 +1169,7 @@ the purpose of each folder, and describing the most important files.
     <th>Special tag</th>
     <th>Example</th>
     <th>Description</th>
+  </tr>
   <tr>
     <td><code><%= %></code></td>
     <td><code><strong><%= @product.price %></strong></code></td>
