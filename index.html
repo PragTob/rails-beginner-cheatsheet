@@ -1167,8 +1167,8 @@ the purpose of each folder, and describing the most important files.
 </p>
 <p>
   There are two ERB tags that you need to remember:
-  <code><%= <i>ruby_code</i> %></code> and
-  <code><% <i>ruby_code</i> %></code>. Notice that the difference is the
+  <code>&lt;%= <i>ruby_code</i> %&gt;</code> and
+  <code>&lt;% <i>ruby_code</i> %&gt;</code>. Notice that the difference is the
   <strong>=</strong> in the first tag.
 </p>
 
@@ -1179,25 +1179,25 @@ the purpose of each folder, and describing the most important files.
     <th class="description">Description</th>
   </tr>
   <tr>
-    <td><code><%<strong>=</strong> %></code></td>
-    <td><code><strong><%= @product.price %></strong></code></td>
+    <td><code>&lt;%<strong>=</strong> %&gt;</code></td>
+    <td><code><strong>&lt;%= @product.price %&gt;</strong></code></td>
     <td>
       It runs the Ruby code and inserts the result to the HTML at that position.
-      You can put <em>any kind of Ruby code</em> between <code><%=</code> and
-      <code>%></code>, for instance, <code><%= 9 * 3 %></code> will translate to
+      You can put <em>any kind of Ruby code</em> between <code>&lt;%=</code> and
+      <code>%&gt;</code>, for instance, <code>&lt;%= 9 * 3 %&gt;</code> will translate to
       <strong>27</strong> in the page that the user is viewing. However,
       typically this tag is used to display some data from a model, such as the
       price of a product, as shown in the example here.
     </td>
   </tr>
   <tr>
-    <td><code><% %></code></td>
+    <td><code>&lt;% %&gt;</code></td>
     <td>
-<pre><code><strong><% if user.admin? %></strong>
+<pre><code><strong>&lt;% if user.admin? %&gt;</strong>
   &lt;p&gt;Hello Admin!&lt;/p&gt;
-<% end %></code></pre></td>
+&lt;% end %&gt;</code></pre></td>
     <td>
-      The Ruby code between the delimiters <code><%</code> and <code>%></code>
+      The Ruby code between the delimiters <code>&lt;%</code> and <code>%&gt;</code>
       is run but the result will <strong>not</strong> be inserted at this point
       in the HTML. Therefore these tags are most commonly used for control flow
       structures such as an if statement in the example, or loops.
