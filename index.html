@@ -1157,6 +1157,43 @@ the purpose of each folder, and describing the most important files.
   </tr>
 </table>
 
+<h2 id="rails-erb">ERB: Embedded Ruby</h2>
+<p>
+  In your views (that is, under <code>app/views</code> in your Rails app) you will find 
+  .html.erb files. <strong>ERB</strong> stands for <strong>E</strong>mbedded <strong>RB</strong>by.
+  This just means that Rails processes some special tags in those files and produces 
+  HTML output to send back to the user.
+</p>
+<p>
+  There are two ERB tags that you need to remember: <code><%= <i>ruby_expression</i> %></code> and <code><% <i>ruby_code</i> %></code>
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th>Special tag</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code><%= %></code></td>
+    <td><code><strong><%= @product.price %></strong></code></td>
+    <td>
+      It runs the Ruby code and inserts the result to the HTML at that position. You can 
+      put <em>any kind of Ruby code</em> between <code><%=</code> and <code>%></code>, for instance,
+      <code><%= 9 * 3 %></code> will translate to <strong>27</strong> in the page that the user is viewing.
+      However, typically this tag is used to display some data from a model, such as the price of a product 
+      shown in the example here.
+    </td>
+  </tr>
+  <tr>
+    <td><code><% %></code></td>
+    <td><code><strong><% print "Hi" %></strong></code></td>
+    <td>
+      The Ruby code between the delimiters <code><%</code> and <code>%></code> are embedded code blocks, will be evaluated in its place and gets substituted with the result., as per the example, the output <strong>Hi</strong> will replace this <code><% print "Hi" %></code> part of the code.
+    </td>
+  </tr>
+</table>
+
 <h1 id="editor">Editor tips</h1>
 
 <p>
