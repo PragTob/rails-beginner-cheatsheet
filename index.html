@@ -1174,12 +1174,12 @@ the purpose of each folder, and describing the most important files.
 
 <table class="table table-striped">
   <tr>
-    <th>Tag</th>
-    <th>Example</th>
-    <th>Description</th>
+    <th class="usage">Tag</th>
+    <th class="erb-example">Examples</th>
+    <th class="description">Description</th>
   </tr>
   <tr>
-    <td><code><%= %></code></td>
+    <td><code><%<strong>=</strong> %></code></td>
     <td><code><strong><%= @product.price %></strong></code></td>
     <td>
       It runs the Ruby code and inserts the result to the HTML at that position.
@@ -1187,18 +1187,20 @@ the purpose of each folder, and describing the most important files.
       <code>%></code>, for instance, <code><%= 9 * 3 %></code> will translate to
       <strong>27</strong> in the page that the user is viewing. However,
       typically this tag is used to display some data from a model, such as the
-      price of a product shown in the example here.
+      price of a product, as shown in the example here.
     </td>
   </tr>
   <tr>
     <td><code><% %></code></td>
-    <td><code><strong><% print "Hi" %></strong></code></td>
+    <td>
+<pre><code><strong><% if user.admin? %></strong>
+  &lt;p&gt;Hello Admin!&lt;/p&gt;
+<% end %></code></pre></td>
     <td>
       The Ruby code between the delimiters <code><%</code> and <code>%></code>
-      are embedded code blocks, will be evaluated in its place and gets
-      substituted with the result., as per the example, the output
-      <strong>Hi</strong> will replace this <code><% print "Hi" %></code>
-      part of the code.
+      is run but the result will <strong>not</strong> be inserted at this point
+      in the HTML. Therefore these tags are most commonly used for control flow
+      structures such as an if statement in the example, or loops.
     </td>
   </tr>
 </table>
