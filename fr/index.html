@@ -266,79 +266,77 @@
 <h1 id="ruby">Bases de Ruby</h1>
 
 <p>
-  Ruby is the programming language Ruby on Rails is written in. So most
-  of the time you will be writing Ruby code. Therefore it is good to
-  grasp the basics of Ruby. If you just want to play with Ruby, type
-  <strong>irb</strong> into your console to start interactive ruby. There
-  you can easily experiment with Ruby. To leave irb, type
-  <strong>exit</strong>.
+  Ruby on Rails est écrit avec le language de programmation Ruby. C'est 
+  pourquoi vous écrirez principalement votre code en Ruby. Il est donc important
+  de comprendre les bases de ce language. Si vous souhaitez simplement essayer Ruby,
+  tapez <strong>irb</strong> dans votre console. Vous pourrez ainsi experimenter avec 
+  le language. Pour quitter irb, taper <strong>exit</strong>.
 </p>
 
 <p>
-  This is just a very small selection of concepts. This is especially
-  true later on when we talk about what Arrays, Strings etc. can do.
-  For more complete information have a look at
-  <a href="http://ruby-doc.org/">ruby-doc</a> or search with your favorite
-  search engine!
+  Ci-dessous vous trouverez un petit échantillon des concepts. C'est particulièrement vrai 
+  lorsque l'on considère ce que les Arrays, Strings, etc. peuvent faire. Pour plus de détails vous pouvez
+  regarder <a href="http://ruby-doc.org/">ruby-doc</a> (en anglais) ou utiliser votre moteur 
+  de recherche favori!
 </p>
 
-<h2 id="ruby-concepts">General concepts</h2>
+<h2 id="ruby-concepts">Concepts Généraux</h2>
 <table class="table table-striped">
 <tr>
   <th class="concept">Concept</th>
-  <th class="usage">Usage</th>
-  <th class="example">Examples</th>
+  <th class="usage">Utilisation</th>
+  <th class="example">Exemples</th>
   <th class="description">Description</th>
 </tr>
 <tr>
-  <td>Comment</td>
+  <td>Commen- taires</td>
   <td>
-    <code><strong>#</strong> <em>Comment text</em></code>
+    <code><strong>#</strong> <em>Texte commentaire</em></code>
   </td>
   <td>
     <p>
-      <code><strong>#</strong> <em>This text is a comment</em></code>
+      <code><strong>#</strong> <em>Ceci est un commentaire</em></code>
     </p>
 
     <p>
-      <code>some.ruby_code <strong>#</strong> A comment</code>
+      <code>qqch.code_ruby <strong>#</strong> Un commentaire</code>
     </p>
 
     <p>
-      <code><strong>#</strong> some.ignored_ruby_code</code>
+      <code><strong>#</strong> qqch.code_ruby_ignoré</code>
     </p>
   </td>
   <td>
-    Ruby ignores everything that is marked as a comment. It does not try
-    to execute it. Comments are just there for you as information.
-    Comments are also commonly used to <em>comment out code</em>. That
-    is when you don't want some part of your code to execute
-    but you don't want to delete it just yet, because you are trying
-    different things out.
+    Ruby ignore tout ce qui est marqué comme commentaire (à l'aide du 
+    caractère #). Il n'essaie pas de l'éxecuter. Les commentaires sont 
+    uniquement présents à titre informatif. Les commentaires sont aussi 
+    communement utilisé pour <em>commenter des lignes de code</em>. Lorsque
+    vous souhaitez qu'une partie de votre code ne soit pas éxecutée 
+    mais vous ne souhaitez pas le supprimer car vous faites des essais.
   </td>
 </tr>
 <tr>
   <td>Variables</td>
   <td>
-    <code><strong>variable =</strong> <em>some_value</em></code>
+    <code><strong>variable =</strong> <em>une_valeur</em></code>
   </td>
   <td>
-<pre><code><strong>name =</strong> <em>"Tobi"</em>
-<strong>name</strong> # => "Tobi"</code></pre>
-<pre><code><strong>sum =</strong> <em>18 + 5</em>
-<strong>sum</strong> # => 23</code></pre>
+<pre><code><strong>nom =</strong> <em>"Pierre"</em>
+<strong>nom</strong> # => "Pierre"</code></pre>
+<pre><code><strong>somme =</strong> <em>18 + 5</em>
+<strong>somme</strong> # => 23</code></pre>
   </td>
   <td>
-    With a variable you tell Ruby that from now on you want to refer to
-    that value by the name you gave it. So for the first example, from
-    now on when you use <em>name</em> Ruby will know that you meant
-    <em>"Tobi"</em>.
+    A l'aide d'une variable vous dites à Ruby qu'à partir de maintenant vous souhaitez
+    vous référer à une valeur par le nom que vous lui avez donné. Dans le premier 
+    exemple, dorénavant lorsque vous utilisez <em>nom</em> Ruby saura que vous
+    voulez dire <em>"Pierre"</em>
   </td>
 </tr>
 <tr>
-  <td>Console output</td>
+  <td>Impression console</td>
   <td>
-    <code><strong>puts</strong> <em>something</em></code>
+    <code><strong>puts</strong> <em>quelquechose</em></code>
   </td>
   <td>
     <p><code><strong>puts</strong> <em>"Hello World"</em></code></p>
@@ -346,14 +344,15 @@
     <p><code><strong>puts</strong> <em>[1, 5, "mooo"]</em></code></p>
   </td>
   <td>
-    Prints its argument to the console. Can be used in Rails apps
-    to print something in the console where the server is running.
+    Imprime son argument dans la console. Peut être utilisé dans les
+    applications Rails pour imprimer quelquechose dans la console où
+    le serveur fonctionne.
   </td>
 </tr>
 <tr>
-  <td>Call a method</td>
+  <td>Appeler une méthode</td>
   <td>
-    <code>object<strong>.method</strong><em>(arguments)</em></code>
+    <code>objet<strong>.method</strong><em>(arguments)</em></code>
   </td>
   <td>
     <p><code>string<strong>.length</strong></code></p>
@@ -365,152 +364,149 @@
     <p><code>string<strong>.gsub</strong><em>("ae", "ä")</em></code></p>
   </td>
   <td>
-    <p>Calling a method is also often referred to as
-      <em>sending a message</em> in Ruby. Basically we are sending an
-      object some kind of message and are waiting for its response.
-      This message may have no arguments or multiple arguments, depending
-      on the message.
-      So we kindly ask the object to do something or give us some
-      information.
-      When you "call a method" or "send a message" something happens. In the
-      first example we ask a String how long it is (how many
-      characters it consists of). In the last example we substitute all
-      occurrences of "ae" in the string with the German "ä".</p>
+    <p>Appeler une méthode est souvent mentionné comme 
+      <em>envoyer un message</em> en Ruby. Grosso modo, nous envoyons un
+      message à un objet et nous en attendons une réponse. Selon le message, il 
+      peut y avoir zéro, un ou plusieurs arguments. Ainsi nous demandons gentiment à l'objet
+      de faire quelque chose ou de nous donner une information. Lorsque nous "appelons
+      une méthode" ou "envoyons un message" quelque chose se passe. Dans le premier
+      exemple on demande à l'object de la classe 'String' la longueur qu'il fait (De combien 
+      de caractère il consiste). Dans le dernier exemple nous remplaçons toutes les
+      répétitions de "ae" dans le texte par le caractère allemand "ä".
 
     <p>
-      Different kinds of objects (Strings, Numbers, Arrays...)
-      understand different messages.
+      Différents types d'objets (Strings, Numbers, Arrays...) comprennent
+      différents messages
     </p>
   </td>
 </tr>
 <tr>
-  <td>Define a method</td>
+  <td>Définir une méthode</td>
   <td>
-<pre><code><strong>def</strong> <em>name(parameter)</em>
-  <em># method body</em>
+<pre><code><strong>def</strong> <em>nom(paramètre)</em>
+  <em># corps de la méthode</em>
 <strong>end</strong></code></pre>
   </td>
   <td>
-<pre><code><strong>def</strong> <em>greet(name)</em>
-  <em>puts "Hy there " + name</em>
+<pre><code><strong>def</strong> <em>salutation(nom)</em>
+  <em>puts "Salut " + nom</em>
 <strong>end</strong></code></pre>
   </td>
   <td>
-    <p>Methods are basically reusable units of behaviour. And you can
-      define them yourself just like this. Methods are small and focused
-      on implementing a specific behaviour.</p>
+    <p>Les méthodes sont des unités de comportement réutilisables. Vous pouvez
+    les définir vous-mêmes comme dans l'exemple. Les méthodes sont petites et focalisées
+    sur l'éxecution d'une tâche spécifique. 
 
     <p>
-      Our example method is focused on greeting people.
-      You could call it like this: <code>greet("Tobi")</code>
+      La méthode de l'exemple est focalisé sur la salutation de personne.
+      Elle peut être appelé de la manière suivante: <code>salutation("Pierre")</code>
     </p>
   </td>
 </tr>
 <tr>
-  <td>Equality</td>
-  <td><code>object <strong>==</strong> other</code></td>
+  <td>Egalité</td>
+  <td><code>objet <strong>==</strong> autre</code></td>
   <td>
     <p><code>true <strong>==</strong> true # => true</code></p>
 
     <p><code>3 <strong>==</strong> 4 # => false</code></p>
 
-    <p><code>"Hello" <strong>==</strong> "Hello" # => true</code></p>
+    <p><code>"Bonjour" <strong>==</strong> "Bonjour" # => true</code></p>
 
-    <p><code>"Helo" <strong>==</strong> "Hello" # => false</code></p>
+    <p><code>"Onjour" <strong>==</strong> "Bonjour" # => false</code></p>
   </td>
   <td>
-    With two equal signs you can check if two things are the
-    same. If so, <code>true</code> will be returned; otherwise, the result
-    will be <code>false</code>.
+    Avec deux signes égaux vous pouvez vérifier si deux éléments sont identiques.
+    Si c'est le cas, <code>true</code> sera retourné; sinon, se sera <code>false</code>.
   </td>
 </tr>
 <tr>
-  <td>Inequality</td>
-  <td><code>object <strong>!=</strong> other</code></td>
+  <td>Inégalité</td>
+  <td><code>objet <strong>!=</strong> autre</code></td>
   <td>
     <p><code>true <strong>!=</strong> true # => false</code></p>
 
     <p><code>3 <strong>!=</strong> 4 # => true</code></p>
   </td>
   <td>
-    Inequality is the inverse to equality, e.g. it results in
-    <code>true</code> when two values are not the same and it results
-    in <code>false</code> when they are the same.
+    L'inégalité est l'inverse d'égalité. C'est à dire qu'il retourne
+    <code>true</code> quand les deux éléments sont différents et 
+    <code>false</code> s'ils sont identiques.
   </td>
 </tr>
 <tr>
-  <td>Decisions with if</td>
+  <td>Décisions avec if</td>
   <td>
 <pre><code><strong>if</strong> <em>condition</em>
-  # happens when true
+  # éxécute si vrai
 <strong>else</strong>
-  # happens when false
+  # éxécute si faux
 <strong>end</strong>
 </code></pre>
   </td>
   <td>
-<pre><code><strong>if</strong> <em>input == password</em>
-  grant_access
+<pre><code><strong>if</strong> <em>texte_saisi == mot_de_passe</em>
+  accès_accordé
 <strong>else</strong>
-  deny_access
+  accès_refusé
 <strong>end</strong>
 </code></pre>
   </td>
   <td>
-    <p>With if-clauses you can decide based upon a <em>condition</em>
-      what to do. When the condition is considered true, then the code
-      after it is executed. If it is considered false, the code after
-      the "else" is executed.</p>
-
+    <p>Avec if vous pouvez décider que faire selon une <em>condition</em>. 
+      Lorsqu'une condition est considérée vraie, alors le code qui suit est
+      éxécuté. Si elle est considérée fausse, alors le code après "else" est
+      éxécuté.     
     <p>
-      In the example, access is granted based upon the decision if a
-      given input matches the password.
+      Dans l'exemple, l'accès est accordé si le texte saisi est identique au
+      mot de passe.
     </p>
   </td>
 </tr>
 <tr>
-  <td>Constants</td>
-  <td><code><strong>CONSTANT =</strong> <em>some_value</em></code></td>
+  <td>Constantes</td>
+  <td><code><strong>CONSTANTE =</strong> <em>une_valeur</em></code></td>
   <td>
 <pre><code><strong>PI = 3.1415926535</strong>
 <strong>PI</strong> # => 3.1415926535</code></pre>
-<pre><code><strong>ADULT_AGE</strong> = 18
-<strong>ADULT_AGE</strong> # => 18</code></pre>
+<pre><code><strong>AGE_ADULTE</strong> = 18
+<strong>AGE_ADULTE</strong> # => 18</code></pre>
   </td>
   <td>
-    Constants look like variables, just in UPCASE. Both hold
-    values and give you a name to refer to those values. However while
-    the value a variable holds may change or might be of an unknown
-    value (if you save user input in a variable) constants are
-    different. They have a known value that should never change. Think
-    of it a bit like mathematical or physical constants. These don't
-    change, they always refer to the same value.
+    Les constantes ressemblent aux variables, seulement en CAPITALES.
+    Toutes les deux contiennent une valeur et ont un nom pour mentionner
+    ces valeurs. En revanche, alors que la valeur contenu dans une variable
+    peut changer ou être inconnue (si l'on enregistre dans la variable 
+    une valeur saisie par l'utilisateur) les constantes sont différentes.
+    Elles ont une valeur connue qui ne devrait jamais changer. Un peu comme
+    les constantes mathématiques ou physiques. Celles-ci ne changent pas,
+    elles font toujours référence à la même valeur.
   </td>
 </tr>
 </table>
 
-<h2 id="ruby-numbers">Numbers</h2>
+<h2 id="ruby-numbers">Les Nombres</h2>
 
 <p>
-  Numbers are what you would expect them to be, normal
-  numbers that you use to perform basic math operations.
+  Les nombres sont, comme leurs noms l'indiquent, des nombres normaux
+  utilisés pour effectuer des opérations mathématiques basiques.
 </p>
 
 <p>
-  More information about numbers can be found in the
+  Plus d'informations sur les nombres peuvent être trouvées ici:
   <a href="http://ruby-doc.org/core-2.0/Numeric.html">ruby-doc of Numeric</a>.
 </p>
 
 <table class="table table-striped">
   <tr>
     <th class="concept">Concept</th>
-    <th class="usage">Usage</th>
-    <th class="example">Examples</th>
+    <th class="usage">Utilisation</th>
+    <th class="example">Exemples</th>
     <th class="description">Description</th>
   </tr>
   <tr>
-    <td>normal Number</td>
-    <td><code><strong>number_of_your_choice</strong></code></td>
+    <td>Nombres normaux</td>
+    <td><code><strong>nombre_de_votre_choix</strong></code></td>
     <td>
       <p><code><strong>0</strong></code></p>
 
@@ -519,25 +515,25 @@
       <p><code><strong>42</strong></code></p>
     </td>
     <td>
-      Numbers are natural for Ruby, you just have to enter them!
+      Les nombres sont naturels pour Ruby, il suffit seulement de les entrer!
     </td>
   </tr>
   <tr>
-    <td>Decimals</td>
-    <td><code><strong>main.decimal</strong></code></td>
+    <td>Décimaux</td>
+    <td><code><strong>principal.décimal</strong></code></td>
     <td>
       <p><code><strong>3.2</strong></code></p>
 
       <p><code><strong>-5.0</strong></code></p>
     </td>
     <td>
-      You can achieve decimal numbers in Ruby simply by adding a point.
+      Vous pouvez écrire des nombres décimaux dans Ruby simplement en ajoutant un point.
     </td>
   </tr>
   <tr>
-    <td>Basic Math</td>
+    <td>Math basiques</td>
     <td>
-      <code>n <strong>operator</strong> <em>m</em></code>
+      <code>a <strong>opérateur</strong> <em>b</em></code>
     </td>
     <td>
       <p><code>2 <strong>+</strong> <em>3</em> # => 5</code></p>
@@ -549,14 +545,14 @@
       <p><code>84 <strong>/</strong> <em>4</em> # => 21</code></p>
     </td>
     <td>
-      In Ruby you can easily use basic math operations.
-      In that sense you may use Ruby as a super-powered calculator.
+      Dans Ruby vous pouvez aisément utiliser les opérations mathématiques de base.
+      Vous pouvez ainsi vous servir de Ruby comme une très puissante calculatrice.
     </td>
   </tr>
   <tr>
-    <td>Comparison</td>
+    <td>Comparaison</td>
     <td>
-      <code>n <strong>operator</strong> <em>m</em></code>
+      <code>a <strong>opérateur</strong> <em>b</em></code>
     </td>
     <td>
       <p><code>12 <strong>&gt;</strong> <em>3</em> # => true</code></p>
@@ -566,11 +562,10 @@
       <p><code>7 <strong>&gt;=</strong> <em>7</em> # => true</code></p>
     </td>
     <td>
-      <p>Numbers may be compared to determine if a number is bigger or smaller
-        than another number. When you have the age of a person saved in the
-        <code>age</code> variable you can see if that person is considered
-        an adult in Germany:</p>
-
+      <p>Les nombres peuvent être comparés pour déterminer si un nombre est plus ou moins
+      grand qu'un autre. Lorsque vous avez l'age d'une personne enregistrée dans la
+      variable <code>age</code> vous pouvez vérifier si cette personne est considérée
+      comme un adulte
       <p><code>age >= 18 # true or false</code></p>
     </td>
   </tr>
@@ -579,13 +574,14 @@
 <h2 id="ruby-strings">Strings</h2>
 
 <p>
-  Strings are used to hold textual information. They may contain
-  single characters, words, sentences or a whole book. However you may
-  just think of them as an ordered collection of characters.
+  Strings sont utilisés pour contenir des valeurs sous forme de texte.
+  Ils peuvent contenir des caractères seuls, des mots, des phrases ou
+  un livre entier. Cependant, vous pouvez simplement les considérer
+  comme un ensemble ordonné de caractères.
 </p>
 
 <p>
-  You can find out more about Strings at the
+  Plus d'informations sur les Strings peuvent être trouvées ici:
   <a href="http://ruby-doc.org/core-2.0/String.html">ruby-doc page about
     Strings</a>.
 </p>
@@ -593,8 +589,8 @@
 <table class="table table-striped">
   <tr>
     <th class="concept">Concept</th>
-    <th class="usage">Usage</th>
-    <th class="example">Examples</th>
+    <th class="usage">Utilisation</th>
+    <th class="example">Exemples</th>
     <th class="description">Description</th>
   </tr>
   <tr>
