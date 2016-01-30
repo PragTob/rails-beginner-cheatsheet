@@ -702,29 +702,30 @@ remplacement)</em></code></pre>
 <h2 id="ruby-arrays">Arrays</h2>
 
 <p>
-  An array is an ordered collection of items which is indexed by numbers.
-  So an array contains multiple objects that are mostly related to each
-  other. So what could you do? You could store a collection of the names
-  of your favorite fruits and name it <em>fruits</em>.
+  Un array est une collection ordonnée d'éléments indexés par des nombres.
+  Un array contient donc de multiples objets qui sont le plus souvent lié 
+  entre eux. Que pouvez-vous donc faire? Vous pouvez regrouper un 
+  ensemble de noms de vos fruits favoris dans un array et l'appeler <em>fruits</em>.
 </p>
 
 <p>
-  This is just a small selection of things an Array can do. For more
-  information have a look at the
-  <a href=http://ruby-doc.org/core-2.0/Array.html>ruby-doc for Array</a>.
+  C'est seulement une petite sélection de ce qu'un array peut faire.
+  Plus d'informations sur les arrays peuvent être trouvées ici:
+  <a href="http://ruby-doc.org/core-2.0/Array.html">ruby-doc for
+    Array</a>.
 </p>
 
 <table class="table table-striped">
   <tr>
     <th class="concept">Concept</th>
-    <th class="usage">Usage</th>
-    <th class="example">Examples</th>
+    <th class="usage">Utilisation</th>
+    <th class="example">Exemples</th>
     <th class="description">Description</th>
   </tr>
   <tr>
-    <td>Create</td>
+    <td>Créer</td>
     <td>
-      <code><strong>[</strong><em>contents</em><strong>]</strong></code>
+      <code><strong>[</strong><em>contenu</em><strong>]</strong></code>
     </td>
     <td>
       <p><code><strong>[]</strong></code></p>
@@ -733,10 +734,10 @@ remplacement)</em></code></pre>
         <strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong>
       </code></p>
     </td>
-    <td>Creates an Array, empty or with the specified contents.</td>
+    <td>Créé un Array, vide ou avec le contenu spécifié</td>
   </tr>
   <tr>
-    <td>Number of elements</td>
+    <td>Nomdre d'éléments</td>
     <td>
       <code>array<strong>.size</strong></code>
     </td>
@@ -747,10 +748,10 @@ remplacement)</em></code></pre>
 
       <p><code>["foo", "bar"]<strong>.size</strong> # => 2</code></p>
     </td>
-    <td>Returns the number of elements in an Array.</td>
+    <td>Retourne le nombre d'éléments contenus dans un Array</td>
   </tr>
   <tr>
-    <td>Access</td>
+    <td>Accès</td>
     <td>
       <code>
         array<strong>[</strong><em>position</em><strong>]</strong>
@@ -761,19 +762,18 @@ remplacement)</em></code></pre>
 array<strong>[</strong><em>0</em><strong>]</strong> # => "hi"
 array<strong>[</strong><em>2</em><strong>]</strong> # => "bar"</code></pre>
     </td>
-    <td>As an Array is a collection of different elements, you often want
-      to access a single element of the Array.
-      Arrays are indexed by numbers so you can use a number
-      to access an individual element. Be aware that the
-      numbering actually starts with "0" so the first element
-      actually is the 0th. And the last element of a three element
-      array is element number 2.
+    <td>Puisque qu'un Array est une collection de différents éléments, vous
+    voulez souvent accéder à un seul élément de l'Array. Les Arrays sont 
+    indéxés par nombres donc vous pouvez utiliser un nombre pour accéder
+    à un élément individuel. Sachez que le numérotation commence par "0"
+    donc le premier élément se trouve en position 0. Et le dernier élément
+    d'un Array à trois éléments se trouve en 2ème position.
     </td>
   </tr>
   <tr>
-    <td>Adding an element</td>
+    <td>Ajouter un élément</td>
     <td>
-      <code>array <strong>&lt;&lt;</strong> <em>element</em></code>
+      <code>array <strong>&lt;&lt;</strong> <em>élément</em></code>
     </td>
     <td>
 <pre><code>array = [1, 2, 3]
@@ -782,28 +782,28 @@ array # => [1, 2, 3, 4]
 </code></pre>
     </td>
     <td>
-      Adds the element to the end of the array,
-      increasing the size of the array by one.
+      Ajoute l'élément à la fin de l'Array, augmentant sa taille par un.
     </td>
   </tr>
   <tr>
-    <td>Assigning</td>
+    <td>Assigner</td>
     <td>
-      <code>array<strong>[</strong><em>number</em><strong>] =
-      </strong> <em>value</em></code>
+      <code>array<strong>[</strong><em>nombre</em><strong>] =
+      </strong> <em>valeur</em></code>
     </td>
     <td>
-<pre><code>array = ["hi", "foo", "bar"]
-array<strong>[</strong><em>2</em><strong>] =</strong> <em>"new"</em>
-array # => ["hi", "foo", "new"]</code></pre>
+<pre><code>array = ["salut", "foo", "bar"]
+array<strong>[</strong><em>2</em><strong>] =</strong> <em>"nouveau"</em>
+array # => ["salut", "foo", "nouveau"]</code></pre>
     </td>
-    <td>Assigning new Array Values works a lot like accessing
-      them; use an equals sign to set a new value. Voila!
-      You changed an element of the array! Weehuuuuu!
+    <td>Assigner de nouvelles valeurs aux Arrays ressemblent 
+    beaucoup à la manière d'y accéder; utilisez un signe égal 
+    pour assigner une nouvelle valeur. Voilà! Vous venez de 
+    changer l'élément d'un Array! Weehuuuuu!
     </td>
   </tr>
   <tr>
-    <td>Delete at index</td>
+    <td>Supprimer un index</td>
     <td><code>
       array<strong>.delete_at</strong><em>(i)</em>
     </code></td>
@@ -814,36 +814,36 @@ array # => [0, 14, 79]
 </code></pre>
     </td>
     <td>
-      Deletes the element of the array at the specified index. Remember
-      that indexing starts at 0. If you specify an index larger than the
-      number of elements in the array, nothing will happen.
+      Supprime l'élément d'un Array à l'index spécifié. Souvenez-vous que
+      la numérotation commence par 0. Si vous spécifiez un index plus grand
+      que le nombre d'éléments dans un Array, rien ne se passera.
     </td>
   </tr>
   <tr>
-    <td>Iterating</td>
+    <td>Itérer</td>
     <td>
       <code>array<strong>.each</strong> <em>do |e| .. end</em></code>
     </td>
     <td>
       <p><code>
-        persons<strong>.each</strong> <em>do |p| puts p.name end</em>
+        personnes<strong>.each</strong> <em>do |p| puts p.nom end</em>
       </code></p>
 
       <p><code>
-        numbers<strong>.each</strong> <em>do |n| n = n * 2 end</em>
+        nombres<strong>.each</strong> <em>do |n| n = n * 2 end</em>
       </code></p>
     </td>
     <td>
       <p>
-        "Iterating" means doing something for <em>each</em> element
-        of the array. Code placed between <em>do</em> and <em>end</em>
-        determines what is done to each element in the array.
+        "Itérer" signifie faire quelque chose pour chaque <em>(each)</em>
+        élément de l'Array. Le code situé entre <em>do</em> et <em>end</em> 
+        détermine ce qui est fait à chacun de ces éléments.
       </p>
 
       <p>
-        The first example prints the name of every person in the array to
-        the console. The second example simply doubles every number of a
-        given array.
+        Le premier exemple imprime dans la console le nom de chaque personne 
+        incluse dans l'Array. Le deuxième exemple simplement double chaque nombre
+        d'un Array
       </p>
     </td>
   </tr>
