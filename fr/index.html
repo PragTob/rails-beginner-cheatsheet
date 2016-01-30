@@ -574,7 +574,7 @@
 <h2 id="ruby-strings">Strings</h2>
 
 <p>
-  Strings sont utilisés pour contenir des valeurs sous forme de texte.
+  Les Strings sont utilisés pour contenir des valeurs sous forme de texte.
   Ils peuvent contenir des caractères seuls, des mots, des phrases ou
   un livre entier. Cependant, vous pouvez simplement les considérer
   comme un ensemble ordonné de caractères.
@@ -594,9 +594,9 @@
     <th class="description">Description</th>
   </tr>
   <tr>
-    <td>Create</td>
+    <td>Créer</td>
     <td>
-      <p><code><strong>'</strong>A string<strong>'</strong></code></p>
+      <p><code><strong>'</strong>Une phrase<strong>'</strong></code></p>
     </td>
     <td>
       <p><code><strong>'</strong>Hello World<strong>'</strong></code></p>
@@ -604,68 +604,68 @@
       <p><code><strong>'</strong>a<strong>'</strong></code></p>
 
       <p><code>
-        <strong>'</strong>Just characters 129 _!$%^<strong>'</strong>
+        <strong>'</strong>Caractères seulement 129 _!$%^<strong>'</strong>
       </code></p>
 
       <p><code><strong>''</strong></code></p>
     </td>
     <td>
-      A string is created by putting quotation marks around a
-      character sequence. A <a href="https://github.com/bbatsov/ruby-style-guide/">Ruby style guide</a>
-      recommends using single quotes for simple strings.
+      Une String est créée en entourant une suite de caractère par des guillemets. Le
+       <a href="https://github.com/bbatsov/ruby-style-guide/">guide de style Ruby</a>
+      recommende d'utiliser les guillemets simples pour du texte simple. Exemple: <code>'texte'</code>
     </td>
   </tr>
   <tr>
-    <td>Interpolation</td>
+    <td>Interpolation (insertion)</td>
     <td>
-      <p><code><strong>"</strong>A string and an #{expression}<strong>"</strong></code></p>
+      <p><code><strong>"</strong>Une phrase et une #{insertion}<strong>"</strong></code></p>
     </td>
     <td>
-      <p><code><strong>"</strong>Email: #{user.email}<strong>"</strong></code></p>
+      <p><code><strong>"</strong>Email: #{utilisateur.email}<strong>"</strong></code></p>
 
-      <p><code><strong>"</strong>The total is #{2 + 2}<strong>"</strong></code></p>
+      <p><code><strong>"</strong>Le total est #{2 + 2}<strong>"</strong></code></p>
 
-      <p><code><strong>"</strong>A simple string<strong>"</strong></code></p>
+      <p><code><strong>"</strong>Une phrase simple<strong>"</strong></code></p>
     </td>
     <td>
-      You can combine a string with a variable or Ruby expression using double quotation marks.
-      This is called "interpolation." It is okay to use double quotation marks around a simple
-      string, too.
+      Vous pouvez associer une String avec une variable ou une expression Ruby en utilisant des
+      guillemets doubles. C'est appelé "Interpolation". C'est aussi correct d'utiliser des guillemets
+      doubles autour de texte simple.
     </td>
   </tr>
   <tr>
-    <td>Length</td>
+    <td>Longueur</td>
     <td><code>string<strong>.length</strong></code></td>
     <td>
-      <p><code>"Hello"<strong>.length</strong> # => 5</code></p>
+      <p><code>"Bonjour"<strong>.length</strong> # => 5</code></p>
 
       <p><code>""<strong>.length</strong> # => 0</code></p>
     </td>
     <td>
-      You can send a string a message, asking it how long it is and it
-      will respond with the number of characters it consists of. You could
-      use this to check if the desired password of a user exceeds the
-      required minimum length. Notice how we add a comment to show the
-      expected result.
+      Vous pouvez envoyer un message au String, lui demandant quelle
+      est sa longueur. Il répondra avec le nombre de caractères qui le constitue.
+      Vous pouvez également l'utiliser afin de vérifier si le mot de passe désiré
+      par un utilise atteinds la longueur minimum requise. Remarquez que nous 
+      ajoutons un commentaire pour montrer le résultat attendu.
     </td>
   </tr>
   <tr>
-    <td>Concatenate</td>
+    <td>Concaténer</td>
     <td><code>string <strong>+</strong> <em>string2</em></code></td>
     <td>
-<pre><code>"Hello " <strong>+</strong> <em>"reader"</em>
-# => "Hello reader"</code></pre>
+<pre><code>"Bonjour " <strong>+</strong> <em>"lecteur"</em>
+# => "Bonjour lecteur"</code></pre>
       <p><code>"a" <strong>+</strong> <em>"b"</em> <strong>+</strong>
         <em>"c"</em>
         # => "abc"</code></p>
     </td>
-    <td>Concatenates two or more strings together and returns the result.</td>
+    <td>Associe deux Strings ou plus ensemble and retourne le résultat</td>
   </tr>
   <tr>
-    <td>Substitute</td>
+    <td>Remplacer</td>
     <td>
-<pre><code>string<strong>.gsub</strong><em>(a_string,
-substitute)</em></code></pre>
+<pre><code>string<strong>.gsub</strong><em>(un_texte,
+remplacement)</em></code></pre>
     </td>
     <td>
 <pre><code>"Hae"<strong>.gsub</strong><em>("ae", "ä")
@@ -675,25 +675,25 @@ substitute)</em></code></pre>
 <pre><code>"Greenie"<strong>.gsub</strong><em>("e", "u")
 # => "Gruuniu"</em></code></pre>
     </td>
-    <td><em>gsub</em> stands for "globally substitute". It substitutes all
-      occurences of <code>a_string</code> within the string with
-      <code>substitute</code>.</td>
+    <td><em>gsub</em> signifie remplacement global. Il remplace toutes les
+    répétitions de <code>un_texte</code> dans le String avec
+      <code>remplacement</code>.</td>
   </tr>
   <tr>
-    <td>Access</td>
+    <td>Accès</td>
     <td>
       <code>
-        string<strong>[</strong><em>position</em><strong>]</strong>
+        texte<strong>[</strong><em>position</em><strong>]</strong>
       </code>
     </td>
     <td>
       <code>
-        "Hello"<strong>[</strong><em>1</em><strong>]</strong> # => "e"
+        "Bonjour"<strong>[</strong><em>1</em><strong>]</strong> # => "o"
       </code>
     </td>
     <td>
-      Access the character at the given position in the string. Be aware
-      that the first position is actually position <em>0</em>.
+      Accède au caractère à une position précise dans le String. Pour information,
+      le premier caractère se trouve en position <em>0</em>.
     </td>
   </tr>
 </table>
