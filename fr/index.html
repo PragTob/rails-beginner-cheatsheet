@@ -843,103 +843,100 @@ array # => [0, 14, 79]
       <p>
         Le premier exemple imprime dans la console le nom de chaque personne 
         incluse dans l'Array. Le deuxième exemple simplement double chaque nombre
-        d'un Array
+        d'un Array.
       </p>
     </td>
   </tr>
 </table>
 
-<h2 id="ruby-hashes">Hashes</h2>
+<h2 id="ruby-hashes">Hashes (Dictionnaires)</h2>
 
 <p>
-  Hashes associate a <em>key</em>  to some <em>value</em>. You may then retrieve the value based upon its key.
-  This construct is called a <em>dictionary</em> in other languages, which is appropriate
-  because you use the key to "look up" a value, as you would look up a definition for
-  a word in a dictionary. Each key must be unique for a given hash but values can be repeated.
+  Les Hashes associent une <em>clé</em> à une <em>valeur</em>. Vous pouvez ensuite retrouver la valeur par sa clé.
+  Cette construction est appelée dictionnaire dans d'autres languages, ce qui est approprié puisque l'on utilise 
+  la clé pour rechercher une valeur, comme vous rechercheriez la définition d'un mot dans un dictionnaire. Chaque
+  clé doit être unique pour un hash donné mais les valeurs peuvent se répéter. 
 </p>
 
 <p>
-  Hashes can map from anything to anything! You can map from Strings to
-  Numbers, Strings to Strings, Numbers to Booleans... and you can mix
-  all of those! Although it is common that at least all the keys are of
-  the same class. <em>Symbols</em> are especially common as keys. Symbols
-  look like this: <code>:symbol</code>. A symbol is a colon followed by some
-  characters. You can think of them as special strings that stand for
-  (symbolize) something! We often use symbols because
-  Ruby runs faster when we use symbols instead of strings.
+  Les hashes peuvent associer n'importe quoi à n'importe quoi! Vous pouvez associer des strings à des nombres, des strings
+  à des strings, des nombres à des booleans... et vous pouvez mélanger tout ces types de valeurs. Cependant les clés sont
+  communément de la même classe. Les symboles sont particulièrement commun comme clés. Les symboles ressemblent à ça:
+  <code>:symbole</code>. Un symbole est une suite de caractères précédées par un deux-points. Vous pouvez les considérer comme
+  des strings spéciaux qui représentent (symbolisent) quelque chose! On utilise souvent les symboles car Ruby éxécute plus
+  rapidement quand on utilise des symboles plutôt que des strings.
 </p>
 
-<p>Learn more about hashes at
-  <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a>.
+<p>Plus d'informations sur les hashes peuvent être trouvées ici:
+  <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc for Hashes</a>.
 </p>
 
 <table class="table table-striped">
   <tr>
     <th class="concept">Concept</th>
-    <th class="usage">Usage</th>
-    <th class="hash-example">Examples</th>
+    <th class="usage">Utilisation</th>
+    <th class="hash-example">Exemples</th>
     <th class="description">Description</th>
   </tr>
   <tr>
-    <td>Creating</td>
+    <td>Créer</td>
     <td><code>
-      <strong>{</strong>key <strong>=></strong> value<strong>}</strong>
+      <strong>{</strong>clé <strong>=></strong> valeur<strong>}</strong>
     </code></td>
     <td>
       <p><code>
-        <strong>{</strong>:hobby <strong>=></strong>
-        "programming"<strong>}</strong>
+        <strong>{</strong>:hobbie <strong>=></strong>
+        "la programmation"<strong>}</strong>
       </code></p>
-<pre><code><strong>{</strong>42 <strong>=></strong> "answer", "score" <strong>=></strong> 100,
- :name <strong>=></strong> "Tobi"<strong>}</strong>
+<pre><code><strong>{</strong>42 <strong>=></strong> "réponse", "score" <strong>=></strong> 100,
+ :name <strong>=></strong> "Pierre"<strong>}</strong>
 </code></pre>
     </td>
     <td>
-      You create a hash by surrounding the key-value pairs with curly
-      braces. The arrow always goes from the <em>key</em> to the
-      <em>value</em> depicting the meaning: <em>"This key points to this
-      value."</em>. Key-value pairs are then separated by commas.
+      Vous créez un hash en entourant la paire clé-valeur par des
+      accolades. La flèche va toujours de la <em>clé</em> vers la 
+      <em>valeur</em>, ce qui signifie: <em>"La clé pointe vers 
+      cette valeur"</em>. Les paires clé-valeur sont séparées par 
+      des virgules.
     </td>
   </tr>
   <tr>
-    <td>Accessing</td>
-    <td><code>hash<strong>[</strong>key<strong>]</strong></code></td>
+    <td>Accéder</td>
+    <td><code>hash<strong>[</strong>clé<strong>]</strong></code></td>
     <td>
-<pre><code>hash = {:key => "value"}
-hash<strong>[</strong>:key<strong>]</strong> # => "value"
+<pre><code>hash = {:clé => "valeur"}
+hash<strong>[</strong>:clé<strong>]</strong> # => "valeur"
 hash<strong>[</strong>foo<strong>]</strong> # => nil
 </code></pre>
     </td>
     <td>
-      Accessing an entry in a hash looks a lot like accessing it in
-      an <em>array</em>. However with a hash the key can be anything, not
-      just numbers. If you try to access a key that does not exist, the
-      value <code>nil</code> is returned, which is Ruby's way of saying
-      "nothing", because if it doesn't recognize the key it can't return
-      a value for it.
+      Accéder à un élément dans un hash ressemble beaucoup à y accéder avec
+      un array. Cependant, avec un hash la clé peut être n'importe quoi, pas
+      uniquement un nombre. Si vous essayez d'accéder à une clé qui n'existe pas,
+      la valeur <code>nil</code> est retournée, ce qui est la manière de dire "rien"
+      de Ruby. Puisqu'il ne reconnait pas la clé il ne peut retourner sa valeur.
     </td>
   </tr>
   <tr>
-    <td>Assigning</td>
+    <td>Assigner</td>
     <td>
-      <code>hash<strong>[</strong>key<strong>] =</strong> value</code>
+      <code>hash<strong>[</strong>clé<strong>] =</strong> valeur</code>
     </td>
     <td>
 <pre><code>hash = {:a => "b"}
-hash<strong>[</strong>:key<strong>] =</strong> "value"
-hash # => {:a=>"b", :key=>"value"}
+hash<strong>[</strong>:clé<strong>] =</strong> "valeur"
+hash # => {:a=>"b", :clé=>"valeur"}
 </code></pre>
     </td>
     <td>
-      Assigning values to a hash is similar to assigning values to an
-      array. With a hash, the key can
-      be a number or it can be a symbol, string,
-      number... or anything, really!
+      Assigner des valeurs à un hash est similaire à l'assignation de valeur
+      à un array. Avec un hash, la clé peut être un nombre ou elle peut être
+      un symbole, une string, un nombre... ou autre !
     </td>
   </tr>
   <tr>
-    <td>Deleting</td>
-    <td><code>hash<strong>.delete</strong><em>(key)</em></code></td>
+    <td>Supprimer</td>
+    <td><code>hash<strong>.delete</strong><em>(clé)</em></code></td>
     <td>
 <pre><code>hash = {:a => "b", :b => 10}
 hash<strong>.delete</strong><em>(:a)</em>
@@ -947,13 +944,13 @@ hash # => {:b=>10}
 </code></pre>
     </td>
     <td>
-      You can delete a specified key from the hash, so that the key and its
-      value can not be accessed.
+      Vous pouvez supprimer une clé spécifique d'un hash, de manière que la clé
+      et sa valeur ne peuvent pas être accéder
     </td>
   </tr>
 </table>
 
-<h1 id="rails">Rails Basics</h1>
+<h1 id="rails">Bases de Rails</h1>
 
 <p>This is an introduction to the basics of Rails. We look at the general
   structure of a Rails application and the important commands used in the terminal.
