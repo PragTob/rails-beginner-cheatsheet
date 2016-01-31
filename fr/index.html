@@ -1121,198 +1121,199 @@ les plus importants.
 <h2 id="rails-commands">Les commandes importantes de Rails</h2>
 
 <p>
-  Here is a summary of important commands that can be used as you develop
-  your Ruby on Rails app. You must be in the root dossier of your project
-  to run any of these commands (with the exception of the <em>rails new</em>
-  command). The project or application root dossier is the folder containing
-  all the subfolders described above (app, config, etc.).
+  Voici un sommaire des commandes importantes qui peuvent être utilisées lorsque
+  vous développez une application Ruby on Rails. Vous devez être dans le dossier
+  racine de votre projet pour exécuter ces commandes (à l'exception de la commande
+  <em>rails new</em>). Le dossier racine du projet ou de l'application est le dossier
+  contenant tout les sous-dossiers décris ci-dessus (app, config, etc.).
 </p>
 
 <table class="table table-striped">
   <tr>
     <th>Concept</th>
-    <th>Usage</th>
+    <th>Utilisation</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>Create a new app</td>
-    <td><code><strong>rails new</strong> <em>name</em></code></td>
-    <td>Create a new Ruby on Rails application with the given name here.
-      This will give you the basic structure to immediately get started.
-      After this command has successfully run your application is in a
-      folder with the same name you gave the application. You have to
-      <em>cd</em> into that folder.
+    <td>Créer une nouvelle application</td>
+    <td><code><strong>rails new</strong> <em>nom</em></code></td>
+    <td>Créé une nouvelle application Ruby on Rails avec le nom spécifié. Cela va vous
+    donner la structure de base pour pouvoir commencer immédiatement. Une fois que cette
+    commande a été exécutée votre application se trouve dans un dossier du même nom
+    que celui que vous avez donné. Vous devez ensuite <em>cd</em> dans ce dossier.
     </td>
   </tr>
   <tr>
-    <td>Start the server</td>
+    <td>Démarrer le serveur</td>
     <td><code><strong>rails server</strong></code></td>
     <td>
-      <p>You have to start the server in order for your application to
-        respond to your requests. Starting the server might take some time.
-        When it is done, you can access your application under
-        <a href="localhost:3000">localhost:3000</a> in the browser of your
-        choice.</p>
+      <p>Vous devez démarrer le serveur afin que votre application réponde à vos requêtes.
+      Démarrer le serveur peut prendre quelques temps. Lorsque c'est fait, vous pouvez
+      accéder à votre application ici: <a href="localhost:3000">localhost:3000</a>
+      dans le navigateur internet de votre choix.
+      </p>
 
-      <p>In order to stop the server, go to the console where it is
-        running and press <strong>Ctrl + C</strong></p>
+      <p>Afin d'arrêter le serveur, allez dans la console où il fonctionne et cliquer
+      sur les touches <strong>Ctrl + C</strong></p>.
     </td>
   </tr>
   <tr>
-    <td>Scaffolding</td>
+    <td>Échaffauder</td>
     <td>
       <code><strong>rails generate scaffold</strong>
-        <em>name attribute:type</em></code>
+        <em>nom attribut:type</em></code>
     </td>
     <td>
       <p>
-        The scaffold command magically generates all the common things needed
-        for a new resource for you! This includes <em>controllers, models and views</em>. It
-        also creates the following basic actions: create a new resource,
-        edit a resource, show a resource, and delete a resource.
+        La commande échaffaudage (scaffold en anglais) génère comme par magie, pour vous,
+        tous les éléments communément nécessaire pour une nouvelle ressource. Cela inclut les
+        <em>controlleurs, modèles et vues</em>. Cela créé également les actions de base suivantes:
+        créer une nouvelle ressource, modifier une ressource, montrer une ressource, et supprimer
+        une ressource.
       </p>
 
-      <p>That's all the basics you need. Take this example:</p>
+      <p>Ce sont tout les éléments de base dont vous avez besoin. Prenez par exemple:</p>
 
-      <p><code><strong>rails generate scaffold</strong> <em>product
-        name:string price:integer</em></code></p>
+      <p><code><strong>rails generate scaffold</strong> <em>produit
+        nom:string prix:integer</em></code></p>
 
-      <p>Now you can create new products, edit them, view them and delete
-        them if you don't need them anymore. Nothing stops you from
-        creating a full fledged web shop now ;-)</p>
+      <p>Maintenant vous pouvez créer de nouveaux produits, les modifier, les afficher et les supprimer
+      si vous n'en avez plus besoin. Rien ne vous empêche dorénavant de créer une boutique internet à part
+      entière. ;-)
     </td>
   </tr>
   <tr>
-    <td>Run migrations</td>
+    <td>Exécuter les migrations</td>
     <td><code><strong>rake db:migrate</strong></code></td>
-    <td>When you add a new migration, for example by creating
-      a new <em>scaffold</em>, the migration has to be applied to your database.
-      The command is used to update your database.
+    <td>Lorsque vous ajoutez une nouvelle migration, par exemple en créant un nouvel <em>échaffaudage</em>,
+    la migration doit être appliquée à votre base de données. Cette commande est donc utilisé pour mettre
+    à jour votre base de données.
     </td>
   </tr>
   <tr>
-    <td>Install dependencies</td>
+    <td>Installer les dépendances</td>
     <td><code><strong>bundle install</strong></code></td>
-    <td>If you just added a new gem to your Gemfile you should run bundle
-      install to install it. Don't forget to restart your server
-      afterwards!
+    <td>Si vous venez tout juste d'ajouter une nouvelle gemme dans votre Gemfile vous devriez exécuter <em>bundle
+    install</em> pour l'installer. N'oubliez de redémarrer votre serveur après coup!
     </td>
   </tr>
 </table>
 
-<h1 id="editor">Editor tips</h1>
+<h1 id="editor">Les astuces du rédacteur</h1>
 
 <p>
-  When you write code you will be using a text editor. Of course each text
-  editor is different and configurable. Here are just some functions and
-  their most general short cuts. All of them work in
-  <a href="https://sublimetext.com/2">Sublime Text 2</a>. Your editor may
-  differ!
+  Lorsque vous écrivez du code vous utilisez un éditeur de texte. Bien 
+  évidemment chaque éditeur de texte est différent et configurable. Voici juste
+  quelques fonctions et leurs raccourcis les plus communs. Tous ces raccourcis
+  fonctionnent avec <a href="https://sublimetext.com/2">Sublime Text 2</a>.
+  Votre éditeur peut être différent!
 </p>
 
 <p>
-  The shortcuts listed here are for Linux/Windows. On a Mac you will have
-  to replace <em>Ctrl</em> with <em>Cmd</em>.
+  Les raccourcis listés ci-dessous sont pour Linux/Windows. Avec un Mac il 
+  vous faudra remplacer <em>Ctrl</em> par <em>Cmd</em>.
 </p>
 
 <table class="table table-striped">
   <tr>
-    <th>Function</th>
-    <th class="shortcut">Shortcut</th>
+    <th>Fonction</th>
+    <th class="shortcut">Raccourci</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>Save file</td>
+    <td>Sauvegarder un fichier</td>
     <td><strong>Ctrl + S</strong></td>
     <td>
-      Saves the currently open file. If it was a new file you may also be
-      asked where to save it.
+      Sauvegarde le fichier actuellement ouvert. S'il s'agit d'un nouveau
+      fichier il vous sera demandé l'emplacement où le sauvegarder.
     </td>
   </tr>
   <tr>
-    <td>Undo</td>
+    <td>Annuler</td>
     <td><strong>Ctrl + Z</strong></td>
     <td>
-      Undo the last change you made to the current file. Can be applied
-      multiple times in succession to undo multiple changes.
+      Annule la dernière modification effectuée sur le fichier actuel.
+      Peut être effectué plusieurs fois à la suite pour annuler de
+      multiples changements.
     </td>
   </tr>
   <tr>
-    <td>Redo</td>
+    <td>Rétablir</td>
     <td><p><strong>Ctrl + Y</strong></p>
 
       <p><em>or Ctrl + Shift + Z</em></p></td>
     <td>
-      Redo what you just undid with <em>undo</em>, can also be done
-      multiple times.
+      Rétabli ce qui vient tout juste d'être <em>annulé</em>. Peut 
+      également être éffectué de multiples fois.
     </td>
   </tr>
   <tr>
-    <td>Find in File</td>
+    <td>Chercher dans un fichier</td>
     <td><strong>Ctrl + F</strong></td>
     <td>
-      Search for a character sequence within the currently open file.
-      Hit <em>Enter</em> to progress to the next match.
+      Recherche une suite de caractère à l'intérieur du fichier ouvert.
+      Cliquer sur <em>entrer</em> pour aller au suivant.
     </td>
   </tr>
   <tr>
-    <td>Find in all Files</td>
+    <td>Chercher dans tous les fichiers</td>
     <td><strong>Ctrl + Shift + F</strong></td>
-    <td>Search for a character sequence in all files of the project.</td>
+    <td>Recherche une suite de caractère à l'intérieur de l'ensemble des
+    fichiers du projet</td>
   </tr>
   <tr>
-    <td>Replace</td>
+    <td>Remplacer</td>
     <td>
       <p><strong>Ctrl + H</strong></p>
 
       <p><em>or Ctrl + R</em></p>
     </td>
     <td>
-      Replace occurrences of the supplied character sequence with the
-      other supplied character sequence. Useful when renaming something.
+      Remplace les répétitions de la suite de caractère donnée par l'autre
+      suite de caractère fournie. Utilise pour renommer quelque chose.
     </td>
   </tr>
   <tr>
-    <td>Copy</td>
+    <td>Copier</td>
     <td><strong>Ctrl + C</strong></td>
     <td>
-      Copy the currently highlighted text into the clipboard.
+      Copie le texte surligné dans le presse-papiers.
     </td>
   </tr>
   <tr>
-    <td>Cut</td>
+    <td>Couper</td>
     <td><strong>Ctrl + X</strong></td>
-    <td>Copy the highlighted text into the clipboard but delete it.</td>
+    <td>Copie le texte surligné dans le presse-papiers mais le supprime également</td>
   </tr>
   <tr>
-    <td>Paste</td>
+    <td>Coller</td>
     <td><strong>Ctrl + V</strong></td>
     <td>
-      Insert whatever currently is in the clipboard (through
-      <em>Copy</em> or <em>Cut</em>) at the current caret position.
-      Can insert multiple times.
+      Insère ce qui se trouve actuellement dans le presse-papiers (via <em>Copier</em> 
+      ou <em>Coller</em>) à la position actuelle du caret.
+      Il est possible d'insérer de multiples fois.
     </td>
   </tr>
   <tr>
-    <td>New File</td>
+    <td>Nouveau Fichier</td>
     <td><strong>Ctrl + N</strong></td>
-    <td>Create a new empty file.</td>
+    <td>Créer un nouveau fichier vide</td>
   </tr>
   <tr>
-    <td>Search and open file</td>
+    <td>Recherche et ouvre un fichier</td>
     <td><strong>Ctrl + P</strong></td>
     <td>
-      Search for a file giving part of its name (<em>fuzzy search</em>).
-      Pressing <em>enter</em> will open the selected file.
+      Recherche un fichier en donnant une partie de son nom.
+      Cliquer sur <em>entrer</em> ouvrira le fichier selectionné.
     </td>
   </tr>
   <tr>
-    <td>Comment</td>
+    <td>Commentaires</td>
     <td><strong>Ctrl + /</strong></td>
     <td>
-      Marks the selected text as a comment, which means that it will
-      be ignored. Useful when you want to see how something behaves or looks
-      without a specific section of code being run.
+      Marque le texte selectionné comme un commentaire, ce qui veut dire qu'il
+      sera ignoré. Utile lorsque vous voulez voir comment quelque chose se comporte
+      ou apparait sans exécuter une section spécifique du code.
     </td>
   </tr>
 </table>
