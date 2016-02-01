@@ -132,9 +132,9 @@
       <code><strong>cd</strong> <em>dossier</em></code>
     </td>
     <td>
-      <p><code>cd my_app</code></p>
+      <p><code>cd mon_projet</code></p>
 
-      <p><code>cd my_app/app/controllers</code></p>
+      <p><code>cd mon_projet/app/views</code></p>
     </td>
     <td>Vous déplace vers (ou "ouvre") le dossier demandé.
     </td>
@@ -149,7 +149,7 @@
     <td>
       <p><code><strong>ls</strong></code></p>
 
-      <p><code><strong>ls</strong> <em>my_app</em></code></p>
+      <p><code><strong>ls</strong> <em>mon_projet</em></code></p>
     </td>
     <td>Montre le contenu (fichiers et dossiers) du dossier demandé.
       Si aucun dossier n'est demandé, liste le contenu du dossier courant.
@@ -197,7 +197,7 @@
       que l'on voulait conserver :(</p>
       <p>
 	Vous pouvez vous déplacer dans le dossier et supprimer le fichier.
-	Mais comme montre le troisième exemple, vous pouvez effacer un fichier
+	Mais comme le montre le troisième exemple, vous pouvez effacer un fichier
 	où qu'il soit sans changer de dossier, tant que vous connaissez son chemin.
 	Ici, on efface <em>vieille_image.jpg</em> du dossier <em>images</em>.
       </p>
@@ -266,16 +266,16 @@
 <h1 id="ruby">Bases de Ruby</h1>
 
 <p>
-  Ruby on Rails est écrit avec le language de programmation Ruby. C'est 
+  Ruby on Rails est écrit avec le langage de programmation Ruby. C'est 
   pourquoi vous écrirez principalement votre code en Ruby. Il est donc important
-  de comprendre les bases de ce language. Si vous souhaitez simplement essayer Ruby,
+  de comprendre les bases de ce langage. Si vous souhaitez simplement essayer Ruby,
   tapez <strong>irb</strong> dans votre console. Vous pourrez ainsi experimenter avec 
-  le language. Pour quitter irb, taper <strong>exit</strong>.
+  le langage. Pour quitter irb, taper <strong>exit</strong>.
 </p>
 
 <p>
   Ci-dessous vous trouverez un petit échantillon des concepts. C'est particulièrement vrai 
-  lorsque l'on considère ce que les Arrays, Strings, etc. peuvent faire. Pour plus de détails vous pouvez
+  lorsque l'on considère tout ce que les Arrays, Strings, etc. peuvent faire. Pour plus de détails vous pouvez
   regarder <a href="http://ruby-doc.org/">ruby-doc</a> (en anglais) ou utiliser votre moteur 
   de recherche favori!
 </p>
@@ -312,7 +312,7 @@
     uniquement présents à titre informatif. Les commentaires sont aussi 
     communement utilisés pour <em>commenter des lignes de code</em>. Lorsque
     vous souhaitez qu'une partie de votre code ne soit pas éxecutée 
-    mais vous ne désirez pas le supprimer car vous faites des expérimentations.
+    mais que vous ne désirez pas le supprimer car vous faites des expérimentations.
   </td>
 </tr>
 <tr>
@@ -329,7 +329,7 @@
   <td>
     A l'aide d'une variable vous dites à Ruby qu'à partir de maintenant vous souhaitez
     vous référer à une valeur par le nom que vous lui avez donné. Dans le premier 
-    exemple, dorénavant lorsque vous utilisez <em>nom</em> Ruby saura que vous
+    exemple, dorénavant, lorsque vous utilisez <em>nom</em> Ruby saura que vous
     voulez dire <em>"Pierre"</em>.
   </td>
 </tr>
@@ -393,12 +393,12 @@
   </td>
   <td>
     <p>Les méthodes sont des unités de comportement réutilisables. Vous pouvez
-    les définir vous-mêmes comme dans l'exemple. Les méthodes sont petites et focalisées
+    les définir vous-même comme dans l'exemple. Les méthodes sont petites et focalisées
     sur l'éxecution d'une tâche spécifique. 
 
     <p>
-      La méthode de l'exemple est focalisé sur la salutation de personne.
-      Elle peut être appelé de la manière suivante: <code>salutation("Pierre")</code>
+      La méthode de l'exemple est focalisée sur la salutation de personne.
+      Elle peut être appelée de la manière suivante: <code>salutation("Pierre")</code>
     </p>
   </td>
 </tr>
@@ -415,7 +415,7 @@
     <p><code>"Onjour" <strong>==</strong> "Bonjour" # => false</code></p>
   </td>
   <td>
-    Avec deux signes égaux vous pouvez vérifier si deux éléments sont identiques.
+    Avec deux signes égaux consécutifs vous pouvez vérifier si deux éléments sont identiques.
     Si c'est le cas, <code>true</code> sera retourné; sinon, se sera <code>false</code>.
   </td>
 </tr>
@@ -428,7 +428,8 @@
     <p><code>3 <strong>!=</strong> 4 # => true</code></p>
   </td>
   <td>
-    L'inégalité est l'inverse d'égalité. C'est à dire qu'il retourne
+    L'inégalité, écrit avec un point d'exclamation suivit du signe égal 
+    est l'inverse de l'égalité. C'est à dire qu'il retourne
     <code>true</code> quand les deux éléments sont différents et 
     <code>false</code> s'ils sont identiques.
   </td>
@@ -452,7 +453,7 @@
 </code></pre>
   </td>
   <td>
-    <p>Avec if (si) vous pouvez décider que faire selon une <em>condition</em>. 
+    <p>Avec le terme if (si) vous pouvez décider que faire selon une <em>condition</em>. 
       Lorsqu'une condition est considérée vraie, alors le code qui suit est
       éxécuté. Si elle est considérée fausse, alors le code après "else" est
       éxécuté.     
@@ -476,7 +477,7 @@
     Toutes les deux contiennent une valeur et ont un nom pour mentionner
     ces valeurs. En revanche, alors que la valeur contenue dans une variable
     peut changer ou être inconnue (si l'on enregistre dans la variable 
-    une valeur saisie par l'utilisateur) les constantes sont différentes.
+    une valeur saisie par l'utilisateur), les constantes sont différentes.
     Elles ont une valeur connue qui ne devrait jamais changer. Un peu comme
     les constantes mathématiques ou physiques. Celles-ci ne changent pas,
     elles font toujours référence à la même valeur.
@@ -546,7 +547,7 @@
     </td>
     <td>
       Dans Ruby vous pouvez aisément utiliser les opérations mathématiques de base.
-      Vous pouvez ainsi vous servir de Ruby comme d'une très puissante calculatrice.
+      Vous pouvez ainsi vous servir de Ruby comme d'une calculatrice très puissante.
     </td>
   </tr>
   <tr>
@@ -563,7 +564,7 @@
     </td>
     <td>
       <p>Les nombres peuvent être comparés pour déterminer si un nombre est plus ou moins
-      grand qu'un autre. Lorsque vous avez l'âge d'une personne enregistrée dans la
+      grand qu'un autre. Lorsque vous avez l'âge d'une personne enregistré dans la
       variable <code>age</code> vous pouvez vérifier si cette personne est considérée
       comme un adulte.
       <p><code>age >= 18 # true or false</code></p>
@@ -603,7 +604,7 @@
       <p><code><strong>'</strong>a<strong>'</strong></code></p>
 
       <p><code>
-        <strong>'</strong>Caractères seulement 129 _!$%^<strong>'</strong>
+        <strong>'</strong>Caractères seuls 129 _!$%^<strong>'</strong>
       </code></p>
 
       <p><code><strong>''</strong></code></p>
@@ -658,13 +659,13 @@
         <em>"c"</em>
         # => "abc"</code></p>
     </td>
-    <td>Associe deux strings ou plus ensemble et retourne le résultat</td>
+    <td>Associe deux strings ou plus ensemble et retourne le résultat.</td>
   </tr>
   <tr>
     <td>Remplacer</td>
     <td>
 <pre><code>string<strong>.gsub</strong><em>(un_texte,
-remplacement)</em></code></pre>
+un_autre_texte)</em></code></pre>
     </td>
     <td>
 <pre><code>"Hae"<strong>.gsub</strong><em>("ae", "ä")
@@ -676,7 +677,7 @@ remplacement)</em></code></pre>
     </td>
     <td><em>gsub</em> signifie remplacement global. Il remplace toutes les
     répétitions de <code>un_texte</code> dans la string avec
-      <code>remplacement</code>.</td>
+      <code>un_autre_texte</code>.</td>
   </tr>
   <tr>
     <td>Accès</td>
@@ -704,7 +705,7 @@ remplacement)</em></code></pre>
   Un array est une collection ordonnée d'éléments indexés par des nombres.
   Un array contient donc de multiples objets qui sont le plus souvent liés
   entre eux. A quoi cela peut-il servir? Vous pouvez regrouper un 
-  ensemble de noms de vos fruits favoris dans un array et l'appeler <em>fruits</em>.
+  ensemble de noms de vos fruits favoris dans un array et appeler cet array <em>fruits</em>.
 </p>
 
 <p>
@@ -732,10 +733,10 @@ remplacement)</em></code></pre>
         <strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong>
       </code></p>
     </td>
-    <td>Créé un array, vide ou avec le contenu spécifié</td>
+    <td>Créé un array, vide ou avec le contenu spécifié.</td>
   </tr>
   <tr>
-    <td>Nomdre d'éléments</td>
+    <td>Nombre d'éléments</td>
     <td>
       <code>array<strong>.size</strong></code>
     </td>
@@ -761,7 +762,7 @@ array<strong>[</strong><em>0</em><strong>]</strong> # => "hi"
 array<strong>[</strong><em>2</em><strong>]</strong> # => "bar"</code></pre>
     </td>
     <td>Puisqu'un array est une collection de différents éléments, vous
-    souhaiterais souvent accéder à un seul de ces éléments. Les arrays sont 
+    souhaiterez souvent accéder à un seul de ces éléments. Les arrays sont 
     indéxés par des nombres, vous pouvez donc utiliser un nombre pour accéder
     à un élément individuel. Sachez que la numérotation commence par "0"
     donc le premier élément se trouve en position 0. Le dernier élément
@@ -797,7 +798,7 @@ array # => ["salut", "foo", "nouveau"]</code></pre>
     <td>Assigner de nouvelles valeurs aux arrays ressemblent 
     beaucoup à la manière d'y accéder; utilisez un signe égal 
     pour assigner une nouvelle valeur. Voilà! Vous venez de 
-    changer l'élément d'un Array! Waahouuuuu!
+    changer l'élément d'un array! Waahouuuuu!
     </td>
   </tr>
   <tr>
@@ -851,7 +852,7 @@ array # => [0, 14, 79]
 
 <p>
   Les hashes associent une <em>clé</em> à une <em>valeur</em>. Vous pouvez ensuite retrouver la valeur par sa clé.
-  Cette construction est appelée dictionnaire dans d'autres languages, ce qui est approprié puisque l'on utilise 
+  Cette construction est appelée dictionnaire dans d'autres langages, ce qui est approprié puisque l'on utilise 
   la clé pour rechercher une valeur, comme vous rechercheriez la définition d'un mot dans un dictionnaire. Chaque
   clé doit être unique pour un hash donné mais les valeurs peuvent se répéter. 
 </p>
@@ -859,8 +860,8 @@ array # => [0, 14, 79]
 <p>
   Les hashes peuvent associer n'importe quoi à n'importe quoi! Vous pouvez associer des strings à des nombres, des strings
   à des strings, des nombres à des booléens... et vous pouvez mélanger tout ces types de valeurs. Cependant les clés sont
-  le plus souvent de la même classe. Les symboles sont particulièrement commun comme clés. Les symboles ressemblent à ça:
-  <code>:symbole</code>. Un symbole est une suite de caractères précédées par un deux-points. Vous pouvez les considérer comme
+  le plus souvent de la même classe. Les symboles sont coommunément utilisés comme clés. Les symboles ressemblent à ça:
+  <code>:symbole</code>. Un symbole est une suite de caractères précédée par un deux-points. Vous pouvez les considérer comme
   des strings spéciaux qui représentent (symbolisent) quelque chose! On utilise souvent les symboles car Ruby éxécute plus
   rapidement lorsque l'on utilise des symboles plutôt que des strings.
 </p>
@@ -911,8 +912,8 @@ hash<strong>[</strong>foo<strong>]</strong> # => nil
       Accéder à un élément dans un hash ressemble beaucoup à la méthode utilisée avec
       les arrays. Cependant, avec un hash, la clé peut être n'importe quoi, pas
       uniquement un nombre. Si vous essayez d'accéder à une clé qui n'existe pas,
-      la valeur <code>nil</code> est retournée, ce qui est la manière de dire "rien"
-      de Ruby. Puisqu'il ne reconnait pas la clé il ne peut retourner sa valeur.
+      la valeur <code>nil</code> est retournée, ce qui est la manière pour Ruby de dire "rien". 
+      Puisqu'il ne reconnait pas la clé il ne peut retourner sa valeur.
     </td>
   </tr>
   <tr>
@@ -929,7 +930,7 @@ hash # => {:a=>"b", :clé=>"valeur"}
     <td>
       Assigner des valeurs à un hash est similaire à l'assignation de valeur
       à un array. Seulement, avec un hash, la clé peut être un nombre mais elle 
-      peut aussi bien être un symbole, une string, un nombre... ou autre !
+      peut aussi bien être un symbole, une string, un nombre... ou autre!
     </td>
   </tr>
   <tr>
@@ -943,7 +944,7 @@ hash # => {:b=>10}
     </td>
     <td>
       Vous pouvez supprimer une clé spécifique d'un hash, de manière que la clé
-      et sa valeur ne peuvent pas être accéder
+      et sa valeur ne peuvent pas être accéder.
     </td>
   </tr>
 </table>
@@ -974,9 +975,9 @@ les plus importants.</p>
   </tr>
   <tr>
     <td>app/assets</td>
-    <td>Les "assets" sont essentiellement vos éléments front-end. Ce dossier
+    <td>Les "assets" (actifs) sont essentiellement vos éléments front-end. Ce dossier
     contient les <em>images</em> du site, le <em>javascript</em> 
-    pour les intéractions sophistiquées du front-end ainsi que les <em>stylesheets</em>
+    pour les intéractions sophistiquées, ainsi que les <em>stylesheets</em>
     pour tout le CSS rendant votre site magnigfique.
     </td>
   </tr>
@@ -997,12 +998,12 @@ les plus importants.</p>
   </tr>
   <tr>
     <td>app/mailers</td>
-    <td>La fonctionnalité permettant d'emvoyer des e-mails se trouve ici.</td>
+    <td>La fonctionnalité permettant d'envoyer des e-mails se trouve ici.</td>
   </tr>
   <tr>
     <td>app/models</td>
     <td>Le sous-dossier modèle contient les classes qui modélisent la logique métier de l'application.
-    Il se préoccupe de se dont traite l'application: souvent il s'agit de données, qui sont 
+    Il se préoccupe de ce dont traite l'application: souvent il s'agit de données, qui sont 
     également sauvegardées dans la base de données. Par exemple, une classe Personne ou Lieu avec
     ses fonctionnalités typiques.
     </td>
@@ -1016,13 +1017,13 @@ les plus importants.</p>
       des données provenant de l'application. Ils sont ensuite convertis en HTML et
       envoyés au navigateur internet de l'utilisateur. Il y a des sous-dossiers
       pour chaque ressource de l'application (ex: lieux, personnes, etc.). Ces 
-      sous-dossiers contiennent les fichiers vues associés.</p>
+      sous-dossiers contiennent les fichiers de vues associés.</p>
 
       <p>Les fichiers dont le nom commence par un tiret bas (<em>_</em>) sont appelés
       <em>partiels</em>. Ils font partis d'une vue qui elle même est réutilisée dans
       d'autres vues. Un exemple commun est <em>_form.html.erb</em> qui contient le formulaire
       (form) de base d'une ressource donnée. Il est utilisé dans les vues <em>new</em> 
-      (nouveau) et <em>edit</em> (modifier) puisque créer ou modifier quelque chose se 
+      (nouveau) et <em>edit</em> (modifier) puisque créer ou changer quelque chose se 
       ressemble fortement.
       </p>
     </td>
@@ -1031,7 +1032,7 @@ les plus importants.</p>
     <td>config</td>
     <td>Ce dossier contient les fichiers de configuration dont l'application à besoin,
     incluant la configuration de votre base de données (dans <em>database.yml</em>) et
-    le particulièrement important <em>routes.rb</em> qui déterminent comment les requêtes
+    le particulièrement important <em>routes.rb</em> qui détermine comment les requêtes
     web sont gérées. Le fichier <em>routes.rb</em> associe un URL donné avec le 
     <em>controlleur</em> qui va se charger de la requête.
     </td>
@@ -1062,32 +1063,32 @@ les plus importants.</p>
   </tr>
   <tr>
     <td>log</td>
-    <td>Vous voyez toutes les choses étranges qui sont écrites dans votre console quand vous
-    démarrer le serveur Rails ? Elles sont écrites dans votre fichier <em>development.log</em>. Les
-    logs (journaux de bord) contient les informations d'exécution de votre application. S'il y 
+    <td>Voyez-vous toutes les choses étranges qui sont écrites dans votre console quand vous
+    démarrez le serveur Rails ? Elles sont écrites dans votre fichier <em>development.log</em>. Les
+    logs (journaux de bord) contiennent les informations d'exécution de votre application. S'il y 
     a une erreur, elle sera enregistrée ici.
     </td>
   </tr>
   <tr>
     <td>public</td>
-    <td>Inclut les fichiers statiques qui ne contiennent pas de code Ruby, comme une page erreur</td>
+    <td>Inclut les fichiers statiques qui ne contiennent pas de code Ruby, comme une page erreur.</td>
   </tr>
   <tr>
     <td>script</td>
-    <td>Par défaut contient ce qui est exécuté quand vous tapez la commande <em>rails</em>. Ceci
-    est rarement d'important pour les débutants.
+    <td>Par défaut ce dossier contient ce qui est exécuté quand vous tapez la commande <em>rails</em>. Ceci
+    est rarement d'importance pour les débutants.
     </td>
   </tr>
   <tr>
     <td>test</td>
     <td>Contient les tests de votre application. A l'aide de tests vous vous assurez que votre
     application fonctionne comme vous l'avez prévu. Ce dossier peut également être appelé <em>spec</em>
-    si vous utilisez le gem RSpec (un système de test alternatif). 
+    si vous utilisez le gem Rspec (un système de test alternatif). 
     </td>
   </tr>
   <tr>
     <td>vendor</td>
-    <td>Un dossier pour le code logiciel fourni par d'autres ("librairies"). Dans la majorité des cas,
+    <td>Dossier contenant le code logiciel fourni par d'autres ("librairies"). Dans la majorité des cas,
     les librairies sont fournies comme des <em>ruby gems</em> (gemmes Ruby) et sont installées en utilisant
     le fichier <em>Gemfile</em>. Si le code n'est pas disponible comme une gemme Ruby, alors c'est ici que vous 
     devez le placer. Cela peut être le cas pour les plugins jQuery. Vous n'utiliserez probablement pas ce 
@@ -1112,7 +1113,7 @@ les plus importants.</p>
     <td>Gemfile.lock</td>
     <td>Ce fichier spécifie les versions exactes de toutes les gemmes que vous utilisez. Puisque certaines
     gemmes dépendent d'autres gemmes, Ruby va installer automatiquement toutes celles dont vous avez
-    besoin. Le fichier contient également les numéros de versions de ces gemmes. Cela peut être utilisé afin
+    besoin. Le fichier contient également les numéros de version de ces gemmes. Cela peut être utilisé afin
     de s'assurer que tout les membres d'une équipe travaillent avec les gemmes de mêmes versions. Ce fichier
     est généré automatiquement. <em>Ne modifiez pas ce fichier.</em></td>
   </tr>
@@ -1136,7 +1137,7 @@ les plus importants.</p>
   </tr>
   <tr>
     <td>Créer une nouvelle application</td>
-    <td><code><strong>rails new</strong> <em>nom</em></code></td>
+    <td><code><strong>rails new</strong> <em>nom_du_projet</em></code></td>
     <td>Créé une nouvelle application Ruby on Rails avec le nom spécifié. Cela va vous
     donner la structure de base pour pouvoir commencer immédiatement. Une fois que cette
     commande a été exécutée votre application se trouve dans un dossier du même nom
@@ -1154,7 +1155,7 @@ les plus importants.</p>
       </p>
 
       <p>Afin d'arrêter le serveur, allez dans la console où il fonctionne et cliquer
-      sur les touches <strong>Ctrl + C</strong></p>.
+      sur les touches <strong>Ctrl + C</strong>.</p>
     </td>
   </tr>
   <tr>
@@ -1177,7 +1178,7 @@ les plus importants.</p>
       <p><code><strong>rails generate scaffold</strong> <em>produit
         nom:string prix:integer</em></code></p>
 
-      <p>Maintenant vous pouvez créer de nouveaux produits, les modifier, les afficher et les supprimer
+      <p>Maintenant vous pouvez créer de nouveaux produits (avec un nom et un prix), les modifier, les afficher et les supprimer
       si vous n'en avez plus besoin. Rien ne vous empêche dorénavant de créer une boutique internet à part
       entière. ;-)
     </td>
@@ -1186,7 +1187,7 @@ les plus importants.</p>
     <td>Exécuter les migrations</td>
     <td><code><strong>rake db:migrate</strong></code></td>
     <td>Lorsque vous ajoutez une nouvelle migration, par exemple en créant un nouvel <em>échaffaudage</em>,
-    la migration doit être appliquée à votre base de données. Cette commande est donc utilisé pour mettre
+    la migration doit être appliquée à votre base de données. Cette commande est donc utilisée pour mettre
     à jour votre base de données.
     </td>
   </tr>
@@ -1194,7 +1195,7 @@ les plus importants.</p>
     <td>Installer les dépendances</td>
     <td><code><strong>bundle install</strong></code></td>
     <td>Si vous venez tout juste d'ajouter une nouvelle gemme dans votre Gemfile vous devriez exécuter <em>bundle
-    install</em> pour l'installer. N'oubliez de redémarrer votre serveur après coup!
+    install</em> pour l'installer. N'oubliez pas de redémarrer votre serveur après coup!
     </td>
   </tr>
 </table>
@@ -1259,7 +1260,7 @@ les plus importants.</p>
     <td>Chercher dans tous les fichiers</td>
     <td><strong>Ctrl + Shift + F</strong></td>
     <td>Recherche une suite de caractère à l'intérieur de l'ensemble des
-    fichiers du projet</td>
+    fichiers du projet.</td>
   </tr>
   <tr>
     <td>Remplacer</td>
@@ -1270,7 +1271,7 @@ les plus importants.</p>
     </td>
     <td>
       Remplace les répétitions de la suite de caractère donnée par l'autre
-      suite de caractère fournie. Utilise pour renommer quelque chose.
+      suite de caractère fournie. Utile pour renommer quelque chose.
     </td>
   </tr>
   <tr>
@@ -1283,7 +1284,7 @@ les plus importants.</p>
   <tr>
     <td>Couper</td>
     <td><strong>Ctrl + X</strong></td>
-    <td>Copie le texte surligné dans le presse-papiers mais le supprime également</td>
+    <td>Copie le texte surligné dans le presse-papiers tout en le supprimant</td>
   </tr>
   <tr>
     <td>Coller</td>
@@ -1321,12 +1322,12 @@ les plus importants.</p>
 <h1 id="help">Aide: Que faire lorsque quelque chose se passe mal?</h1>
 
 <p>
-  Les choses se passent mal constamment. Ne vous inquiétez pas, cela arrive à tout le monde.
+  Il arrive très souvent de rencontrer des complications. Ne vous inquiétez pas, cela arrive à tout le monde.
   Donc restez calme. Lorsque vous rencontrez une erreur, écrivez le message d'erreur dans
   Google. Pour un meilleur résultat, ajoutez les mot-clés "rails" ou "ruby". Les résultats
   provenant de 
   <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails?sort=newest">stackoverflow.com</a>
-  sont souvent très utiles. Regardez ceux-là! Les développeurs les plus expérimentés le font
+  sont souvent très utiles. Regardez en priorité ceux-là! Les développeurs les plus expérimentés le font
   régulièrement ;-).
   </p>
 
@@ -1335,23 +1336,23 @@ les plus importants.</p>
 </p>
 
 <ul>
-  <li>Avez-vous exécutez <em>rake db:migrate</em> pour appliquer les récentes
-  migrations de la base de données?
+  <li>Avez-vous exécuté <em>rake db:migrate</em> pour appliquer les récentes
+  migrations dans la base de données?
   </li>
-  <li>Avez-vous sauvegarder le fichier que vous venez juste de modifier? Les fichiers
+  <li>Avez-vous sauvegardé le fichier que vous venez juste de modifier? Les fichiers
   non sauvegardés sont souvent marqués dans l'éditeur par un astérisque ou un point
   à côté de leurs noms.
   </li>
-  <li>Si vous venez juste d'ajouter une gemme à votre Gemfile, avez-vous exécuter 
+  <li>Si vous venez juste d'ajouter une gemme à votre Gemfile, avez-vous exécuté
   <em>bundle install</em> pour l'installer?
   </li>
-  <li>Si vous venez juste d'installer une gemme, avez-vous relancer le serveur?</li>
+  <li>Si vous venez juste d'installer une gemme, avez-vous relancé le serveur?</li>
 </ul>
 
 <p>
   Avez-vous besoin de plus de ressources Ruby on Rails pour débutant ?
-  Nous avons commencé à regrouper des tutoriaux gratuits et autres liens pour apprendre
-  dans une page <strong><a href="resources.html">resources</a></strong>!
+  Nous avons commencé à regrouper dans une page <strong><a href="resources.html">resources</a></strong>
+  des tutoriaux gratuits et autres liens pour apprendre!
   Merci de partager vos remarques et impressions sur vos tutoriaux et cours favoris!
 </p>
 
