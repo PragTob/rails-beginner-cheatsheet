@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
+        rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css"
+        media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css"
+        media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css"
+        media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
+        media="print"/>
+  <script type="text/javascript" src="../javascripts/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../javascripts/main.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <title>Référence Ruby on Rails Débutant</title>
+</head>
+
+<body>
+<div class="container">
+  <nav>
+    <div class="navbar navbar-inner navbar-fixed-top">
+      <div class="navbar-inner">
+        <a href="index.html#" class='brand'>Référence Ruby on Rails Débutant</a>
+        <ul class="nav">
+          <li><a href="index.html#console">Console</a></li>
+          <li><a href="index.html#ruby">Ruby</a></li>
+          <li><a href="index.html#rails">Rails</a></li>
+          <li><a href="index.html#editor">Éditeur de texte</a></li>
+          <li><a href="index.html#help">Aide</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li><a href="resources.html">Ressources</a></li>
+          <li><a href="about.html">À propos de</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div id="content-wrapper">
+  <div class="container ">
+    <section id="main-content">
+      <h1>À propos de</h1>
+      <p>
+	Bienvenue ! Vous commencez l'apprentissage de Ruby on Rails ?
+	Fantastique !  Cette page est pour vous. Elle résume certaines
+	des informations les plus importantes à propos de Ruby et de
+	Rails, pour référence.
+
+	Ce sont les choses qu'on oublie facilement, comme <em>comment démarrer le serveur</em>
+	ou <em>à quoi sert ce dossier de configuration déjà ?</em>
+
+	De plus, il vise spécialement les débutants, ce qui signifie
+	un peu moins de concepts mais davantages d'explications, par
+	rapport à d'autres fiches de référence (<em>Cheat Sheets</em>).
+
+	Nous pensons que cela peut aider tous les débutants en Rails,
+	que vous ayez des années d'expérience dans d'autres langages et
+	plateformes, ou que vous soyez totalement débutant en développement.
+	Cela dit, c'est ce dernier groupe que nous ciblons en priorité :)
+      </p>
+      <p>
+	Notez qu'il s'agit d'une première version, sur un logiciel en constante évolution.
+	Il peut contenir des <em>informations incorrectes ou erronnées</em>,
+	ou se référer à une version de Rails qui n'est pas strictement la dernière.
+	La précision n'est pas notre souci premier, c'est la simplicité.
+
+	Nous voulons aider les gens à débuter avec Ruby on Rails, pas
+	les perdre dans les méandres de chaque cas extrême qu'un expert
+	pourrait imaginer.
+      </p>
+      <p>
+	Cette fiche n'a pas pour but d'être un guide complet sur Rails.
+	Si c'est ce que vous recherchez, il existe plusieurs compilations
+	de ressources pour apprendre Rails (et autres), souvent en anglais
+	(par exemple <a href="http://pragtob.wordpress.com/resources/">le blog de l'auteur</a>)
+	mais parfois aussi en français (comme <a href="http://jeveuxapprendreruby.fr">).
+      </p>
+
+      <h1>Est-ce que je peux l'avoir en PDF ?</h1>
+      <p>Oui, <a href="https://twitter.com/CarlaD">Carla</a> a fait
+	une belle version PDF de cette page. Pour l'instant ça reste
+	du manuel et sur l'anglais, mais nous espérons bien mettre ça
+	en place automatiquement à l'avenir. Le PDF est
+	<strong><a href="RailsBeginnerCheatSheet.pdf">téléchargeable ici</a>
+      </strong>.</p>
+
+      <h1>Problèmes / Contributions</h1>
+      <p>
+	Il y a peut-être des erreurs, coquilles ou choses à préciser.
+	S'il manque quelque chose d'important, si une explication
+	n'est pas claire, si le design est à améliorer...
+	Si c'est le cas, <strong>contactez nous !</strong>
+        Vous pouvez
+        <a href="https://github.com/PragTob/rails-beginner-cheatsheet/issues">
+        remonter les erreurs sur GitHub (issues)</a>, où vous aurez aussi une
+	vision des problèmes connus à l'heure actuelle.
+
+	Si vous n'avez pas de compte GitHub, envoyez un mail aux auteurs
+	<a href="mailto:pragtob@gmail.com">PragTob</a> ou
+	<a href="mailto:sylvain.abelard+rails@gmail.com">Sylvain Abélard</a>.
+
+	Nous ferons de notre mieux, mais si vous voulez et pouvez, une
+	Pull-Request sur
+        <strong><a href="https://github.com/abelards/rails-beginner-cheatsheet">
+	le GitHub du projet</a></strong> sera appréciée :)
+      </p>
+
+      <h1>Qui ?</h1>
+      <p>
+	Cette page a été faite par plusieurs personnes qui souhaitent vous
+	fournir les meilleures conditions d'apprentissage ! Ce sont :
+      </p>
+
+      <h2>Créateur et Mainteneur</h2>
+      <p>
+	Tobias Pfeiffer est fier de vous proposer cette fiche récapitulative.
+	Mais appelez-le Tobi. Partout sur Internet, on le connaît sous le nom de
+        <em>PragTob</em>. Il s'est surtout lancé dans ce travail pour son groupe
+        <a href="http://railsgirlsberlin.de/">Rails Girls Berlin</a>,
+        mais pense que cela pourrait profiter à bien plus de gens.
+      </p>
+      <p>
+	Vous pouvez en savoir plus sur son
+        <a href="http://pragtob.wordpress.com/">blog</a>,
+        <a href="https://twitter.com/PragTob">twitter</a> ou
+        <a href="https://github.com/PragTob">github</a> !
+      </p>
+
+      <h2>Contributions</h2>
+      <p>
+	L'Open Source est fantastique : n'importe qui peut apporter sa
+	pierre à l'édifice et améliorer les choses ! Voici une liste
+	de quelques-uns de nos merveilleux contributeurs :
+      </p>
+      <ul>
+        <li>
+          <strong><a href="https://github.com/DanielKehoe">Daniel Kehoe</a></strong>
+          - vous pouvez lire sa
+          <a href="http://railsapps.github.io/ruby-and-rails.html">liste de ressources utiles</a>
+	  ou le
+          <a href="https://twitter.com/rails_apps">suivre sur Twitter</a>!
+        </li>
+        <li>
+          <strong><a href="https://github.com/blairand">Blair Anderson</a></strong>
+	  a lancé la section ressources et vous a fourni le chemin vers une liste
+	  d'informations bien triées pour commencer Rails !
+        </li>
+        <li>
+          <strong><a href="http://www.infrastructure.de/">Barbara Kleinen</a></strong>
+	  a proposé quelques correctifs et explications supplémentaires !
+        </li>
+        <li>
+          <strong><a href="http://somewherehq.com/people/17-carla-drago">
+            Carla Drago</a></strong> a fait l'effort de mettre cette page en
+          <a href="RailsBeginnerCheatSheet.pdf">PDF</a> facile à télécharger !
+        </li>
+        <li>
+          <strong><a href="http://maitre-du-monde.fr">Sylvain Abélard</a></strong> et <strong><a href="https://github.com/fabienalbi">Fabien Albi</a></strong>
+	  ont traduit ce site en français !
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-constrain">
+    <p>créé par <a href="http://pragtob.wordpress.com/about/">Tobias Pfeiffer</a>,
+       traduit par <a href="http://maitre-du-monde.fr">Sylvain Abélard</a></p>
+       et <a href="https://github.com/fabienalbi">Fabien Albi</a></p>
+    <ul class="footer-links">
+      <li><a href="about.html">À propos de</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="http://pragtob.wordpress.com/">Blog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="resources.html">Ressources</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
