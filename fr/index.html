@@ -97,7 +97,7 @@
 
   Comme c'est du texte, c'est plus facile de copier-coller les lignes
   ou de répéter et d'enchaîner des commandes. Grouper des commandes,
-  souvent dans un fichier texte, pour les éxécuter en groupe s'appelle
+  souvent dans un fichier texte, pour les éxécuter ensemble s'appelle
   faire (ou lancer) un "script".
 </p>
 
@@ -176,7 +176,7 @@
       <p><code><strong>mkdir</strong> <em>fun</em></code></p>
     </td>
     <td>
-      Créé un nouveau dossier, avec le nom demandé, dans le dossier courant.
+      Crée un nouveau dossier, avec le nom demandé, dans le dossier courant.
     </td>
   </tr>
   <tr>
@@ -239,8 +239,8 @@
 
       <p><code><strong>irb</strong></code></p>
     </td>
-    <td>Lance le programme avec le nom demandé. Tout ce qui est après sont
-      des paramètres ou options, si votre programme en a besoin.
+    <td>Lance le programme avec le nom demandé. Les arguments sont
+      des paramètres ou options dont votre programme aurait potentiellement besoin.
       Dans l'exemple de Firefox, sans argument il s'ouvre parfaitement.
       Mais avec une adresse en paramètre, il ouvrira le site demandé.
 
@@ -270,7 +270,7 @@
   pourquoi vous écrirez principalement votre code en Ruby. Il est donc important
   de comprendre les bases de ce langage. Si vous souhaitez simplement essayer Ruby,
   tapez <strong>irb</strong> dans votre console. Vous pourrez ainsi experimenter avec 
-  le langage. Pour quitter irb, taper <strong>exit</strong>.
+  le langage. Pour quitter irb, tapez <strong>exit</strong>.
 </p>
 
 <p>
@@ -310,7 +310,7 @@
     Ruby ignore tout ce qui est marqué comme commentaire (à l'aide du 
     caractère #). Il n'essaie pas de l'éxecuter. Les commentaires sont 
     uniquement présents à titre informatif. Les commentaires sont aussi 
-    communement utilisés pour <em>commenter des lignes de code</em>. Lorsque
+    communement utilisés pour <em>commenter des lignes de code</em>: lorsque
     vous souhaitez qu'une partie de votre code ne soit pas éxecutée 
     mais que vous ne désirez pas le supprimer car vous faites des expérimentations.
   </td>
@@ -369,8 +369,8 @@
       message à un objet et nous en attendons une réponse. Selon le message, il 
       peut y avoir zéro, un ou plusieurs arguments. Ainsi nous demandons simplement à l'objet
       de faire quelque chose ou de nous donner une information. Dans le premier
-      exemple on demande à l'object de la classe 'String' la longueur qu'il fait (De combien 
-      de caractère il consiste). Dans le dernier exemple nous remplaçons toutes les
+      exemple, on demande à l'objet de la classe 'String' sa longueur (De combien
+      de caractères il se compose). Dans le dernier exemple nous remplaçons toutes les
       répétitions de "ae" dans le texte par le caractère allemand "ä".
 
     <p>
@@ -416,7 +416,7 @@
   </td>
   <td>
     Avec deux signes égaux consécutifs vous pouvez vérifier si deux éléments sont identiques.
-    Si c'est le cas, <code>true</code> sera retourné; sinon, se sera <code>false</code>.
+    Si c'est le cas, <code>true</code> sera retourné; sinon, ce sera <code>false</code>.
   </td>
 </tr>
 <tr>
@@ -576,7 +576,7 @@
 
 <p>
   Les strings sont utilisées pour contenir des valeurs sous forme de texte.
-  Ils peuvent contenir des caractères seuls, des mots, des phrases voir même
+  Elles peuvent contenir des caractères seuls, des mots, des phrases voir même
   un livre entier. Cependant, vous pouvez simplement les considérer
   comme un ensemble ordonné de caractères.
 </p>
@@ -610,9 +610,9 @@
       <p><code><strong>''</strong></code></p>
     </td>
     <td>
-      Une string est créée en entourant une suite de caractère par des guillemets. Le
+      Une string est créée en entourant une suite de caractères par des guillemets. Le
        <a href="https://github.com/bbatsov/ruby-style-guide/">guide de style Ruby</a>
-      recommende d'utiliser les guillemets simples pour du texte simple. Exemple: <code>'texte'</code>
+      recommande d'utiliser les guillemets simples pour du texte simple. Exemple: <code>'texte'</code>
     </td>
   </tr>
   <tr>
@@ -630,7 +630,7 @@
     <td>
       Vous pouvez associer une string avec une variable ou une expression Ruby en utilisant des
       guillemets doubles. C'est appelé "Interpolation". C'est aussi correct d'utiliser des guillemets
-      doubles autour de texte simple.
+      doubles autour d'un texte simple.
     </td>
   </tr>
   <tr>
@@ -642,7 +642,7 @@
       <p><code>""<strong>.length</strong> # => 0</code></p>
     </td>
     <td>
-      Vous pouvez envoyer un message au string, lui demandant quelle
+      Vous pouvez envoyer un message à la string, lui demandant quelle
       est sa longueur. Elle répondra avec le nombre de caractères qui la constitue.
       Vous pouvez également l'utiliser afin de vérifier si le mot de passe désiré
       par un utilisateur atteint la longueur minimum requise. Remarquez que nous 
@@ -659,7 +659,7 @@
         <em>"c"</em>
         # => "abc"</code></p>
     </td>
-    <td>Associe deux strings ou plus ensemble et retourne le résultat.</td>
+    <td>Associe deux strings (ou plus) ensemble et retourne le résultat.</td>
   </tr>
   <tr>
     <td>Remplacer</td>
@@ -733,7 +733,7 @@ un_autre_texte)</em></code></pre>
         <strong>[</strong><em>"Rails", "fun", 5</em><strong>]</strong>
       </code></p>
     </td>
-    <td>Créé un array, vide ou avec le contenu spécifié.</td>
+    <td>Crée un array, vide ou avec le contenu spécifié.</td>
   </tr>
   <tr>
     <td>Nombre d'éléments</td>
@@ -747,7 +747,7 @@ un_autre_texte)</em></code></pre>
 
       <p><code>["foo", "bar"]<strong>.size</strong> # => 2</code></p>
     </td>
-    <td>Retourne le nombre d'éléments contenu dans un array</td>
+    <td>Retourne le nombre d'éléments contenus dans un array</td>
   </tr>
   <tr>
     <td>Accès</td>
@@ -763,8 +763,8 @@ array<strong>[</strong><em>2</em><strong>]</strong> # => "bar"</code></pre>
     </td>
     <td>Puisqu'un array est une collection de différents éléments, vous
     souhaiterez souvent accéder à un seul de ces éléments. Les arrays sont 
-    indéxés par des nombres, vous pouvez donc utiliser un nombre pour accéder
-    à un élément individuel. Sachez que la numérotation commence par "0"
+    indéxés par des nombres. Vous pouvez donc utiliser un nombre pour accéder
+    à un élément individuel. Sachez que la numérotation commence par 0,
     donc le premier élément se trouve en position 0. Le dernier élément
     d'un array à trois éléments se trouve ainsi en 2ème position.
     </td>
@@ -781,7 +781,7 @@ array # => [1, 2, 3, 4]
 </code></pre>
     </td>
     <td>
-      Ajoute l'élément à la fin de l'array, augmentant sa taille par un.
+      Ajoute l'élément à la fin de l'array, incrémentant sa taille de un.
     </td>
   </tr>
   <tr>
@@ -859,10 +859,10 @@ array # => [0, 14, 79]
 
 <p>
   Les hashes peuvent associer n'importe quoi à n'importe quoi! Vous pouvez associer des strings à des nombres, des strings
-  à des strings, des nombres à des booléens... et vous pouvez mélanger tout ces types de valeurs. Cependant les clés sont
-  le plus souvent de la même classe. Les symboles sont coommunément utilisés comme clés. Les symboles ressemblent à ça:
+  à des strings, des nombres à des booléens... et vous pouvez mélanger tous ces types de valeurs. Cependant les clés sont
+  le plus souvent de la même classe. Les symboles sont communément utilisés comme clés. Les symboles sont du format:
   <code>:symbole</code>. Un symbole est une suite de caractères précédée par un deux-points. Vous pouvez les considérer comme
-  des strings spéciaux qui représentent (symbolisent) quelque chose! On utilise souvent les symboles car Ruby éxécute plus
+  des strings spéciales qui représentent (symbolisent) quelque chose! On utilise souvent les symboles car Ruby s'exécute plus
   rapidement lorsque l'on utilise des symboles plutôt que des strings.
 </p>
 
@@ -943,8 +943,7 @@ hash # => {:b=>10}
 </code></pre>
     </td>
     <td>
-      Vous pouvez supprimer une clé spécifique d'un hash, de manière que la clé
-      et sa valeur ne peuvent pas être accéder.
+      Vous pouvez supprimer une clé spécifique d'un hash, de manière à ne plus pouvoir accéder ni à la clé ni à sa valeur.
     </td>
   </tr>
 </table>
@@ -983,7 +982,7 @@ les plus importants.</p>
   </tr>
   <tr>
     <td>app/controllers</td>
-    <td>Le sous-dossier controllers contient les controlleurs, qui se charge des requêtes
+    <td>Le sous-dossier controllers contient les controlleurs, qui se chargent des requêtes
     provenant de l'utilisateur. Chaque controlleur est souvent responsable d'une ressource d'un unique type,
     comme lieux, utilisateurs ou participants. Les controlleurs relient les <em>modèles</em> aux 
     <em>vues</em>.
@@ -1023,14 +1022,14 @@ les plus importants.</p>
       <em>partiels</em>. Ils font partis d'une vue qui elle même est réutilisée dans
       d'autres vues. Un exemple commun est <em>_form.html.erb</em> qui contient le formulaire
       (form) de base d'une ressource donnée. Il est utilisé dans les vues <em>new</em> 
-      (nouveau) et <em>edit</em> (modifier) puisque créer ou changer quelque chose se 
-      ressemble fortement.
+      (nouveau) et <em>edit</em> (modifier) puisque les actions créer ou changer quelque chose se
+      ressemblent fortement.
       </p>
     </td>
   </tr>
   <tr>
     <td>config</td>
-    <td>Ce dossier contient les fichiers de configuration dont l'application à besoin,
+    <td>Ce dossier contient les fichiers de configuration dont l'application a besoin,
     incluant la configuration de votre base de données (dans <em>database.yml</em>) et
     le particulièrement important <em>routes.rb</em> qui détermine comment les requêtes
     web sont gérées. Le fichier <em>routes.rb</em> associe un URL donné avec le 
@@ -1056,8 +1055,7 @@ les plus importants.</p>
   </tr>
   <tr>
     <td>lib</td>
-    <td>Diminutif pour librairie. Il contient le code que vous avez écrit qui est utilisé dans
-    votre application et peut-être utilisé autre part. Par exemple, cela peut être du code
+    <td>Diminutif pour librairie. Il contient le code que vous avez écrit et qui peut etre utilisé autant dans votre application qu'ailleurs. Par exemple, cela peut être du code
     utilisé pour obtenir des informations spécifiques en provenance de Facebook.
     </td>
   </tr>
@@ -1114,7 +1112,7 @@ les plus importants.</p>
     <td>Ce fichier spécifie les versions exactes de toutes les gemmes que vous utilisez. Puisque certaines
     gemmes dépendent d'autres gemmes, Ruby va installer automatiquement toutes celles dont vous avez
     besoin. Le fichier contient également les numéros de version de ces gemmes. Cela peut être utilisé afin
-    de s'assurer que tout les membres d'une équipe travaillent avec les gemmes de mêmes versions. Ce fichier
+    de s'assurer que tous les membres d'une équipe travaillent avec les gemmes de mêmes versions. Ce fichier
     est généré automatiquement. <em>Ne modifiez pas ce fichier.</em></td>
   </tr>
 </table>
@@ -1126,7 +1124,7 @@ les plus importants.</p>
   vous développez une application Ruby on Rails. Vous devez être dans le dossier
   racine de votre projet pour exécuter ces commandes (à l'exception de la commande
   <em>rails new</em>). Le dossier racine du projet ou de l'application est le dossier
-  contenant tout les sous-dossiers décris ci-dessus (app, config, etc.).
+  contenant tous les sous-dossiers décris ci-dessus (app, config, etc.).
 </p>
 
 <table class="table table-striped">
@@ -1138,9 +1136,9 @@ les plus importants.</p>
   <tr>
     <td>Créer une nouvelle application</td>
     <td><code><strong>rails new</strong> <em>nom_du_projet</em></code></td>
-    <td>Créé une nouvelle application Ruby on Rails avec le nom spécifié. Cela va vous
+    <td>Crée une nouvelle application Ruby on Rails avec le nom spécifié. Cela va vous
     donner la structure de base pour pouvoir commencer immédiatement. Une fois que cette
-    commande a été exécutée votre application se trouve dans un dossier du même nom
+    commande a été exécutée, votre application se trouve dans un dossier du même nom
     que celui que vous avez donné. Vous devez ensuite <em>cd</em> dans ce dossier.
     </td>
   </tr>
@@ -1149,12 +1147,12 @@ les plus importants.</p>
     <td><code><strong>rails server</strong></code></td>
     <td>
       <p>Vous devez démarrer le serveur afin que votre application réponde à vos requêtes.
-      Démarrer le serveur peut prendre quelques temps. Lorsque c'est fait, vous pouvez
+      Démarrer le serveur peut prendre quelques instants. Lorsque c'est fait, vous pouvez
       accéder à votre application ici: <a href="localhost:3000">localhost:3000</a>
       dans le navigateur internet de votre choix.
       </p>
 
-      <p>Afin d'arrêter le serveur, allez dans la console où il fonctionne et cliquer
+      <p>Afin d'arrêter le serveur, allez dans la console où il fonctionne et cliquez
       sur les touches <strong>Ctrl + C</strong>.</p>
     </td>
   </tr>
@@ -1167,13 +1165,13 @@ les plus importants.</p>
     <td>
       <p>
         La commande échaffaudage (scaffold en anglais) génère comme par magie, pour vous,
-        tous les éléments communément nécessaire pour une nouvelle ressource. Cela inclut les
-        <em>controlleurs, modèles et vues</em>. Cela créé également les actions de base suivantes:
+        tous les éléments communément nécessaires pour une nouvelle ressource. Cela inclut les
+        <em>controlleurs, modèles et vues</em>. Cela crée également les actions de base suivantes:
         créer une nouvelle ressource, modifier une ressource, montrer une ressource, et supprimer
         une ressource.
       </p>
 
-      <p>Ce sont tout les éléments de base dont vous avez besoin. Prenez par exemple:</p>
+      <p>Ce sont tous les éléments de base dont vous avez besoin. Prenez par exemple:</p>
 
       <p><code><strong>rails generate scaffold</strong> <em>produit
         nom:string prix:integer</em></code></p>
@@ -1203,8 +1201,8 @@ les plus importants.</p>
 <h1 id="editor">Les astuces du rédacteur</h1>
 
 <p>
-  Lorsque vous écrivez du code vous utilisez un éditeur de texte. Bien 
-  évidemment chaque éditeur de texte est différent et configurable. Voici juste
+  Lorsque vous écrivez du code, vous utilisez un éditeur de texte. Bien
+  évidemment, chaque éditeur de texte est différent et configurable. Voici simplement
   quelques fonctions et leurs raccourcis les plus communs. Tous ces raccourcis
   fonctionnent avec <a href="https://sublimetext.com/2">Sublime Text 2</a>.
   Votre éditeur peut être différent!
@@ -1244,7 +1242,7 @@ les plus importants.</p>
 
       <p><em>or Ctrl + Shift + Z</em></p></td>
     <td>
-      Rétabli ce qui vient tout juste d'être <em>annulé</em>. Peut 
+      Rétablit ce qui vient tout juste d'être <em>annulé</em>. Peut
       également être éffectué de multiples fois.
     </td>
   </tr>
@@ -1252,14 +1250,14 @@ les plus importants.</p>
     <td>Chercher dans un fichier</td>
     <td><strong>Ctrl + F</strong></td>
     <td>
-      Recherche une suite de caractère à l'intérieur du fichier ouvert.
-      Cliquer sur <em>entrer</em> pour aller au suivant.
+      Recherche une suite de caractères à l'intérieur du fichier ouvert.
+      Cliquez sur <em>entrer</em> pour aller au suivant.
     </td>
   </tr>
   <tr>
     <td>Chercher dans tous les fichiers</td>
     <td><strong>Ctrl + Shift + F</strong></td>
-    <td>Recherche une suite de caractère à l'intérieur de l'ensemble des
+    <td>Recherche une suite de caractères à l'intérieur de l'ensemble des
     fichiers du projet.</td>
   </tr>
   <tr>
@@ -1270,8 +1268,8 @@ les plus importants.</p>
       <p><em>or Ctrl + R</em></p>
     </td>
     <td>
-      Remplace les répétitions de la suite de caractère donnée par l'autre
-      suite de caractère fournie. Utile pour renommer quelque chose.
+      Remplace les répétitions de la suite de caractères donnée par l'autre
+      suite de caractères fournie. Utile pour renommer quelque chose.
     </td>
   </tr>
   <tr>
@@ -1291,21 +1289,21 @@ les plus importants.</p>
     <td><strong>Ctrl + V</strong></td>
     <td>
       Insère ce qui se trouve actuellement dans le presse-papiers (via <em>Copier</em> 
-      ou <em>Coller</em>) à la position actuelle du caret.
-      Il est possible d'insérer de multiples fois.
+      ou <em>Coller</em>) à la position actuelle du curseur.
+      Il est possible d'insérer de multiples fois l'information copiée.
     </td>
   </tr>
   <tr>
     <td>Nouveau Fichier</td>
     <td><strong>Ctrl + N</strong></td>
-    <td>Créer un nouveau fichier vide</td>
+    <td>Crée un nouveau fichier vide</td>
   </tr>
   <tr>
     <td>Recherche et ouvre un fichier</td>
     <td><strong>Ctrl + P</strong></td>
     <td>
       Recherche un fichier en donnant une partie de son nom.
-      Cliquer sur <em>entrer</em> ouvrira le fichier selectionné.
+      Cliquez sur <em>entrer</em> pour ouvrir le fichier selectionné.
     </td>
   </tr>
   <tr>
@@ -1341,7 +1339,7 @@ les plus importants.</p>
   </li>
   <li>Avez-vous sauvegardé le fichier que vous venez juste de modifier? Les fichiers
   non sauvegardés sont souvent marqués dans l'éditeur par un astérisque ou un point
-  à côté de leurs noms.
+  à côté de leur nom.
   </li>
   <li>Si vous venez juste d'ajouter une gemme à votre Gemfile, avez-vous exécuté
   <em>bundle install</em> pour l'installer?
