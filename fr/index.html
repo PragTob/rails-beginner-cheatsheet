@@ -1,22 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset='utf-8'>
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
-        rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css"
-        media="screen"/>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css"
-        media="screen"/>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css"
-        media="screen"/>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
-        media="print"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
   <script type="text/javascript" src="../javascripts/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../javascripts/bootstrap.js"></script>
   <script type="text/javascript" src="../javascripts/main.js"></script>
+
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,51 +22,49 @@
 <body>
 <div class="container">
   <nav>
-    <div class="navbar navbar-inner navbar-fixed-top">
-      <div class="navbar-inner">
-        <a href="index.html#" class='brand'>Référence Ruby on Rails Débutant</a>
-        <ul class="nav">
-          <li><a href="index.html#console">Console</a></li>
+    <div class="navbar navbar-fixed-top navbar-default"><div class="navbar-header"><a href="./#" class="navbar-brand cheat-sheet-brand">Rails Beginner Cheat Sheet</a></div>
 
+      <ul class="nav navbar-nav">
+        <li><a href="./#console">Console</a></li>
         <li class="dropdown">
-          <a href="#ruby" class="dropdown-toggle"><b class="caret"></b> Ruby</a>
+          <a href="./#ruby" class="dropdown-toggle"><b class="caret"></b> Ruby</a>
           <ul class="dropdown-menu">
-            <li><a href="#ruby-concepts">Concepts Généraux</a></li>
-            <li><a href="#ruby-numbers">Nombres</a></li>
-            <li><a href="#ruby-strings">Textes</a></li>
-            <li><a href="#ruby-arrays">Tableaux</a></li>
-            <li><a href="#ruby-hashes">Dictionnaires</a></li>
+            <li><a href="./#ruby-concepts">Concepts Généraux</a></li>
+            <li><a href="./#ruby-numbers">Les nombres</a></li>
+            <li><a href="./#ruby-strings">Strings</a></li>
+            <li><a href="./#ruby-arrays">Arrays</a></li>
+            <li><a href="./#ruby-hashes">Hashes</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#rails"><b class="caret"></b> Rails</a>
+          <a href="./#rails"><b class="caret"></b> Rails</a>
           <ul class="dropdown-menu">
-            <li><a href="#rails-folder-structure">Dossiers et Fichiers</a></li>
-            <li><a href="#rails-commands">Commandes</a></li>
+            <li><a href="./#rails-folder-structure">Structure</a></li>
+            <li><a href="./#rails-commands">Commandes</a></li>
+            <li><a href="./#rails-erb">ERB: Ruby Intégré</a></li>
           </ul>
         </li>
-        <li><a href="#editor">Éditeur de texte</a></li>
-        <li><a href="#help">Aide</a></li>
+        <li><a href="./#editor">Astuces</a></li>
+        <li><a href="./#help">Aide</a></li>
       </ul>
-      <ul class="nav pull-right">
+      <ul class="nav pull-right navbar-nav">
         <li><a href="resources.html">Ressources</a></li>
-        <li><a href="about.html">À propos de</a></li>
+        <li><a href="about.html">À propos</a></li>
       </ul>
     </div>
   </nav>
 </div>
 
 <div id="content-wrapper">
-<div class="container ">
-<section id="main-content">
+  <div class="container ">
+    <section id="main-content">
 <h1>Conventions de cette référence</h1>
 
 <p>
   Les mots en <strong>gras</strong> sont les plus importants, par exemple
   la commande ou les concepts montrés dans la catégorie "utilisation".
 
-  Dans le code  des sections "utilisation" et "exemples", nous mettons en valeur la 
-  commande utilisée comme suit : <code>code_d_exemple<strong>.concept_a_montrer</strong></code>.
+  Dans le code des sections "utilisation" et "exemples", cela met en valeur l'élément essentiel du concept, comme suit : <code>code_d_exemple<strong>.concept_a_montrer</strong></code>.
 
   Dans ces mêmes colonnes, les <code><em>mots_italiques</em></code>
   mettent en avant les arguments/paramètres d'une commande/méthode.
@@ -80,11 +72,11 @@
 
 <p>
   En revanche, dans les descriptions ou le texte général, les <em>mots italiques</em>
-  dénotent plutôt des concepts génériques, ou des concepts expliqués ailleurs
+  dénotent des concepts plus génériques, ou des concepts expliqués ailleurs
   (que ce soit dans cette référence ou en général).
 </p>
 
-<h1 id="console">La console</h1>
+<h1 id="console">La Console</h1>
 
 <p>
   La console (aussi appelée <em>terminal, ligne de commande ou 'shell'</em>)
@@ -109,7 +101,7 @@
 <ul>
   <li><strong>Windows:</strong> Ouvrez le menu démarrer et cherchez le terminal.
     Vous pouvez également choisir <em>Exécuter...</em> et taper <em>cmd</em>.</li>
-  <li><strong>Mac:</strong> Ouvrez la recherche (Spotlight), tapez <em>terminal</em>,
+  <li><strong>Mac:</strong> Ouvrez Spotlight, tapez <em>terminal</em>,
     et lancez ce programme.
   </li>
   <li><strong>Linux:</strong> Le terminal devrait être une des principales options
@@ -136,7 +128,7 @@
 
       <p><code>cd mon_projet/app/views</code></p>
     </td>
-    <td>Vous déplace vers (ou "ouvre") le dossier demandé.
+    <td>Vous déplace vers (ou "ouvre") le dossier spécifié dans la console.
     </td>
   </tr>
   <tr>
@@ -151,18 +143,18 @@
 
       <p><code><strong>ls</strong> <em>mon_projet</em></code></p>
     </td>
-    <td>Montre le contenu (fichiers et dossiers) du dossier demandé.
-      Si aucun dossier n'est demandé, liste le contenu du dossier courant.
+    <td>Montre l'ensemble du contenu (fichiers et dossiers) du dossier.
+      Si aucun dossier n'est spécifié en argument, liste le contenu du dossier courant.
     </td>
   </tr>
   <tr>
     <td>Dossier courant</td>
     <td><code><strong>pwd</strong></code></td>
     <td><code><strong>pwd</strong></code></td>
-    <td>Montre le chemin complet du dossier courant ("dans lequel vous êtes"), par exemple
-      <code>/home/tobi/railsgirls</code>
+    <td>Montre le chemin complet du dossier courant ("dans lequel vous êtes"), par exemple: 
+    /home/tobi/railsgirls
       <br />
-      À propos des chemins : si un fichier ou dossier commence par un slash /
+      À propos des chemins: si un fichier ou dossier commence par un slash /
       comme montré ci-dessus, il s'agit d'un chemin "absolu", donnant le chemin
       complet depuis la racine du disque.
       S'il n'y a pas de slash(/), le chemin est relatif au dossier courant.
@@ -192,7 +184,7 @@
       <p><code><strong>rm</strong> <em>images/vieille_image.jpg</em></code></p>
     </td>
     <td>
-      <p>Supprime le fichier demandé. <strong>Attention !</strong>
+      <p>Supprime le fichier demandé. Faites <strong> très attention !</strong>
       Il sera perdu pour toujours, et il est trop facile d'effacer un fichier
       que l'on voulait conserver :(</p>
       <p>
@@ -204,7 +196,7 @@
     </td>
   </tr>
   <tr>
-    <td>Effacer un dossier complet</td>
+    <td>Effacer un dossier</td>
     <td>
       <p><code><strong>rm -r</strong> <em>dossier</em></code></p>
 
@@ -239,19 +231,20 @@
 
       <p><code><strong>irb</strong></code></p>
     </td>
-    <td>Lance le programme avec le nom demandé. Les arguments sont
-      des paramètres ou options dont votre programme aurait potentiellement besoin.
-      Dans l'exemple de Firefox, sans argument il s'ouvre parfaitement.
-      Mais avec une adresse en paramètre, il ouvrira le site demandé.
+    <td>Lance le programme avec le nom demandé et des arguments, si le programme 
+      prends des arguments. Les arguments sont des paramètres ou options dont votre 
+      programme aurait potentiellement besoin. Dans l'exemple de Firefox, sans 
+      argument il s'ouvre parfaitement. Mais avec une adresse en paramètre, il 
+      ouvrira le site demandé.
 
-      Et quand vous tapez <code>irb</code>, cela lance un <em>interpréteur ruby</em>.
+      <p>Et quand vous tapez <code>irb</code>, cela lance l'<em>interpréteur ruby</em>.</p>
     </td>
   </tr>
   <tr>
-    <td>Quitter le programme</td>
+    <td>Stopper le programme</td>
     <td>Appuyez sur <strong>Ctrl + C</strong></td>
     <td>-</td>
-    <td>Termine le programme qui fonctionne en ce moment dans le
+    <td>Stoppe le programme qui fonctionne en ce moment dans le
     terminal et vous rend la main.
       Par exemple, c'est ainsi que l'on arrête le serveur Rails.
       Vous pouvez aussi interrompre de nombreuses commandes avec ça,
@@ -263,7 +256,7 @@
 </table>
 
 
-<h1 id="ruby">Bases de Ruby</h1>
+<h1 id="ruby">Les bases de Ruby</h1>
 
 <p>
   Ruby on Rails est écrit avec le langage de programmation Ruby. C'est 
@@ -616,7 +609,7 @@
     </td>
   </tr>
   <tr>
-    <td>Interpolation (insertion)</td>
+    <td>Interpoler (insérer)</td>
     <td>
       <p><code><strong>"</strong>Une phrase et une #{insertion}<strong>"</strong></code></p>
     </td>
@@ -680,7 +673,7 @@ un_autre_texte)</em></code></pre>
       <code>un_autre_texte</code>.</td>
   </tr>
   <tr>
-    <td>Accès</td>
+    <td>Accéder</td>
     <td>
       <code>
         texte<strong>[</strong><em>position</em><strong>]</strong>
@@ -750,7 +743,7 @@ un_autre_texte)</em></code></pre>
     <td>Retourne le nombre d'éléments contenus dans un array</td>
   </tr>
   <tr>
-    <td>Accès</td>
+    <td>Accéder</td>
     <td>
       <code>
         array<strong>[</strong><em>position</em><strong>]</strong>
@@ -952,6 +945,13 @@ hash # => {:b=>10}
 
 <p>Ceci est une introduction aux bases de Rails. Nous allons voir la structure générale
 d'une application Rails ainsi que les commandes importantes utilisées dans le terminal.
+</p>
+
+<p>
+  Si vous n'avez pas encore Rails installé, il y a un
+  <a href="http://railsapps.github.io/installing-rails.html">
+    guide bien maintenu par Daniel Kehoe
+  </a> (en anglais) qui explique comment installer Rails sur différentes plateformes.
 </p>
 
 <h2 id="rails-folder-structure">La structure d'une application Rails</h2>
@@ -1196,6 +1196,65 @@ les plus importants.</p>
     install</em> pour l'installer. N'oubliez pas de redémarrer votre serveur après coup!
     </td>
   </tr>
+  <tr>
+    <td>Vérifier les dépendances</td>
+    <td><code><strong>bundle check</strong></code></td>
+    <td>Vérifie si les dépendances listées dans le Gemfile correspondent aux gemmes actuellement installées.
+    </td>
+  </tr> 
+  <tr>
+    <td>Afficher les chemins existants</td>
+    <td><code><strong>rake routes</strong></code></td>
+    <td>Affiche la liste complètes des chemins (routes) disponibles dans votre application</td>
+  </tr>
+</table>
+
+<h2 id="rails-erb">ERB: Ruby Intégré</h2>
+<p>
+  Dans vos vues (c'est à dire, dans le dossier <code>app/views</code> de votre application)
+  vous trouverez des fichiers dont l'extension est <code>.html.<strong>erb</strong></code>.
+  <strong>ERB</strong> veut dire <strong>E</strong>mbedded <strong>R</strong>u<strong>B</strong>y
+  (Ruby Intégré). Cela signifie simplement que Rails traite les balises spéciales qui se trouvent dans 
+  ces fichiers et produit de l'HTML qui est renvoyé à l'utilisateur.
+</p>
+<p>
+  Il y a deux balises ERB que vous devez retenir:
+  <code>&lt;%= <i>code_ruby</i> %&gt;</code> et
+  <code>&lt;% <i>code_ruby</i> %&gt;</code>. Remarquez que la différence est la présence
+  d'un signe <code>=</code> dans la première balise.
+</p>
+
+<table class="table table-striped">
+  <tr>
+    <th class="usage">Balise</th>
+    <th class="erb-example">Exemples</th>
+    <th class="description">Description</th>
+  </tr>
+  <tr>
+    <td><code>&lt;%<strong>=</strong> %&gt;</code></td>
+    <td><code><strong>&lt;%= @produit.prix %&gt;</strong></code></td>
+    <td>
+      Exécute le code ruby et insère le résultat dans l'HTML à cette position.
+      Vous pouvez mettre <em>tout type de code ruby</em> entre <code>&lt;%=</code> et
+      <code>%&gt;</code>, par exemple, <code>&lt;%= 9 * 3 %&gt;</code> va donner
+      <strong>27</strong> dans la page que l'utilisateur verra. Cependant, généralement
+      cette balise est utilisée pour afficher des données provenant d'un modèle, tel le prix
+      d'un produit, comme montré dans l'exemple.
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;% %&gt;</code></td>
+    <td>
+<pre><code><strong>&lt;% if utilisateur.admin? %&gt;</strong>
+  &lt;p&gt;Bonjour Admin!&lt;/p&gt;
+&lt;% end %&gt;</code></pre></td>
+    <td>
+      Le code Ruby placé entre les balises <code>&lt;%</code> et <code>%&gt;</code>
+      est exécuté mais le résultat <strong>ne sera pas</strong> inséré dans l'HTML à cette position. 
+      C'est pourquoi ces balises sont le plus souvent utilisées pour contrôler la structure de la page
+      à l'aide de conditions (if) ou de boucles.
+    </td>
+  </tr>
 </table>
 
 <h1 id="editor">Les astuces du rédacteur</h1>
@@ -1366,9 +1425,9 @@ les plus importants.</p>
     <ul class="footer-links">
       <li><a href="about.html">À propos de</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="http://pragtob.wordpress.com/">Blog</a></li>
-      <li class="muted">&middot;</li>
       <li><a href="resources.html">Ressources</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="http://pragtob.wordpress.com/">Blog</a></li>
     </ul>
   </div>
 </footer>

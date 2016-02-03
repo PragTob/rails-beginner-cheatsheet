@@ -1,22 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset='utf-8'>
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
-        rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css"
-        media="screen"/>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css"
-        media="screen"/>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css"
-        media="screen"/>
-  <link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
-        media="print"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
   <script type="text/javascript" src="../javascripts/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../javascripts/bootstrap.js"></script>
   <script type="text/javascript" src="../javascripts/main.js"></script>
+
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,28 +22,42 @@
 <body>
 <div class="container">
   <nav>
-    <div class="navbar navbar-inner navbar-fixed-top">
-      <div class="navbar-inner">
-        <a href="index.html#" class='brand'>Référence Ruby on Rails Débutant</a>
-        <ul class="nav">
-          <li><a href="index.html#console">Console</a></li>
-          <li><a href="index.html#ruby">Ruby</a></li>
-          <li><a href="index.html#rails">Rails</a></li>
-          <li><a href="index.html#editor">Éditeur de texte</a></li>
-          <li><a href="index.html#help">Aide</a></li>
-        </ul>
-        <ul class="nav pull-right">
-          <li><a href="resources.html">Ressources</a></li>
-          <li><a href="about.html">À propos de</a></li>
-        </ul>
-      </div>
+    <div class="navbar navbar-fixed-top navbar-default"><div class="navbar-header"><a href="./#" class="navbar-brand cheat-sheet-brand">Rails Beginner Cheat Sheet</a></div>
+
+      <ul class="nav navbar-nav">
+        <li><a href="./#console">Console</a></li>
+        <li class="dropdown">
+          <a href="./#ruby" class="dropdown-toggle"><b class="caret"></b> Ruby</a>
+          <ul class="dropdown-menu">
+            <li><a href="./#ruby-concepts">Concepts Généraux</a></li>
+            <li><a href="./#ruby-numbers">Les nombres</a></li>
+            <li><a href="./#ruby-strings">Strings</a></li>
+            <li><a href="./#ruby-arrays">Arrays</a></li>
+            <li><a href="./#ruby-hashes">Hashes</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="./#rails"><b class="caret"></b> Rails</a>
+          <ul class="dropdown-menu">
+            <li><a href="./#rails-folder-structure">Structure</a></li>
+            <li><a href="./#rails-commands">Commandes</a></li>
+            <li><a href="./#rails-erb">ERB: Ruby Intégré</a></li>
+          </ul>
+        </li>
+        <li><a href="./#editor">Astuces</a></li>
+        <li><a href="./#help">Aide</a></li>
+      </ul>
+      <ul class="nav pull-right navbar-nav">
+        <li><a href="resources.html">Ressources</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
     </div>
   </nav>
 </div>
 
 <div id="content-wrapper">
-<div class="container ">
-<section id="main-content">
+  <div class="container ">
+    <section id="main-content">
 <h1 id="resources">Les ressources pour Rails</h1>
 <p>
   Cette Référence Ruby on Rails Débutant ne se substitue pas à un tutoriel ou d'autres sources d'informations. Son but est de venir en complément des ressources disponibles et de vous aider.
@@ -176,9 +184,9 @@ Voici quelques-uns d'entre eux:
     <ul class="footer-links">
       <li><a href="about.html">À propos de</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="http://pragtob.wordpress.com/">Blog</a></li>
-      <li class="muted">&middot;</li>
       <li><a href="resources.html">Ressources</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="http://pragtob.wordpress.com/">Blog</a></li>
     </ul>
   </div>
 </footer>
